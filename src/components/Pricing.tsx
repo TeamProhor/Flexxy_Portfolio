@@ -63,6 +63,7 @@ export const Pricing = () => {
             </div>
 
             <button
+              type="button"
               className="w-full bg-black/80 hover:bg-black text-white text-center py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-colors border border-white/10"
               aria-label="Get started with Basic Plan"
             >
@@ -119,6 +120,7 @@ export const Pricing = () => {
             </div>
 
             <button
+              type="button"
               className="relative z-10 w-full bg-black/80 hover:bg-black text-white text-center py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-colors border border-white/20 shadow-xl"
               aria-label="Get started with Premium Plan"
             >
