@@ -24,7 +24,7 @@ export const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-4xl md:text-[72px] leading-[1.05] tracking-tight font-medium text-black max-w-4xl mx-auto">
-          Master the design system behind Apple&apos;s{" "}
+         Editor that actually stops the scroll
           <br />
           <PointerHighlight
             rectangleClassName="bg-zinc-100 border-zinc-200"
@@ -32,14 +32,14 @@ export const Hero = () => {
             containerClassName="inline-block"
           >
             <span className="font-serif-italic text-[#FF4D47] font-normal tracking-normal px-6 relative z-10">
-              motion language
+              vedita editz
             </span>
           </PointerHighlight>
         </h1>
 
         {/* Subtitle */}
         <p className="text-[#6b6b6b] text-base md:text-xl mt-6 max-w-2xl mx-auto">
-          The motion design language that separates $500 freelancers from designers who command $10K per project.
+        The motion design language that separates $500 freelancers from designers who command $10K per project.
         </p>
 
         {/* CTA Button */}
