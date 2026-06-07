@@ -51,24 +51,24 @@ export const Pricing = () => {
               <hr className="border-black/10 mb-8" />
 
               <ul className="flex flex-col gap-4 mb-10">
-                {pricingPlans.basic.features.map((text, i) => (
-                  <li key={i} className="flex items-center gap-3">
+                {pricingPlans.basic.features.map((feature) => (
+                  <li key={feature.id} className="flex items-center gap-3">
                     <div className="bg-black/10 rounded-full p-1 flex items-center justify-center">
                       <CheckIcon size={16} color="#000" weight="bold" />
                     </div>
-                    <span className="text-black font-medium">{text}</span>
+                    <span className="text-black font-medium">{feature.text}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <a
-              href="#"
+            <button
               className="w-full bg-black/80 hover:bg-black text-white text-center py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-colors border border-white/10"
+              aria-label="Get started with Basic Plan"
             >
               Get Started
               <ArrowRightIcon size={18} color="#ffffff" weight="bold" />
-            </a>
+            </button>
           </div>
         </ScrollReveal>
 
@@ -80,6 +80,7 @@ export const Pricing = () => {
               className="absolute inset-0 w-full h-full object-cover z-0"
               alt="Dark Background"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-black/20 z-0"></div>
 
@@ -106,24 +107,24 @@ export const Pricing = () => {
               <hr className="border-white/20 mb-8" />
 
               <ul className="flex flex-col gap-4 mb-10">
-                {pricingPlans.premium.features.map((text, i) => (
-                  <li key={i} className="flex items-start gap-3">
+                {pricingPlans.premium.features.map((feature) => (
+                  <li key={feature.id} className="flex items-start gap-3">
                     <div className="bg-white/20 rounded-full p-1 mt-0.5 shrink-0 flex items-center justify-center">
                       <CheckIcon size={16} color="#fff" weight="bold" />
                     </div>
-                    <span className="text-white font-medium leading-tight">{text}</span>
+                    <span className="text-white font-medium leading-tight">{feature.text}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <a
-              href="#"
+            <button
               className="relative z-10 w-full bg-black/80 hover:bg-black text-white text-center py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-colors border border-white/20 shadow-xl"
+              aria-label="Get started with Premium Plan"
             >
               Get Started
               <ArrowRightIcon size={18} color="#ffffff" weight="bold" />
-            </a>
+            </button>
           </div>
         </ScrollReveal>
       </div>

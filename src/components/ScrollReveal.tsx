@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m, useReducedMotion, LazyMotion, domAnimation } from "framer-motion";
 import { ReactNode } from "react";
 
 interface ScrollRevealProps {
@@ -9,15 +9,19 @@ interface ScrollRevealProps {
 }
 
 export const ScrollReveal = ({ children, width = "100%" }: ScrollRevealProps) => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      style={{ width }}
-    >
-      {children}
-    </motion.div>
+    <LazyMotion features={domAnimation}>
+      <m.div
+        initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        whileInView={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: "easeOut" }}
+        style={{ width }}
+      >
+        {children}
+      </m.div>
+    </LazyMotion>
   );
 };

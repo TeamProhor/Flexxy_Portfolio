@@ -25,8 +25,8 @@ export const EndResult = () => {
 
       {/* Video Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 w-full">
-        {endResultVideos.map((video, i) => (
-          <ScrollReveal key={i}>
+        {endResultVideos.map((video) => (
+          <ScrollReveal key={video.id}>
             <div
               className={`relative w-full aspect-[4/5] rounded-[32px] overflow-hidden bg-[#1c1c1c] shadow-lg pattern-bg ${video.mt}`}
             >
@@ -38,6 +38,7 @@ export const EndResult = () => {
                 muted
                 playsInline
                 className="w-full h-full object-cover relative z-0"
+                aria-label={`Motion design preview for ${video.title}`}
               ></video>
               <div className="absolute bottom-6 left-6 z-20 flex items-center gap-3">
                 <Image

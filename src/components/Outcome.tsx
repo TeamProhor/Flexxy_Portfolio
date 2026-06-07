@@ -19,6 +19,7 @@ export const Outcome = () => {
               muted
               playsInline
               className="w-full h-full object-cover relative z-0"
+              aria-label="UI animation demonstration in Figma"
             ></video>
 
             <div className="absolute bottom-6 left-6 z-20 flex items-center gap-3">

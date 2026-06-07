@@ -44,6 +44,7 @@ export const Hero = () => {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            sandbox="allow-scripts opacity allow-same-origin allow-popups"
           ></iframe>
         </div>
       </ScrollReveal>

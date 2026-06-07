@@ -32,9 +32,9 @@ export const FAQs = () => {
         <div className="flex flex-col">
           <Accordion type="single" collapsible className="w-full">
             {faqs.left.map((faq, i) => (
-              <ScrollReveal key={i}>
+              <ScrollReveal key={faq.id}>
                 <AccordionItem
-                  value={`left-${i}`}
+                  value={faq.id}
                   className={`${
                     i === 0 ? "border-y-2" : "border-b-2"
                   } border-dashed border-[#e6e6e6] py-3`}
@@ -55,9 +55,9 @@ export const FAQs = () => {
         <div className="flex flex-col mt-4 md:mt-0">
           <Accordion type="single" collapsible className="w-full">
             {faqs.right.map((faq, i) => (
-              <ScrollReveal key={i}>
+              <ScrollReveal key={faq.id}>
                 <AccordionItem
-                  value={`right-${i}`}
+                  value={faq.id}
                   className={`${
                     i === 0 ? "border-b-2 md:border-y-2" : "border-b-2"
                   } border-dashed border-[#e6e6e6] py-3 md:py-3`}
@@ -79,4 +79,5 @@ export const FAQs = () => {
     </section>
   );
 };
+
 

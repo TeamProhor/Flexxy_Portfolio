@@ -8,7 +8,7 @@ export const HowItWorks = () => {
   return (
     <section id="how-it-works" className="flex flex-col gap-12 mt-10 max-w-3xl mx-auto w-full">
       {steps.map((item, i) => (
-        <ScrollReveal key={i}>
+        <ScrollReveal key={item.id}>
           <div className={`relative flex gap-8 ${!item.isLast ? "timeline-line" : ""}`}>
             <div
               className={`relative z-10 w-12 h-12 bg-white border border-gray-300 rounded-full flex-shrink-0 flex items-center justify-center shadow-sm ${

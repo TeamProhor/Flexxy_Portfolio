@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { Outcome } from "@/components/Outcome";
 import { Purpose } from "@/components/Purpose";
@@ -11,14 +12,16 @@ import { FAQs } from "@/components/FAQs";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
 
+export const metadata: Metadata = {
+  title: "Vedita Editz | Master Premium Motion Design",
+  description: "Learn the motion design system behind Apple's premium aesthetic. Join Vedita Editz to level up your UI animation skills.",
+};
+
 export default function Page() {
   return (
     <>
-      {/* Navbar Fake / Dynamic Spacer */}
       <ScrollProgress />
-
-      {/* MAIN CONTAINER */}
-      <main className="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-12 pt-20 pb-32 flex flex-col gap-32 overflow-x-hidden">
+      <main className="flex flex-col gap-32 px-6 md:px-10 max-w-[1400px] mx-auto overflow-x-hidden">
         <Hero />
         <Outcome />
         <Purpose />
