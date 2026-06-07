@@ -14,8 +14,8 @@ export const ScrollReveal = ({ children, width = "100%" }: ScrollRevealProps) =>
   return (
     <LazyMotion features={domAnimation}>
       <m.div
-        initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        whileInView={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: "easeOut" }}
         style={{ width }}

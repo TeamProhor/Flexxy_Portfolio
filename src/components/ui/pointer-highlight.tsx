@@ -14,7 +14,7 @@ export function PointerHighlight({
   pointerClassName?: string;
   containerClassName?: string;
 }) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLSpanElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export function PointerHighlight({
   }, []);
 
   return (
-    <div
+    <span
       className={cn("relative w-fit", containerClassName)}
       ref={containerRef}
     >
@@ -99,7 +99,7 @@ export function PointerHighlight({
           </motion.div>
         </motion.div>
       )}
-    </div>
+    </span>
   );
 }
 

@@ -130,7 +130,7 @@ export const testimonials = [
   },
   {
     id: "testimonial-2",
-    text: "I think it&apos;s a great community for Motion Design, especially UI style animations with great design sense included. Would definitely recommend to others as well as the people are are quite helpful.",
+    text: "I think it's a great community for Motion Design, especially UI style animations with great design sense included. Would definitely recommend to others as well as the people are are quite helpful.",
     author: "Tanay Pandey",
     img: "/image/testimonial-tanay.webp",
     imgPos: "object-top",

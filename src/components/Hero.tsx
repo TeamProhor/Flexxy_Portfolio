@@ -61,9 +61,10 @@ export const Hero = () => {
                 aria-label="Play Video"
               >
                 <Image
-                  src="https://img.youtube.com/vi/88OFD4fWJc4/maxresdefault.jpg"
+                  src="https://img.youtube.com/vi/88OFD4fWJc4/hqdefault.jpg"
                   alt="Video Thumbnail"
                   fill
+                  unoptimized
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   priority

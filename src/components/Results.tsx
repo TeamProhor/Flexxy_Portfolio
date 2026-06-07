@@ -44,7 +44,7 @@ export const Results = () => {
                   />
                 </div>
                 <span className="font-medium text-lg text-black flex items-center gap-1">
-          ...
+                  {t.author}
                   <Image
                     src="/icons/verified.webp"
                     className="w-5 h-5"
