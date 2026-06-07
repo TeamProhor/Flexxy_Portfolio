@@ -1,27 +1,11 @@
+"use client";
+
 import { ScrollReveal } from "./ScrollReveal";
+import Image from "next/image";
+
+import { testimonials } from "@/lib/data";
 
 export const Results = () => {
-  const testimonials = [
-    {
-      text: "If you put into practice the courses teachings and actually apply and complete the modules. All you have to do is post your work and clients will come, the apple-style is super viral and there are hundreds of clients who will pay good money for it. Definetly recommend the course to anyone who wants to learn 👍",
-      author: "Mykel Oritz",
-      img: "https://framerusercontent.com/images/O0uAX5rEdIWiu8QzZQOpgUKIiww.png",
-      imgPos: "",
-    },
-    {
-      text: "I think it&apos;s a great community for Motion Design, especially UI style animations with great design sense included. Would definitely recommend to others as well as the people are are quite helpful.",
-      author: "Tanay Pandey",
-      img: "https://framerusercontent.com/images/b8iqiETIBXAD8CKoHxpdVpPdY.png",
-      imgPos: "object-top",
-    },
-    {
-      text: "I think it’s the best course if you want to improve your motion design skills, put them into real work and get better clients, plus the community really helps you grow and opens your eyes to a lot of things that make you better",
-      author: "joemotions.io",
-      img: "https://framerusercontent.com/images/4a50wzIhlYH8dxbYQjluItztDM.png",
-      imgPos: "",
-    },
-  ];
-
   return (
     <section id="results" className="flex flex-col items-center mt-20">
       <ScrollReveal>
@@ -44,19 +28,23 @@ export const Results = () => {
           <ScrollReveal key={i}>
             <div className="bg-[#F7F7F7] rounded-[24px] p-8 md:p-10 flex flex-col gap-6 shadow-sm">
               <h3 className="text-5xl font-medium text-gray-400 font-serif leading-none">&quot;</h3>
-              <p className="text-lg text-[#1c1c1c] leading-relaxed">{t.text}</p>
+              <p className="text-lg text-[#1c1c1c] leading-relaxed" dangerouslySetInnerHTML={{ __html: t.text }} />
               <div className="flex items-center gap-4 mt-4">
-                <img
+                <Image
                   src={t.img}
+                  width={64}
+                  height={64}
                   className={`w-16 h-16 rounded-full object-cover shadow-lg ${t.imgPos}`}
                   alt={t.author}
                 />
                 <span className="font-medium text-lg text-black flex items-center gap-1">
                   {t.author}{" "}
-                  <img
-                    src="https://framerusercontent.com/images/arcHk4VRD950hQnLVwPvfV4IGA.png"
+                  <Image
+                    src="/icons/verified.webp"
                     className="w-5 h-5"
                     alt="Verified"
+                    width={20}
+                    height={20}
                   />
                 </span>
               </div>

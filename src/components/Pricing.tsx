@@ -1,4 +1,10 @@
+"use client";
+
 import { ScrollReveal } from "./ScrollReveal";
+import { ArrowRightIcon, CheckIcon } from "@phosphor-icons/react";
+import Image from "next/image";
+
+import { pricingPlans } from "@/lib/data";
 
 export const Pricing = () => {
   return (
@@ -26,9 +32,7 @@ export const Pricing = () => {
             <div>
               <div className="flex items-start gap-4 mb-8">
                 <div className="w-16 h-16 bg-black/80 rounded-2xl flex items-center justify-center shadow-lg border border-white/10 shrink-0">
-                  <svg viewBox="0 0 20 20" width="24" height="24" fill="#ffffff">
-                    <path d="M13.477 9.167L9.007 4.697L10.185 3.518L16.667 10L10.185 16.482L9.007 15.303L13.477 10.833L3.334 10.833L3.334 9.167Z"></path>
-                  </svg>
+                  <ArrowRightIcon size={24} color="#ffffff" weight="bold" />
                 </div>
                 <div>
                   <h3 className="text-3xl font-medium text-black">Basic Plan</h3>
@@ -40,30 +44,17 @@ export const Pricing = () => {
               </div>
 
               <div className="flex items-end mb-8">
-                <span className="text-6xl font-medium text-black">$49</span>
-                <span className="text-[#5c5c5c] text-lg mb-2 ml-1">/month</span>
+                <span className="text-6xl font-medium text-black">{pricingPlans.basic.price}</span>
+                <span className="text-[#5c5c5c] text-lg mb-2 ml-1">{pricingPlans.basic.period}</span>
               </div>
 
               <hr className="border-black/10 mb-8" />
 
               <ul className="flex flex-col gap-4 mb-10">
-                {[
-                  "Access to 40+ Video Lessons",
-                  "Private Community Access",
-                  "All projects + SFX Pack",
-                  "Editucation Daily Wheel Spin",
-                  "Widgets Trend Kit",
-                ].map((text, i) => (
+                {pricingPlans.basic.features.map((text, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <div className="bg-black/10 rounded-full p-1">
-                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#000" strokeWidth="2">
-                        <path
-                          d="M 0 5.25 L 3.75 9 L 12.75 0"
-                          transform="translate(6 7.5)"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </svg>
+                    <div className="bg-black/10 rounded-full p-1 flex items-center justify-center">
+                      <CheckIcon size={16} color="#000" weight="bold" />
                     </div>
                     <span className="text-black font-medium">{text}</span>
                   </li>
@@ -76,9 +67,7 @@ export const Pricing = () => {
               className="w-full bg-black/80 hover:bg-black text-white text-center py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-colors border border-white/10"
             >
               Get Started
-              <svg viewBox="0 0 20 20" width="18" height="18" fill="#ffffff">
-                <path d="M13.477 9.167L9.007 4.697L10.185 3.518L16.667 10L10.185 16.482L9.007 15.303L13.477 10.833L3.334 10.833L3.334 9.167Z"></path>
-              </svg>
+              <ArrowRightIcon size={18} color="#ffffff" weight="bold" />
             </a>
           </div>
         </ScrollReveal>
@@ -86,19 +75,18 @@ export const Pricing = () => {
         {/* Premium Plan */}
         <ScrollReveal>
           <div className="relative rounded-[32px] p-10 flex flex-col justify-between overflow-hidden shadow-2xl group h-full">
-            <img
-              src="https://framerusercontent.com/images/qxbEs2He33GhmdQWhbTOQOOEOYw.png"
+            <Image
+              src="/image/pricing-bg.webp"
               className="absolute inset-0 w-full h-full object-cover z-0"
               alt="Dark Background"
+              fill
             />
             <div className="absolute inset-0 bg-black/20 z-0"></div>
 
             <div className="relative z-10">
               <div className="flex items-start gap-4 mb-8">
                 <div className="w-16 h-16 bg-black/80 rounded-2xl flex items-center justify-center shadow-[0_10px_20px_rgba(0,0,0,0.5)] border border-white/10 shrink-0">
-                  <svg viewBox="0 0 20 20" width="24" height="24" fill="#ffffff">
-                    <path d="M13.477 9.167L9.007 4.697L10.185 3.518L16.667 10L10.185 16.482L9.007 15.303L13.477 10.833L3.334 10.833L3.334 9.167Z"></path>
-                  </svg>
+                  <ArrowRightIcon size={24} color="#ffffff" weight="bold" />
                 </div>
                 <div>
                   <h3 className="text-3xl font-medium text-white">Premium Plan</h3>
@@ -111,30 +99,17 @@ export const Pricing = () => {
               </div>
 
               <div className="flex flex-col mb-8">
-                <span className="text-6xl font-medium text-white">$249</span>
-                <span className="text-[#FF2D26] text-2xl font-normal mt-1">Lifetime Access</span>
+                <span className="text-6xl font-medium text-white">{pricingPlans.premium.price}</span>
+                <span className="text-[#FF2D26] text-2xl font-normal mt-1">{pricingPlans.premium.period}</span>
               </div>
 
               <hr className="border-white/20 mb-8" />
 
               <ul className="flex flex-col gap-4 mb-10">
-                {[
-                  "Everything from Basic",
-                  "Deep-dive strategies on building a premium editing brand",
-                  "Client acquisition (how to attract, close & retain clients)",
-                  "Direct help 1v1 when you need help with clients, ideas, inspiration.",
-                  "Widgets Trend Kit",
-                ].map((text, i) => (
+                {pricingPlans.premium.features.map((text, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="bg-white/20 rounded-full p-1 mt-0.5 shrink-0">
-                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" strokeWidth="2">
-                        <path
-                          d="M 0 5.25 L 3.75 9 L 12.75 0"
-                          transform="translate(6 7.5)"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </svg>
+                    <div className="bg-white/20 rounded-full p-1 mt-0.5 shrink-0 flex items-center justify-center">
+                      <CheckIcon size={16} color="#fff" weight="bold" />
                     </div>
                     <span className="text-white font-medium leading-tight">{text}</span>
                   </li>
@@ -147,9 +122,7 @@ export const Pricing = () => {
               className="relative z-10 w-full bg-black/80 hover:bg-black text-white text-center py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-colors border border-white/20 shadow-xl"
             >
               Get Started
-              <svg viewBox="0 0 20 20" width="18" height="18" fill="#ffffff">
-                <path d="M13.477 9.167L9.007 4.697L10.185 3.518L16.667 10L10.185 16.482L9.007 15.303L13.477 10.833L3.334 10.833L3.334 9.167Z"></path>
-              </svg>
+              <ArrowRightIcon size={18} color="#ffffff" weight="bold" />
             </a>
           </div>
         </ScrollReveal>

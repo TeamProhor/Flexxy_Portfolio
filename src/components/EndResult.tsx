@@ -1,33 +1,11 @@
+"use client";
+
 import { ScrollReveal } from "./ScrollReveal";
+import Image from "next/image";
+
+import { endResultVideos } from "@/lib/data";
 
 export const EndResult = () => {
-  const videos = [
-    {
-      src: "https://framerusercontent.com/assets/KlBhhvYD567zQdPcPKmqND4U.mp4",
-      img: "https://framerusercontent.com/images/JLm2rSMcgu0xiQErH96iJCHiCIg.png",
-      title: "Duolingo",
-      mt: "",
-    },
-    {
-      src: "https://framerusercontent.com/assets/ySvG09nTOuS07tHBMRNZejszzs.mp4",
-      img: "https://framerusercontent.com/images/oR86guuzKeGgLoQPShxp3PhAOd8.png",
-      title: "Files",
-      mt: "lg:mt-8",
-    },
-    {
-      src: "https://framerusercontent.com/assets/AhB25AHci65tC7cjM3bBmpGpfw.mp4",
-      img: "https://framerusercontent.com/images/RrIxlQ5xiZ7QVytC1VzCEbR57CI.png",
-      title: "ChatGPT",
-      mt: "",
-    },
-    {
-      src: "https://framerusercontent.com/assets/LnX7wlIL5R7Mp8CR1G4fKjHAOIQ.mp4",
-      img: "https://framerusercontent.com/images/qfUoVSHy4ebtoVGcIIWVOUzXdE.png",
-      title: "Uber",
-      mt: "lg:mt-8",
-    },
-  ];
-
   return (
     <section id="end-result" className="flex flex-col items-center">
       <ScrollReveal>
@@ -47,7 +25,7 @@ export const EndResult = () => {
 
       {/* Video Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 w-full">
-        {videos.map((video, i) => (
+        {endResultVideos.map((video, i) => (
           <ScrollReveal key={i}>
             <div
               className={`relative w-full aspect-[4/5] rounded-[32px] overflow-hidden bg-[#1c1c1c] shadow-lg pattern-bg ${video.mt}`}
@@ -62,17 +40,22 @@ export const EndResult = () => {
                 className="w-full h-full object-cover relative z-0"
               ></video>
               <div className="absolute bottom-6 left-6 z-20 flex items-center gap-3">
-                <img
+                <Image
                   src={video.img}
                   alt={video.title}
+                  width={40}
+                  height={40}
                   className="w-10 h-10 rounded-xl object-cover border border-white/20"
+                  
                 />
                 <span className="text-[#f5f5f5] font-bold text-lg flex items-center gap-1">
                   {video.title}
-                  <img
-                    src="https://framerusercontent.com/images/arcHk4VRD950hQnLVwPvfV4IGA.png"
+                  <Image
+                    src="/icons/verified.webp"
                     className="w-4 h-4"
                     alt="Check"
+                    width={16}
+                    height={16}
                   />
                 </span>
               </div>

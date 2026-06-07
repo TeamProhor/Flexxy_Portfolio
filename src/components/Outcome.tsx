@@ -1,4 +1,7 @@
+"use client";
+
 import { ScrollReveal } from "./ScrollReveal";
+import Image from "next/image";
 
 export const Outcome = () => {
   return (
@@ -19,18 +22,22 @@ export const Outcome = () => {
             ></video>
 
             <div className="absolute bottom-6 left-6 z-20 flex items-center gap-3">
-              <img
-                src="https://framerusercontent.com/images/3IdUTAh1GSwn6llfn1nmO3fREU.png"
+              <Image
+                src="/image/figma-avatar.webp"
                 alt="Profile"
+                width={50}
+                height={50}
                 className="w-[50px] h-[50px] rounded-2xl object-cover shadow-lg border border-white/10"
               />
               <div className="flex flex-col">
                 <span className="text-white font-bold text-xl tracking-tight flex items-center gap-2">
                   Figma
-                  <img
-                    src="https://framerusercontent.com/images/arcHk4VRD950hQnLVwPvfV4IGA.png"
+                  <Image
+                    src="/icons/verified.webp"
                     className="w-5 h-5"
                     alt="Verified"
+                    width={20}
+                    height={20}
                   />
                 </span>
               </div>

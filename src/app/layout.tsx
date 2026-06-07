@@ -18,7 +18,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Editucation - Motion Design System",
+  title: "Vedita Editz - Motion Design System",
   description: "Master the design system behind Apple's motion language",
 };
 
