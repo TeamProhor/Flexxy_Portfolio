@@ -32,15 +32,17 @@ body {
               0 15px 30px -2.5px rgba(250, 95, 180, 0.13);
 }
 
-.timeline-line::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 23px; /* Center of the 48px circle */
-  bottom: 0;
-  width: 2px;
-  background-color: #e5e7eb; /* Tailwind gray-200 */
-  z-index: -1;
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .gradient-text-footer {

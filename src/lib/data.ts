@@ -83,6 +83,7 @@ export const steps = [
       "If you’re starting from zero, this stage gets you oriented fast. You’ll learn how After Effects actually works — interface, layers, compositions, and core tools — without getting lost in features you don’t need yet. By the end, you can move confidently instead of guessing.",
     isLast: false,
     hasBr: false,
+    icon: "Monitor",
   },
   {
     id: "step-2",
@@ -93,6 +94,7 @@ export const steps = [
       "Here’s where your work starts separating from tutorials. You’ll learn the effects, workflows, and techniques used daily in real motion projects — the ones that feel subtle, hard to master, and immediately level up your animations when done right.",
     isLast: false,
     hasBr: true,
+    icon: "BezierCurve",
   },
   {
     id: "step-3",
@@ -103,6 +105,7 @@ export const steps = [
       "This stage focuses on depth and polish. You’ll watch full editing sessions (1–2 hours) where complete animations are built end to end — decisions, mistakes, refinements included. This is where timing, restraint, and confidence come together.",
     isLast: false,
     hasBr: true,
+    icon: "Sparkle",
   },
   {
     id: "step-4",
@@ -113,6 +116,7 @@ export const steps = [
       "Motion alone isn’t enough if no one sees it. You’ll get a clear Instagram strategy: what to post, how to frame your work, and how to grow without chasing trends. Includes a step-by-step breakdown of how I reached 20K — and how to replicate the process.",
     isLast: true,
     hasBr: true,
+    icon: "TrendUp",
   },
 ];
 

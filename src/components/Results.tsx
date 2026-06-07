@@ -3,6 +3,8 @@
 import { ScrollReveal } from "./ScrollReveal";
 import Image from "next/image";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 
 import { testimonials } from "@/lib/data";
 
@@ -11,9 +13,9 @@ export const Results = () => {
     <section id="results" className="flex flex-col items-center mt-20">
       <ScrollReveal>
         <div className="flex flex-col items-center">
-          <span className="bg-[#e6e6e6] text-black px-3 py-1 rounded text-sm font-bold uppercase tracking-wider mb-6 inline-block">
+          <Badge variant="secondary" className="bg-[#e6e6e6] text-black px-3 py-1.5 rounded text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
             Results
-          </span>
+          </Badge>
           <h2 className="text-5xl md:text-6xl font-medium tracking-tight text-black text-center leading-[1.1]">
             Results From Motion Designers Like You
           </h2>
@@ -27,7 +29,7 @@ export const Results = () => {
       <div className="flex flex-col gap-8 mt-16 w-full max-w-4xl">
         {testimonials.map((t) => (
           <ScrollReveal key={t.id}>
-            <div className="bg-[#F7F7F7] rounded-[24px] p-8 md:p-10 flex flex-col gap-6 shadow-sm">
+            <Card className="bg-[#F7F7F7] rounded-[24px] p-8 md:p-10 flex flex-col gap-6 shadow-sm ring-0">
               <h3 className="text-5xl font-medium text-gray-400 font-serif leading-none">&quot;</h3>
               <p className="text-lg text-[#1c1c1c] leading-relaxed">
                 {t.text}
@@ -52,7 +54,7 @@ export const Results = () => {
                   />
                 </span>
               </div>
-            </div>
+            </Card>
           </ScrollReveal>
         ))}
       </div>

@@ -7,22 +7,23 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
 
 import { faqs } from "@/lib/data";
 
 export const FAQs = () => {
   return (
-    <section id="faqs" className="flex flex-col items-center mt-10">
+    <section id="faqs" className="flex flex-col items-center mt-10 px-4 md:px-0">
       <ScrollReveal>
         <div className="flex flex-col items-center">
-          <span className="bg-[#e6e6e6] text-black px-3 py-1 rounded text-sm font-bold uppercase tracking-wider mb-6 inline-block">
+          <Badge variant="secondary" className="bg-[#e6e6e6] text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
             FAQs
-          </span>
-          <h2 className="text-5xl md:text-6xl font-medium tracking-tight text-black text-center leading-[1.1]">
+          </Badge>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-black text-center leading-[1.1]">
             Things You&apos;re Probably Wondering
           </h2>
-          <p className="text-[#6b6b6b] text-lg mt-6 max-w-2xl text-center mb-16">
-            FAQs
+          <p className="text-[#6b6b6b] text-base md:text-lg mt-6 max-w-2xl text-center mb-12 md:mb-16">
+            Everything you need to know about the system.
           </p>
         </div>
       </ScrollReveal>
@@ -39,10 +40,12 @@ export const FAQs = () => {
                     i === 0 ? "border-y-2" : "border-b-2"
                   } border-dashed border-[#e6e6e6] py-3`}
                 >
-                  <AccordionTrigger className="hover:no-underline hover:opacity-70 transition-opacity **:data-[slot=accordion-trigger-icon]:size-6 **:data-[slot=accordion-trigger-icon]:text-black">
-                    <h4 className="text-xl font-medium text-black">{faq.q}</h4>
+                  <AccordionTrigger className="hover:no-underline hover:opacity-70 transition-opacity **:data-[slot=accordion-trigger-icon]:size-5 md:data-[slot=accordion-trigger-icon]:size-6 **:data-[slot=accordion-trigger-icon]:text-black">
+                    <h4 className="text-lg md:text-xl font-medium text-black text-left pr-4">
+                      {faq.q}
+                    </h4>
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#6b6b6b] text-lg leading-relaxed pt-2">
+                  <AccordionContent className="text-[#6b6b6b] text-base md:text-lg leading-relaxed pt-2">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -62,12 +65,12 @@ export const FAQs = () => {
                     i === 0 ? "border-b-2 md:border-y-2" : "border-b-2"
                   } border-dashed border-[#e6e6e6] py-3 md:py-3`}
                 >
-                  <AccordionTrigger className="hover:no-underline hover:opacity-70 transition-opacity **:data-[slot=accordion-trigger-icon]:size-6 **:data-[slot=accordion-trigger-icon]:text-black">
-                    <h4 className="text-xl font-medium text-black pr-4">
+                  <AccordionTrigger className="hover:no-underline hover:opacity-70 transition-opacity **:data-[slot=accordion-trigger-icon]:size-5 md:data-[slot=accordion-trigger-icon]:size-6 **:data-[slot=accordion-trigger-icon]:text-black">
+                    <h4 className="text-lg md:text-xl font-medium text-black text-left pr-4">
                       {faq.q}
                     </h4>
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#6b6b6b] text-lg leading-relaxed pt-2">
+                  <AccordionContent className="text-[#6b6b6b] text-base md:text-lg leading-relaxed pt-2">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
