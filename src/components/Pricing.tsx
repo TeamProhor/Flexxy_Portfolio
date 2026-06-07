@@ -3,6 +3,7 @@
 import { ScrollReveal } from "./ScrollReveal";
 import { ArrowRightIcon, CheckIcon } from "@phosphor-icons/react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 import { pricingPlans } from "@/lib/data";
 
@@ -28,7 +29,7 @@ export const Pricing = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16 w-full max-w-5xl">
         {/* Basic Plan */}
         <ScrollReveal>
-          <div className="bg-[#F0F0F0] rounded-[32px] p-10 flex flex-col justify-between shadow-sm h-full">
+          <div className="bg-[#F0F0F0] rounded-[32px] p-10 flex flex-col justify-between shadow-sm h-full border border-black/5">
             <div>
               <div className="flex items-start gap-4 mb-8">
                 <div className="w-16 h-16 bg-black/80 rounded-2xl flex items-center justify-center shadow-lg border border-white/10 shrink-0">
@@ -62,14 +63,15 @@ export const Pricing = () => {
               </ul>
             </div>
 
-            <button
+            <Button
               type="button"
-              className="w-full bg-black/80 hover:bg-black text-white text-center py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-colors border border-white/10"
+              size="lg"
+              className="w-full bg-black/80 hover:bg-black text-white py-8 rounded-full font-medium flex items-center justify-center gap-2 transition-all border border-white/10 text-lg"
               aria-label="Get started with Basic Plan"
             >
               Get Started
-              <ArrowRightIcon size={18} color="#ffffff" weight="bold" />
-            </button>
+              <ArrowRightIcon size={20} color="#ffffff" weight="bold" />
+            </Button>
           </div>
         </ScrollReveal>
 
@@ -119,14 +121,15 @@ export const Pricing = () => {
               </ul>
             </div>
 
-            <button
+            <Button
               type="button"
-              className="relative z-10 w-full bg-black/80 hover:bg-black text-white text-center py-4 rounded-full font-medium flex items-center justify-center gap-2 transition-colors border border-white/20 shadow-xl"
+              size="lg"
+              className="relative z-10 w-full bg-black/80 hover:bg-black text-white py-8 rounded-full font-medium flex items-center justify-center gap-2 transition-all border border-white/20 shadow-xl text-lg"
               aria-label="Get started with Premium Plan"
             >
               Get Started
-              <ArrowRightIcon size={18} color="#ffffff" weight="bold" />
-            </button>
+              <ArrowRightIcon size={20} color="#ffffff" weight="bold" />
+            </Button>
           </div>
         </ScrollReveal>
       </div>

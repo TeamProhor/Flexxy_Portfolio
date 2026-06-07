@@ -1,6 +1,7 @@
 "use client";
 
 import { ScrollReveal } from "./ScrollReveal";
+import { Button } from "@/components/ui/button";
 
 import { steps } from "@/lib/data";
 
@@ -33,12 +34,12 @@ export const HowItWorks = () => {
                 </span>
               </h2>
               <p className="text-[#6b6b6b] text-lg leading-relaxed">{item.description}</p>
-              <a
-                href="#pricing"
-                className="mt-4 inline-block bg-[#ff0000] text-white font-semibold text-lg px-8 py-3 rounded-full glow-button hover:scale-105 transition-transform duration-300 w-max"
+              <Button
+                asChild
+                className="mt-4 bg-[#ff0000] hover:bg-[#cc0000] text-white font-semibold text-lg px-8 py-6 rounded-full glow-button hover:scale-105 transition-all duration-300 w-max"
               >
-                I&apos;m Ready to Learn the System
-              </a>
+                <a href="#pricing">I&apos;m Ready to Learn the System</a>
+              </Button>
             </div>
           </div>
         </ScrollReveal>

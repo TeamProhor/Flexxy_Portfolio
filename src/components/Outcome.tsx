@@ -2,6 +2,7 @@
 
 import { ScrollReveal } from "./ScrollReveal";
 import Image from "next/image";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export const Outcome = () => {
   return (
@@ -23,13 +24,14 @@ export const Outcome = () => {
             ></video>
 
             <div className="absolute bottom-6 left-6 z-20 flex items-center gap-3">
-              <Image
-                src="/image/figma-avatar.webp"
-                alt="Profile"
-                width={50}
-                height={50}
-                className="w-[50px] h-[50px] rounded-2xl object-cover shadow-lg border border-white/10"
-              />
+              <Avatar className="w-[50px] h-[50px] rounded-2xl border border-white/10 shadow-lg">
+                <AvatarImage
+                  src="/image/figma-avatar.webp"
+                  alt="Figma"
+                  className="object-cover"
+                />
+                <AvatarFallback className="rounded-2xl">F</AvatarFallback>
+              </Avatar>
               <div className="flex flex-col">
                 <span className="text-white font-bold text-xl tracking-tight flex items-center gap-2">
                   Figma

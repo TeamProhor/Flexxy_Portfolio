@@ -2,6 +2,7 @@
 
 import { ScrollReveal } from "./ScrollReveal";
 import { XIcon, CheckIcon } from "@phosphor-icons/react";
+import { Button } from "@/components/ui/button";
 
 import { advantagesData } from "@/lib/data";
 
@@ -68,12 +69,12 @@ export const WhyNow = () => {
 
       <ScrollReveal>
         <div className="flex justify-center mt-16">
-          <a
-            href="#pricing"
-            className="inline-block bg-[#ff0000] text-white font-semibold text-lg px-10 py-4 rounded-full glow-button hover:scale-105 transition-transform duration-300"
+          <Button
+            asChild
+            className="bg-[#ff0000] hover:bg-[#cc0000] text-white font-semibold text-lg px-10 py-7 rounded-full glow-button hover:scale-105 transition-all duration-300"
           >
-            Get Started With Vedita Editz
-          </a>
+            <a href="#pricing">Get Started With Vedita Editz</a>
+          </Button>
         </div>
       </ScrollReveal>
     </section>

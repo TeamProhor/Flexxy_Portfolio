@@ -2,6 +2,8 @@
 
 import { ScrollReveal } from "./ScrollReveal";
 import Image from "next/image";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 
 import { endResultVideos } from "@/lib/data";
 
@@ -41,14 +43,14 @@ export const EndResult = () => {
                 aria-label={`Motion design preview for ${video.title}`}
               ></video>
               <div className="absolute bottom-6 left-6 z-20 flex items-center gap-3">
-                <Image
-                  src={video.img}
-                  alt={video.title}
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 rounded-xl object-cover border border-white/20"
-                  
-                />
+                <Avatar className="w-10 h-10 rounded-xl border border-white/20">
+                  <AvatarImage
+                    src={video.img}
+                    alt={video.title}
+                    className="object-cover"
+                  />
+                  <AvatarFallback className="rounded-xl">{video.title[0]}</AvatarFallback>
+                </Avatar>
                 <span className="text-[#f5f5f5] font-bold text-lg flex items-center gap-1">
                   {video.title}
                   <Image
@@ -67,12 +69,12 @@ export const EndResult = () => {
 
       <ScrollReveal>
         <div className="flex justify-center mt-16">
-          <a
-            href="#pricing"
-            className="inline-block bg-[#ff0000] text-white font-semibold text-lg px-10 py-4 rounded-full glow-button hover:scale-105 transition-transform duration-300"
+          <Button
+            asChild
+            className="bg-[#ff0000] hover:bg-[#cc0000] text-white font-semibold text-lg px-10 py-7 rounded-full glow-button hover:scale-105 transition-all duration-300"
           >
-            I want To Create Work Like This
-          </a>
+            <a href="#pricing">I want To Create Work Like This</a>
+          </Button>
         </div>
       </ScrollReveal>
     </section>

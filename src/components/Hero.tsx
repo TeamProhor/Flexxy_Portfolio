@@ -1,6 +1,7 @@
 "use client";
 
 import { ScrollReveal } from "./ScrollReveal";
+import { Button } from "@/components/ui/button";
 
 export const Hero = () => {
   return (
@@ -28,12 +29,12 @@ export const Hero = () => {
         </p>
 
         {/* CTA Button */}
-        <a
-          href="#pricing"
-          className="mt-10 inline-block bg-[#ff0000] text-white font-semibold text-lg px-10 py-4 rounded-full glow-button hover:scale-105 transition-transform duration-300"
+        <Button
+          asChild
+          className="mt-10 bg-[#ff0000] hover:bg-[#cc0000] text-white font-semibold text-lg px-10 py-7 rounded-full glow-button hover:scale-105 transition-all duration-300"
         >
-          Get Access Now
-        </a>
+          <a href="#pricing">Get Access Now</a>
+        </Button>
 
         {/* Hero Video Embed */}
         <div className="mt-20 w-full aspect-video max-w-5xl mx-auto rounded-[36px] overflow-hidden shadow-2xl relative bg-zinc-100 ring-1 ring-black/5">
