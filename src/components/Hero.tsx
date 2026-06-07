@@ -4,6 +4,7 @@ import { ScrollReveal } from "./ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { PointerHighlight } from "@/components/ui/pointer-highlight";
 
 export const Hero = () => {
   return (
@@ -20,9 +21,16 @@ export const Hero = () => {
         {/* Headline */}
         <h1 className="text-4xl md:text-[72px] leading-[1.05] tracking-tight font-medium text-black max-w-4xl mx-auto">
           Master the design system behind Apple&apos;s{" "}
-          <span className="font-serif-italic text-[#FF4D47] font-normal tracking-normal pr-2">
-            motion language
-          </span>
+          <br />
+          <PointerHighlight
+            rectangleClassName="bg-zinc-100 border-zinc-200"
+            pointerClassName="text-[#FF4D47]"
+            containerClassName="inline-block"
+          >
+            <span className="font-serif-italic text-[#FF4D47] font-normal tracking-normal px-6 relative z-10">
+              motion language
+            </span>
+          </PointerHighlight>
         </h1>
 
         {/* Subtitle */}
