@@ -213,17 +213,19 @@ export const endResultVideos = [
 
 export const advantagesData = {
   disadvantages: [
-    { id: "dis-1", text: "Overly complex animations that feel chaotic, not confident" },
-    { id: "dis-2", text: "Slightly off timing too slow or too bouncy" },
-    { id: "dis-3", text: "Color and typography choices that clash with modern branding" },
-    { id: "dis-4", text: "Random portfolio posts with no strategic direction" },
-    { id: "dis-5", text: "Competing on price because the work doesn't command premium rates" },
+    { id: "dis-1", text: "Always missing deadlines and delaying your content schedule" },
+    { id: "dis-2", text: "Has no clue about scroll-stopping hooks or viewer retention" },
+    { id: "dis-3", text: "Can't assist with scripts, leaving you to do all the creative heavy lifting" },
+    { id: "dis-4", text: "Demands money every single day without actually understanding your business needs" },
+    { id: "dis-5", text: "Inexperienced editors who need constant supervision and direction" },
+    { id: "dis-6", text: "Fails to turn simple footage into anything more than a basic, boring video" },
   ],
   advantages: [
-    { id: "adv-1", text: "Movement that feels expensive because every frame is intentional" },
-    { id: "adv-2", text: "Perfect easing curves that make interfaces feel alive, not robotic" },
-    { id: "adv-3", text: "Design fundamentals baked into every animation (hierarchy, rhythm, contrast)" },
-    { id: "adv-4", text: "A signature aesthetic clients recognize and request specifically" },
-    { id: "adv-5", text: "$5K–$10K project rates because your work looks like you're part of their team" },
+    { id: "adv-1", text: "Always delivers high-quality work on time and keeps your content schedule running smoothly" },
+    { id: "adv-2", text: "Master of scroll-stopping hooks that grab attention and maximize viewer retention" },
+    { id: "adv-3", text: "Proactively helps you with your scripts and creative direction to elevate every video" },
+    { id: "adv-4", text: "Deeply understands your business and your goals instead of just demanding money every day" },
+    { id: "adv-5", text: "Highly experienced editor who takes ownership of projects with minimal supervision" },
+    { id: "adv-6", text: "Expertly turns simple, raw footage into a polished and unforgettable cinematic experience" },
   ],
 };

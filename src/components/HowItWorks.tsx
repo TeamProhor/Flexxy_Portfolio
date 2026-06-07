@@ -104,7 +104,7 @@ export const HowItWorks = () => {
                   <h2 className="text-3xl md:text-[39px] leading-[1.1] text-black">
                     <span className="font-serif-italic font-normal">{item.stage}</span>
                     {item.hasBr ? <br className="hidden md:block" /> : " "}
-                    <span className={`tracking-tight ${i === 0 ? "font-bold text-[#FF5100]" : "font-medium"}`}>
+                    <span className="tracking-tight font-bold text-[#FF5100]">
                       {item.title}
                     </span>
                   </h2>

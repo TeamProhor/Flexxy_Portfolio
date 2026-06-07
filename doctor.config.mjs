@@ -1,9 +1,12 @@
 /** @type {import('react-doctor').Config} */
-export default {
+const config = {
   ignore: {
     // Ignore all shadcn/ui components as they are library code
     files: [
       "src/components/ui/**",
+      "doctor.config.mjs",
     ],
   },
 };
+
+export default config;

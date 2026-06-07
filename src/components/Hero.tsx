@@ -77,11 +77,11 @@ export const Hero = () => {
                 </div>
               </button>
             ) : (
-              <iframe sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"
+              <iframe
+                sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/88OFD4fWJc4?autoplay=1&mute=0&modestbranding=1&rel=0"
                 title="Youtube Video"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 loading="lazy"

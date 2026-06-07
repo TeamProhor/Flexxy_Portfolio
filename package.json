@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "doctor": "npx react-doctor@latest"
+    "doctor": "react-doctor --verbose --yes"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
@@ -40,6 +40,7 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.7",
+    "react-doctor": "^0.4.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

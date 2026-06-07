@@ -24,37 +24,41 @@ export const Results = () => {
         </div>
       </ScrollReveal>
 
-      {/* Testimonials Stack */}
-      <div className="flex flex-col gap-8 mt-16 w-full max-w-4xl">
+      {/* Testimonials Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 w-full max-w-7xl">
         {testimonials.map((t) => (
           <ScrollReveal key={t.id}>
-            <Card className="bg-[#F7F7F7] rounded-[24px] p-8 md:p-10 flex flex-col gap-6 shadow-sm ring-0">
-              <h3 className="text-5xl font-medium text-gray-400 font-serif leading-none">&quot;</h3>
-              <p className="text-lg text-[#1c1c1c] leading-relaxed">
-                {t.text}
-              </p>
-              <div className="flex items-center gap-4 mt-4">
-                <div className="relative size-12 md:size-14 rounded-full overflow-hidden shadow-lg">
-                  <Image
-                    src={t.img}
-                    alt={t.author}
-                    width={80}
-                    height={80}
-                    className={`object-cover w-full h-full ${t.imgPos}`}
-                  />
+            <div className="h-full">
+              <Card className="bg-[#F7F7F7] rounded-[24px] p-6 md:p-8 flex flex-col gap-6 shadow-sm ring-0 h-full">
+                <div className="flex flex-col gap-4 flex-grow">
+                  <h3 className="text-5xl font-medium text-gray-400 font-serif leading-none">&quot;</h3>
+                  <p className="text-base md:text-lg text-[#1c1c1c] leading-relaxed">
+                    {t.text}
+                  </p>
                 </div>
-                <span className="font-medium text-lg text-black flex items-center gap-1">
-                  {t.author}
-                  <Image
-                    src="/icons/verified.webp"
-                    className="w-5 h-5"
-                    alt="Verified"
-                    width={20}
-                    height={20}
-                  />
-                </span>
-              </div>
-            </Card>
+                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200/50">
+                  <div className="relative size-12 rounded-full overflow-hidden shadow-sm">
+                    <Image
+                      src={t.img}
+                      alt={t.author}
+                      width={80}
+                      height={80}
+                      className={`object-cover w-full h-full ${t.imgPos}`}
+                    />
+                  </div>
+                  <span className="font-medium text-base text-black flex items-center gap-1">
+                    {t.author}
+                    <Image
+                      src="/icons/verified.webp"
+                      className="w-4 h-4"
+                      alt="Verified"
+                      width={16}
+                      height={16}
+                    />
+                  </span>
+                </div>
+              </Card>
+            </div>
           </ScrollReveal>
         ))}
       </div>
