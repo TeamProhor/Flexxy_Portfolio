@@ -8,7 +8,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 export const Purpose = () => {
   return (
-    <section id="purpose" className="flex flex-col-reverse md:flex-row gap-12 md:gap-16 items-center px-4 md:px-0">
+    <section id="purpose" className="flex flex-col-reverse md:flex-row gap-12 md:gap-16 items-center">
       {/* Left: Text Content */}
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
         <ScrollReveal>

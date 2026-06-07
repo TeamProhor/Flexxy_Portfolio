@@ -8,7 +8,7 @@ import { PointerHighlight } from "@/components/ui/pointer-highlight";
 
 export const Hero = () => {
   return (
-    <section id="hero" className="flex flex-col items-center text-center mt-12 px-4">
+    <section id="hero" className="flex flex-col items-center text-center mt-10 md:mt-12">
       <ScrollReveal>
         {/* Top Pill */}
         <div className="inline-flex items-center gap-2 px-1 py-1 pr-4 bg-zinc-900 rounded-full mb-8 shadow-sm">
@@ -34,7 +34,7 @@ export const Hero = () => {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-[#6b6b6b] text-base md:text-xl mt-6 max-w-2xl mx-auto px-4 md:px-0">
+        <p className="text-[#6b6b6b] text-base md:text-xl mt-6 max-w-2xl mx-auto">
           The motion design language that separates $500 freelancers from designers who command $10K per project.
         </p>
 

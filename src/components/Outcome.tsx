@@ -9,7 +9,7 @@ import { Card } from "@/components/ui/card";
 
 export const Outcome = () => {
   return (
-    <section id="outcome" className="flex flex-col md:flex-row gap-12 md:gap-16 items-center px-4 md:px-0">
+    <section id="outcome" className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
       {/* Left: Videos */}
       <div className="w-full md:w-1/2 flex flex-col gap-6">
         <ScrollReveal>

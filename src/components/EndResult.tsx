@@ -11,7 +11,7 @@ import { endResultVideos } from "@/lib/data";
 
 export const EndResult = () => {
   return (
-    <section id="end-result" className="flex flex-col items-center px-4 md:px-0">
+    <section id="end-result" className="flex flex-col items-center">
       <ScrollReveal>
         <div className="flex flex-col items-center">
           <Badge variant="secondary" className="bg-[#e6e6e6] text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">

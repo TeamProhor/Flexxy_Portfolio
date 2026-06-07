@@ -54,7 +54,7 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="flex flex-col gap-12 mt-10 max-w-3xl mx-auto w-full relative" ref={containerRef}>
+    <section id="how-it-works" className="flex flex-col gap-12 md:mt-10 max-w-3xl mx-auto w-full relative" ref={containerRef}>
       <LazyMotion features={domAnimation}>
         <div className="absolute left-[20px] md:left-[23px] top-0 bottom-0 w-[2px] bg-gray-100 -z-10" />
         <m.div
