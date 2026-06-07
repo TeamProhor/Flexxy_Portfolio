@@ -1,12 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import { ScrollReveal } from "./ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
+import Image from "next/image";
 
 export const Hero = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <section id="hero" className="flex flex-col items-center text-center mt-10 md:mt-12">
       <ScrollReveal>
@@ -49,15 +53,39 @@ export const Hero = () => {
         {/* Hero Video Embed */}
         <div className="mt-16 md:mt-20 w-full max-w-5xl mx-auto rounded-2xl md:rounded-[36px] overflow-hidden shadow-2xl relative bg-zinc-100 ring-1 ring-black/5">
           <AspectRatio ratio={16 / 9}>
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/88OFD4fWJc4?autoplay=1&mute=1&loop=1&playlist=88OFD4fWJc4&color=white&modestbranding=1&playsinline=1&rel=0"
-              title="Youtube Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              sandbox="allow-scripts allow-popups allow-forms allow-presentation"
-            ></iframe>
+            {!isPlaying ? (
+              <button 
+                type="button"
+                className="absolute inset-0 cursor-pointer group w-full h-full border-none p-0 appearance-none bg-transparent"
+                onClick={() => setIsPlaying(true)}
+                aria-label="Play Video"
+              >
+                <Image
+                  src="https://img.youtube.com/vi/88OFD4fWJc4/maxresdefault.jpg"
+                  alt="Video Thumbnail"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="size-16 md:size-20 bg-white/90 rounded-full flex items-center justify-center shadow-2xl transform transition-transform group-hover:scale-110">
+                    <div className="w-0 h-0 border-y-[10px] md:border-y-[12px] border-y-transparent border-l-[18px] md:border-l-[22px] border-l-black ml-1.5" />
+                  </div>
+                </div>
+              </button>
+            ) : (
+              <iframe sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/88OFD4fWJc4?autoplay=1&mute=0&modestbranding=1&rel=0"
+                title="Youtube Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
+            )}
           </AspectRatio>
         </div>
       </ScrollReveal>

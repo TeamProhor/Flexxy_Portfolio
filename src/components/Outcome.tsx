@@ -2,10 +2,10 @@
 
 import { ScrollReveal } from "./ScrollReveal";
 import Image from "next/image";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
+import { LazyVideo } from "./ui/LazyVideo";
 
 export const Outcome = () => {
   return (
@@ -17,25 +17,22 @@ export const Outcome = () => {
           <div className="relative w-full rounded-2xl md:rounded-[32px] overflow-hidden bg-[#1c1c1c] shadow-2xl pattern-bg group">
             <AspectRatio ratio={4 / 5}>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
-              <video
+              <LazyVideo
                 src="https://framerusercontent.com/assets/g1ZBzF5S0xNUSr65xEIQhuqtmVs.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
                 className="w-full h-full object-cover relative z-0"
-                aria-label="UI animation demonstration in Figma"
-              ></video>
-
+                ariaLabel="UI animation demonstration in Figma"
+              />
+...
               <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-20 flex items-center gap-3">
-                <Avatar className="size-10 md:size-[50px] rounded-xl md:rounded-2xl border border-white/10 shadow-lg">
-                  <AvatarImage
+                <div className="relative size-10 md:size-[50px] rounded-xl md:rounded-2xl border border-white/10 shadow-lg overflow-hidden">
+                  <Image
                     src="/image/figma-avatar.webp"
                     alt="Figma"
-                    className="object-cover"
+                    width={100}
+                    height={100}
+                    className="object-cover w-full h-full"
                   />
-                  <AvatarFallback className="rounded-2xl">F</AvatarFallback>
-                </Avatar>
+                </div>
                 <div className="flex flex-col">
                   <span className="text-white font-bold text-lg md:text-xl tracking-tight flex items-center gap-2">
                     Figma

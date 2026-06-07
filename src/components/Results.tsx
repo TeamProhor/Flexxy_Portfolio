@@ -2,7 +2,6 @@
 
 import { ScrollReveal } from "./ScrollReveal";
 import Image from "next/image";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 
@@ -35,16 +34,17 @@ export const Results = () => {
                 {t.text}
               </p>
               <div className="flex items-center gap-4 mt-4">
-                <Avatar size="lg" className="shadow-lg">
-                  <AvatarImage
+                <div className="relative size-12 md:size-14 rounded-full overflow-hidden shadow-lg">
+                  <Image
                     src={t.img}
-                    className={`object-cover ${t.imgPos}`}
                     alt={t.author}
+                    width={80}
+                    height={80}
+                    className={`object-cover w-full h-full ${t.imgPos}`}
                   />
-                  <AvatarFallback>{t.author[0]}</AvatarFallback>
-                </Avatar>
+                </div>
                 <span className="font-medium text-lg text-black flex items-center gap-1">
-                  {t.author}{" "}
+          ...
                   <Image
                     src="/icons/verified.webp"
                     className="w-5 h-5"

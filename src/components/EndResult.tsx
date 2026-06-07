@@ -2,10 +2,10 @@
 
 import { ScrollReveal } from "./ScrollReveal";
 import Image from "next/image";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { LazyVideo } from "./ui/LazyVideo";
 
 import { endResultVideos } from "@/lib/data";
 
@@ -36,24 +36,21 @@ export const EndResult = () => {
             >
               <AspectRatio ratio={4 / 5}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10 opacity-60"></div>
-                <video
+                <LazyVideo
                   src={video.src}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
                   className="w-full h-full object-cover relative z-0"
-                  aria-label={`Motion design preview for ${video.title}`}
-                ></video>
+                  ariaLabel={`Motion design preview for ${video.title}`}
+                />
                 <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-20 flex items-center gap-3">
-                  <Avatar className="size-8 md:size-10 rounded-lg md:rounded-xl border border-white/20">
-                    <AvatarImage
+                  <div className="relative size-8 md:size-10 rounded-lg md:rounded-xl border border-white/20 overflow-hidden">
+                    <Image
                       src={video.img}
                       alt={video.title}
-                      className="object-cover"
+                      width={80}
+                      height={80}
+                      className="object-cover w-full h-full"
                     />
-                    <AvatarFallback className="rounded-xl">{video.title[0]}</AvatarFallback>
-                  </Avatar>
+                  </div>
                   <span className="text-[#f5f5f5] font-bold text-base md:text-lg flex items-center gap-1">
                     {video.title}
                     <Image
