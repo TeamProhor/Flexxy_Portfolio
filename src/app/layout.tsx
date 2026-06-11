@@ -24,8 +24,8 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Vedita Editz - Motion Design System",
-  description: "Master the design system behind Apple's motion language",
+  title: "Alex Reed | Premium Video Editor",
+  description: "Crafting cinematic stories and premium motion design for top brands.",
 };
 
 export default function RootLayout({
