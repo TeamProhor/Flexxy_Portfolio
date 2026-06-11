@@ -75,7 +75,7 @@ export const Outcome = () => {
               <span className="text-gray-500 font-medium whitespace-nowrap text-sm md:text-base">1.9k profile clicks</span>
             </Card>
             <Card className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex flex-row items-center justify-center md:justify-start gap-3 ring-0">
-              <div className="w-2 h-2 bg-pink-400 rounded-full shrink-0"></div>
+              <div className="w-2 h-2 bg-[#FF4D47] rounded-full shrink-0"></div>
               <span className="text-gray-500 font-medium whitespace-nowrap text-sm md:text-base">200k+ views</span>
             </Card>
           </div>

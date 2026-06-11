@@ -11,6 +11,13 @@
 
 body {
   font-family: var(--font-inter), sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: rgba(255, 0, 0, 0.12);
+  color: inherit;
 }
 
 .font-serif-italic {
@@ -28,8 +35,8 @@ body {
 }
 
 .glow-button {
-  box-shadow: inset 0 0 20px 1.64px rgba(255, 255, 255, 0.4), 
-              0 15px 30px -2.5px rgba(250, 95, 180, 0.13);
+  box-shadow: inset 0 0 20px 1.64px rgba(255, 255, 255, 0.4),
+              0 15px 30px -2.5px rgba(255, 50, 50, 0.2);
 }
 
 .animate-spin-slow {

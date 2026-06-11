@@ -19,7 +19,7 @@ import { pricingPlans } from "@/lib/data";
 
 export const Pricing = () => {
   return (
-    <section id="pricing" className="flex flex-col items-center md:mt-10">
+    <section id="pricing" className="flex flex-col items-center">
       <ScrollReveal>
         <div className="flex flex-col items-center">
           <Badge variant="secondary" className="bg-[#e6e6e6] text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">

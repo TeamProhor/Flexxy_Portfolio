@@ -9,7 +9,7 @@ import { testimonials } from "@/lib/data";
 
 export const Results = () => {
   return (
-    <section id="results" className="flex flex-col items-center md:mt-20">
+    <section id="results" className="flex flex-col items-center">
       <ScrollReveal>
         <div className="flex flex-col items-center">
           <Badge variant="secondary" className="bg-[#e6e6e6] text-black px-3 py-1.5 rounded text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">

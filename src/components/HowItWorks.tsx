@@ -60,9 +60,9 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="flex flex-col mt-20 md:mt-32 max-w-4xl mx-auto w-full px-6 md:px-0">
+    <section id="how-it-works" className="flex flex-col max-w-4xl mx-auto w-full px-6 md:px-0">
       <div className="text-center mb-16 md:mb-24">
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-black">
+        <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-black">
           How do we actually <br />
           <span className="text-[#FF5100] font-serif-italic font-normal">edit your videos?</span>
         </h2>
