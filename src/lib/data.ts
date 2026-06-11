@@ -94,28 +94,28 @@ export const steps = [
 export const endResultVideos = [
   {
     id: "video-duolingo",
-    src: "https://framerusercontent.com/assets/KlBhhvYD567zQdPcPKmqND4U.mp4",
+    src: "/videos/01.mp4",
     img: "/image/video-duolingo.webp",
     title: "Duolingo",
     mt: "",
   },
   {
     id: "video-files",
-    src: "https://framerusercontent.com/assets/ySvG09nTOuS07tHBMRNZejszzs.mp4",
+    src: "/videos/02.mp4",
     img: "/image/video-files.webp",
     title: "Files",
     mt: "lg:mt-8",
   },
   {
     id: "video-chatgpt",
-    src: "https://framerusercontent.com/assets/AhB25AHci65tC7cjM3bBmpGpfw.mp4",
+    src: "/videos/03.mp4",
     img: "/image/video-chatgpt.webp",
     title: "ChatGPT",
     mt: "",
   },
   {
     id: "video-uber",
-    src: "https://framerusercontent.com/assets/LnX7wlIL5R7Mp8CR1G4fKjHAOIQ.mp4",
+    src: "/videos/04.mp4",
     img: "/image/video-uber.webp",
     title: "Uber",
     mt: "lg:mt-8",
@@ -150,7 +150,7 @@ export const allProjects = [
     role: "Lead Editor",
     year: "2024",
     description: "A high-octane global launch campaign requiring split-second precision and seamless speed-ramps to capture the sheer power and elegance of the new M-Series.",
-    src: "https://framerusercontent.com/assets/g1ZBzF5S0xNUSr65xEIQhuqtmVs.mp4",
+    src: "/videos/05.mp4",
     colSpan: "md:col-span-2",
   },
   {
@@ -161,7 +161,7 @@ export const allProjects = [
     role: "Motion Designer",
     year: "2023",
     description: "Minimalist, rhythm-driven editing that highlights the pristine design and capability of the device, matching every cut to the bespoke sound design.",
-    src: "https://framerusercontent.com/assets/RHvEyqdnPvDAB5Vew1I6LccWE.mp4",
+    src: "/videos/01.mp4",
     colSpan: "md:col-span-1",
   },
   {
@@ -172,7 +172,7 @@ export const allProjects = [
     role: "Editor & Colorist",
     year: "2024",
     description: "An emotional, raw documentary-style anthem piece focusing on grit and perseverance, featuring dynamic transitions and a highly cinematic grade.",
-    src: "https://framerusercontent.com/assets/g1ZBzF5S0xNUSr65xEIQhuqtmVs.mp4",
+    src: "/videos/02.mp4",
     colSpan: "md:col-span-1",
   },
   {
@@ -183,7 +183,7 @@ export const allProjects = [
     role: "Lead Editor",
     year: "2023",
     description: "A breathtaking visual journey that required thousands of hours of raw footage to be distilled into a compelling 20-minute narrative.",
-    src: "https://framerusercontent.com/assets/RHvEyqdnPvDAB5Vew1I6LccWE.mp4",
+    src: "/videos/03.mp4",
     colSpan: "md:col-span-2",
   },
   {
@@ -194,7 +194,7 @@ export const allProjects = [
     role: "Video Editor",
     year: "2024",
     description: "A fast-paced, highly engaging commercial optimized for vertical social feeds, featuring bold typography and kinetic motion design.",
-    src: "https://framerusercontent.com/assets/g1ZBzF5S0xNUSr65xEIQhuqtmVs.mp4",
+    src: "/videos/04.mp4",
     colSpan: "md:col-span-3",
   }
 ];
