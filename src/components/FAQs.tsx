@@ -20,7 +20,11 @@ export const FAQs = () => {
             FAQs
           </Badge>
           <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
-            Things You&apos;re Probably Wondering
+            Things You&apos;re Probably
+            <br />
+            <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+              Wondering
+            </span>
           </h2>
           <p className="text-zinc-500 text-base md:text-lg mt-6 max-w-2xl text-center mb-12 md:mb-16">
             Everything you need to know about the system.

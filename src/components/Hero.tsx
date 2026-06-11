@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import Image from "next/image";
+import { Demo as Loader } from "@/components/Loader";
 
 export const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -76,15 +77,11 @@ export const Hero = () => {
           Premium video editing and post-production that elevates your brand and turns viewers into paying customers.
         </m.p>
 
-        {/* CTA */}
-        <m.div {...fadeUp(0.30)}>
-          <Button
-            asChild
-            className="mt-10 bg-gradient-to-br from-rose-500 to-red-600 hover:from-rose-600 hover:to-red-700 text-white font-semibold text-base md:text-lg px-8 md:px-10 py-6 md:py-7 rounded-full glow-button btn-shimmer hover:scale-[1.04] active:scale-[0.97] transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)]"
-          >
-            <a href="#work">View Featured Work</a>
-          </Button>
+        {/* Loader */}
+        <m.div {...fadeUp(0.30)} className="mt-10 flex justify-center w-full">
+          <Loader />
         </m.div>
+
 
         {/* Hero video */}
         <m.div {...fadeUp(0.44)} className="mt-16 md:mt-20 w-full max-w-5xl mx-auto">

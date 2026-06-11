@@ -58,9 +58,12 @@ export const Outcome = () => {
           <Badge variant="secondary" className="bg-zinc-100/80 backdrop-blur-md border border-zinc-200/50 shadow-sm text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
             Outcome
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-medium tracking-tighter text-black leading-[1.1]">
-            Motion Work That Actually{" "}
-            <span className="font-serif-italic text-gradient-primary font-normal">Stops the Scroll.</span>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center md:text-left leading-[1.1]">
+            Motion Work That Actually
+            <br />
+            <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+              Stops the Scroll.
+            </span>
           </h2>
           <p className="text-zinc-500 text-base md:text-lg mt-6 leading-relaxed">
             Your brand deserves video content that looks like an Apple product launch. From dynamic commercials to cinematic documentaries, I deliver high-end post-production that captures attention and drives results. It&apos;s not just editing — it&apos;s crafting a visual experience.

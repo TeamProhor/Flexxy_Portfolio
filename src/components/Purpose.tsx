@@ -15,9 +15,12 @@ export const Purpose = () => {
           <Badge variant="secondary" className="bg-zinc-100/80 backdrop-blur-md border border-zinc-200/50 shadow-sm text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
             Purpose
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-medium tracking-tighter text-black leading-[1.1]">
-            Video Edits That Make Your Audience <br className="hidden md:block" />
-            <span className="font-serif-italic text-gradient-primary font-normal">Choose You First</span>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center md:text-left leading-[1.1]">
+            Video Edits That Make Your Audience
+            <br />
+            <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+              Choose You First
+            </span>
           </h2>
           <p className="text-zinc-500 text-base md:text-lg mt-6 leading-relaxed">
             I partner with ambitious brands and creators to produce videos that command premium attention. Clean cuts, intentional motion, and flawless pacing.

@@ -16,9 +16,12 @@ export const Contact = () => {
             Available for Booking
           </Badge>
           
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-white leading-[1.1] max-w-2xl">
-            Let&apos;s create something <br className="hidden md:block" />
-            <span className="font-serif-italic text-gradient-primary font-normal">extraordinary.</span>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-white text-center leading-[1.1] max-w-2xl">
+            Let&apos;s create something
+            <br />
+            <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+              extraordinary.
+            </span>
           </h2>
           
           <p className="text-zinc-400 text-lg mt-6 max-w-xl mx-auto leading-relaxed">

@@ -62,9 +62,12 @@ export const HowItWorks = () => {
   return (
     <section id="how-it-works" className="flex flex-col max-w-4xl mx-auto w-full px-6 md:px-0">
       <div className="text-center mb-16 md:mb-24">
-        <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black">
-          My Post-Production <br />
-          <span className="text-gradient-primary font-serif-italic font-normal">Process</span>
+        <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
+          My Post-Production
+          <br />
+          <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+            Process
+          </span>
         </h2>
       </div>
 

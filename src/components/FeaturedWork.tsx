@@ -15,8 +15,12 @@ export const FeaturedWork = () => {
           <Badge variant="secondary" className="bg-zinc-100/80 backdrop-blur-md border border-zinc-200/50 shadow-sm text-black px-3 py-1.5 rounded text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
             Selected Projects
           </Badge>
-          <h2 className="text-5xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
-            Featured Work
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
+            Featured
+            <br />
+            <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+              Work
+            </span>
           </h2>
           <p className="text-zinc-500 text-lg mt-6 max-w-2xl text-center">
             A curated selection of my best commercial and documentary edits.

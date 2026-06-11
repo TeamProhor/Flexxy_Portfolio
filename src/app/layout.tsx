@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Instrument_Serif, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { MobileBottomNav } from "@/components/MobileBottomNav";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="en" className={cn("scroll-smooth", "font-sans", geist.variable)}>
       <body className={`${inter.variable} ${instrumentSerif.variable} antialiased`}>
         {children}
+        <MobileBottomNav />
       </body>
     </html>
   );
