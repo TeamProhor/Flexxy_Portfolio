@@ -62,9 +62,9 @@ export const HowItWorks = () => {
   return (
     <section id="how-it-works" className="flex flex-col max-w-4xl mx-auto w-full px-6 md:px-0">
       <div className="text-center mb-16 md:mb-24">
-        <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-black">
-          How do we actually <br />
-          <span className="text-[#FF5100] font-serif-italic font-normal">edit your videos?</span>
+        <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black">
+          My Post-Production <br />
+          <span className="text-gradient-primary font-serif-italic font-normal">Process</span>
         </h2>
       </div>
 
@@ -104,11 +104,11 @@ export const HowItWorks = () => {
                   <h2 className="text-3xl md:text-[39px] leading-[1.1] text-black">
                     <span className="font-serif-italic font-normal">{item.stage}</span>
                     {item.hasBr ? <br className="hidden md:block" /> : " "}
-                    <span className="tracking-tight font-bold text-[#FF5100]">
+                    <span className="tracking-tighter font-bold text-gradient-primary">
                       {item.title}
                     </span>
                   </h2>
-                  <p className="text-[#6b6b6b] text-base md:text-lg leading-relaxed whitespace-pre-line">{item.description}</p>
+                  <p className="text-zinc-500 text-base md:text-lg leading-relaxed whitespace-pre-line">{item.description}</p>
                 </div>
               </m.div>
             );

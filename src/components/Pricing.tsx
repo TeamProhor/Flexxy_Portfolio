@@ -22,15 +22,15 @@ export const Pricing = () => {
     <section id="pricing" className="flex flex-col items-center">
       <ScrollReveal>
         <div className="flex flex-col items-center">
-          <Badge variant="secondary" className="bg-[#e6e6e6] text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
+          <Badge variant="secondary" className="bg-zinc-100/80 backdrop-blur-md border border-zinc-200/50 shadow-sm text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
             Pricing
           </Badge>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-black text-center leading-[1.1]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
             Price It Once. <br />
             <span className="font-serif-italic text-black/40 font-normal">Use It for Years.</span>
           </h2>
-          <p className="text-[#6b6b6b] text-base md:text-lg mt-6 max-w-2xl text-center">
-            Most designers never learn why some motion commands higher rates. You will and you’ll apply it immediately.
+          <p className="text-zinc-500 text-base md:text-lg mt-6 max-w-2xl text-center">
+            Most designers never learn why some motion commands higher rates. You will and you&apos;ll apply it immediately.
           </p>
         </div>
       </ScrollReveal>
@@ -39,7 +39,7 @@ export const Pricing = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 md:mt-16 w-full max-w-5xl">
         {/* Basic Plan */}
         <ScrollReveal>
-          <Card className="bg-[#F0F0F0] rounded-[32px] border border-black/5 ring-0 shadow-sm flex flex-col h-full overflow-hidden">
+          <Card className="bg-zinc-50 rounded-3xl border border-black/5 ring-0 shadow-sm flex flex-col h-full overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:-translate-y-1.5 hover:shadow-xl">
             <CardHeader className="p-6 md:p-10 pb-4 md:pb-6">
               <div className="flex items-start gap-4 mb-6">
                 <div className="size-12 md:size-16 bg-black/80 rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg border border-white/10 shrink-0">
@@ -49,14 +49,14 @@ export const Pricing = () => {
                   <CardTitle className="text-2xl md:text-3xl font-medium text-black">
                     Basic Plan
                   </CardTitle>
-                  <CardDescription className="text-[#5c5c5c] text-sm leading-relaxed max-w-[280px]">
+                  <CardDescription className="text-zinc-500 text-sm leading-relaxed max-w-[280px]">
                     The essentials of the Apple motion language to start charging more.
                   </CardDescription>
                 </div>
               </div>
               <div className="flex items-end gap-1">
-                <span className="text-5xl md:text-6xl font-medium text-black tracking-tight">{pricingPlans.basic.price}</span>
-                <span className="text-[#5c5c5c] text-base md:text-lg font-medium pb-1 md:pb-2">{pricingPlans.basic.period}</span>
+                <span className="text-5xl md:text-6xl font-medium text-black tracking-tighter">{pricingPlans.basic.price}</span>
+                <span className="text-zinc-500 text-base md:text-lg font-medium pb-1 md:pb-2">{pricingPlans.basic.period}</span>
               </div>
             </CardHeader>
 
@@ -77,7 +77,7 @@ export const Pricing = () => {
             <CardFooter className="p-6 md:p-10 pt-0 border-t-0 bg-transparent">
               <Button
                 type="button"
-                className="w-full bg-black/80 hover:bg-black text-white py-6 md:py-8 rounded-full font-medium flex items-center justify-center gap-2 transition-all border border-white/10 text-base md:text-lg"
+                className="w-full bg-black/80 hover:bg-black text-white py-6 md:py-8 rounded-full font-medium flex items-center justify-center gap-2 transition-all border border-white/10 text-base md:text-lg btn-shimmer"
               >
                 Get Started
                 <ArrowRightIcon className="size-4 md:size-5" color="#ffffff" weight="bold" />
@@ -87,8 +87,8 @@ export const Pricing = () => {
         </ScrollReveal>
 
         {/* Premium Plan */}
-        <ScrollReveal>
-          <Card className="relative rounded-[32px] border-0 ring-0 shadow-2xl flex flex-col h-full overflow-hidden group">
+        <ScrollReveal delay={0.12}>
+          <Card className="relative rounded-3xl border-0 ring-0 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col h-full overflow-hidden group transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:-translate-y-1.5 hover:shadow-[0_40px_80px_rgba(0,0,0,0.35)]">
             {/* Background Image */}
             <Image
               src="/image/pricing-bg.webp"
@@ -116,8 +116,8 @@ export const Pricing = () => {
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-5xl md:text-6xl font-medium text-white tracking-tight">{pricingPlans.premium.price}</span>
-                  <span className="text-[#FF2D26] text-xl md:text-2xl font-bold mt-1 tracking-tight">{pricingPlans.premium.period}</span>
+                  <span className="text-5xl md:text-6xl font-medium text-white tracking-tighter">{pricingPlans.premium.price}</span>
+                  <span className="text-rose-500 text-xl md:text-2xl font-bold mt-1 tracking-tighter">{pricingPlans.premium.period}</span>
                 </div>
               </CardHeader>
 
@@ -138,7 +138,7 @@ export const Pricing = () => {
               <CardFooter className="p-6 md:p-10 pt-0 border-t-0 bg-transparent">
                 <Button
                   type="button"
-                  className="w-full bg-[#FF1F1F] hover:bg-red-700 text-white py-6 md:py-8 rounded-full font-bold flex items-center justify-center gap-2 transition-all border border-white/20 shadow-xl text-base md:text-lg glow-button"
+                  className="w-full bg-rose-600 hover:bg-red-700 text-white py-6 md:py-8 rounded-full font-bold flex items-center justify-center gap-2 transition-all border border-white/20 shadow-xl text-base md:text-lg glow-button btn-shimmer"
                 >
                   Get Started
                   <ArrowRightIcon className="size-4 md:size-5" color="#ffffff" weight="bold" />

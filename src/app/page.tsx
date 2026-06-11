@@ -4,10 +4,8 @@ import { Outcome } from "@/components/Outcome";
 import { Purpose } from "@/components/Purpose";
 import { WhyNow } from "@/components/WhyNow";
 import { EndResult } from "@/components/EndResult";
-import { Modules } from "@/components/Modules";
 import { HowItWorks } from "@/components/HowItWorks";
-import { Results } from "@/components/Results";
-import { Pricing } from "@/components/Pricing";
+import { FeaturedWork } from "@/components/FeaturedWork";
 import { FAQs } from "@/components/FAQs";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
@@ -27,10 +25,8 @@ export default function Page() {
         <Purpose />
         <WhyNow />
         <EndResult />
-        <Modules />
+        <FeaturedWork />
         <HowItWorks />
-        <Results />
-        <Pricing />
         <FAQs />
       </main>
 

@@ -16,16 +16,16 @@ export const Modules = () => {
     <section id="modules" className="flex flex-col items-center">
       <ScrollReveal>
         <div className="flex flex-col items-center">
-          <Badge variant="secondary" className="bg-[#e6e6e6] text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
+          <Badge variant="secondary" className="bg-zinc-100/80 backdrop-blur-md border border-zinc-200/50 shadow-sm text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
             Modules
           </Badge>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-black text-center leading-[1.1]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
             The Complete Vedita Editz <br className="hidden md:block" />
             <span className="font-serif-italic text-black/40 font-normal">
               Motion Design System
             </span>
           </h2>
-          <p className="text-[#6b6b6b] text-base md:text-lg mt-6 max-w-2xl text-center">
+          <p className="text-zinc-500 text-base md:text-lg mt-6 max-w-2xl text-center">
             The difference between motion designers who charge $500 and those
             who charge $7K isn&apos;t talent. It&apos;s understanding what moves
             feel intentional instead of accidental. You&apos;re about to learn
@@ -51,7 +51,7 @@ export const Modules = () => {
                       {module.title}
                     </h4>
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#6b6b6b] text-base md:text-lg leading-relaxed pt-2">
+                  <AccordionContent className="text-zinc-500 text-base md:text-lg leading-relaxed pt-2">
                     {module.content}
                   </AccordionContent>
                 </AccordionItem>
@@ -76,7 +76,7 @@ export const Modules = () => {
                       {module.title}
                     </h4>
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#6b6b6b] text-base md:text-lg leading-relaxed pt-2">
+                  <AccordionContent className="text-zinc-500 text-base md:text-lg leading-relaxed pt-2">
                     {module.content}
                   </AccordionContent>
                 </AccordionItem>

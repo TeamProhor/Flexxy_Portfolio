@@ -16,13 +16,13 @@ export const FAQs = () => {
     <section id="faqs" className="flex flex-col items-center">
       <ScrollReveal>
         <div className="flex flex-col items-center">
-          <Badge variant="secondary" className="bg-[#e6e6e6] text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
+          <Badge variant="secondary" className="bg-zinc-100/80 backdrop-blur-md border border-zinc-200/50 shadow-sm text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
             FAQs
           </Badge>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-black text-center leading-[1.1]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
             Things You&apos;re Probably Wondering
           </h2>
-          <p className="text-[#6b6b6b] text-base md:text-lg mt-6 max-w-2xl text-center mb-12 md:mb-16">
+          <p className="text-zinc-500 text-base md:text-lg mt-6 max-w-2xl text-center mb-12 md:mb-16">
             Everything you need to know about the system.
           </p>
         </div>
@@ -45,7 +45,7 @@ export const FAQs = () => {
                       {faq.q}
                     </h4>
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#6b6b6b] text-base md:text-lg leading-relaxed pt-2">
+                  <AccordionContent className="text-zinc-500 text-base md:text-lg leading-relaxed pt-2">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -70,7 +70,7 @@ export const FAQs = () => {
                       {faq.q}
                     </h4>
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#6b6b6b] text-base md:text-lg leading-relaxed pt-2">
+                  <AccordionContent className="text-zinc-500 text-base md:text-lg leading-relaxed pt-2">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>

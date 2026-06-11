@@ -6,18 +6,23 @@ import { ReactNode } from "react";
 interface ScrollRevealProps {
   children: ReactNode;
   width?: "fit-content" | "100%";
+  delay?: number;
 }
 
-export const ScrollReveal = ({ children, width = "100%" }: ScrollRevealProps) => {
+export const ScrollReveal = ({ children, width = "100%", delay = 0 }: ScrollRevealProps) => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
     <LazyMotion features={domAnimation}>
       <m.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 28 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-5% 0px" }}
+        transition={
+          shouldReduceMotion
+            ? { duration: 0 }
+            : { type: "spring", damping: 28, stiffness: 90, delay }
+        }
         style={{ width }}
       >
         {children}
