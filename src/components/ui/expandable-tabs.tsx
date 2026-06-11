@@ -1,7 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { useOnClickOutside } from "usehooks-ts";
 import { cn } from "@/lib/utils";
 import { Icon } from "@phosphor-icons/react";
@@ -27,27 +28,6 @@ interface ExpandableTabsProps {
   onChange?: (index: number | null) => void;
 }
 
-const buttonVariants = {
-  initial: {
-    gap: 0,
-    paddingLeft: ".5rem",
-    paddingRight: ".5rem",
-  },
-  animate: (isSelected: boolean) => ({
-    gap: isSelected ? ".5rem" : 0,
-    paddingLeft: isSelected ? "1rem" : ".5rem",
-    paddingRight: isSelected ? "1rem" : ".5rem",
-  }),
-};
-
-const spanVariants = {
-  initial: { width: 0, opacity: 0 },
-  animate: { width: "auto", opacity: 1 },
-  exit: { width: 0, opacity: 0 },
-};
-
-const transition = { delay: 0.1, type: "spring", bounce: 0, duration: 0.6 };
-
 export function ExpandableTabs({
   tabs,
   className,
@@ -55,9 +35,10 @@ export function ExpandableTabs({
   onChange,
 }: ExpandableTabsProps) {
   const [selected, setSelected] = React.useState<number | null>(null);
-  const outsideClickRef = React.useRef(null);
+  const outsideClickRef = React.useRef<HTMLDivElement>(null);
+  const containerRef = React.useRef<HTMLDivElement>(null);
 
-  useOnClickOutside(outsideClickRef, () => {
+  useOnClickOutside(outsideClickRef as React.RefObject<HTMLElement>, () => {
     setSelected(null);
     onChange?.(null);
   });
@@ -71,54 +52,80 @@ export function ExpandableTabs({
     <div className="mx-1 h-[24px] w-[1.2px] bg-border" aria-hidden="true" />
   );
 
-  return (
-    <div
-      ref={outsideClickRef}
-      className={cn(
-        "flex flex-wrap items-center gap-2 rounded-2xl border bg-background p-1 shadow-sm",
-        className
-      )}
-    >
-      {tabs.map((tab, index) => {
-        if (tab.type === "separator") {
-          return <Separator key={`separator-${index}`} />;
-        }
+  useGSAP(() => {
+    if (!containerRef.current) return;
+    
+    tabs.forEach((tab, index) => {
+      if (tab.type === "separator") return;
+      
+      const isSelected = selected === index;
+      
+      gsap.to(`.tab-btn-${index}`, {
+        gap: isSelected ? "0.5rem" : "0px",
+        paddingLeft: isSelected ? "1rem" : "0.5rem",
+        paddingRight: isSelected ? "1rem" : "0.5rem",
+        duration: 0.4,
+        ease: "power2.out",
+      });
 
-        const Icon = tab.icon;
-        return (
-          <motion.button
-            key={tab.title}
-            variants={buttonVariants}
-            initial={false}
-            animate="animate"
-            custom={selected === index}
-            onClick={() => handleSelect(index)}
-            transition={transition}
-            className={cn(
-              "relative flex items-center rounded-xl px-4 py-2 text-sm font-medium transition-colors duration-300",
-              selected === index
-                ? cn("bg-muted", activeColor)
-                : "text-muted-foreground hover:bg-muted hover:text-foreground"
-            )}
-          >
-            <Icon size={20} />
-            <AnimatePresence initial={false}>
-              {selected === index && (
-                <motion.span
-                  variants={spanVariants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  transition={transition}
-                  className="overflow-hidden"
-                >
-                  {tab.title}
-                </motion.span>
+      const span = document.querySelector(`.tab-span-${index}`) as HTMLElement;
+      if (span) {
+        if (isSelected) {
+          gsap.to(span, {
+            width: "auto",
+            opacity: 1,
+            duration: 0.4,
+            ease: "power2.out",
+          });
+        } else {
+          gsap.to(span, {
+            width: 0,
+            opacity: 0,
+            duration: 0.4,
+            ease: "power2.out",
+          });
+        }
+      }
+    });
+  }, { dependencies: [selected, tabs], scope: containerRef });
+
+  return (
+    <div ref={outsideClickRef} className="w-fit">
+      <div
+        ref={containerRef}
+        className={cn(
+          "flex flex-wrap items-center gap-2 rounded-2xl border bg-background p-1 shadow-sm",
+          className
+        )}
+      >
+        {tabs.map((tab, index) => {
+          if (tab.type === "separator") {
+            return <Separator key={`separator-${index}`} />;
+          }
+
+          const Icon = tab.icon;
+          return (
+            <button
+              key={tab.title}
+              onClick={() => handleSelect(index)}
+              className={cn(
+                `tab-btn-${index} relative flex items-center rounded-xl px-2 py-2 text-sm font-medium transition-colors duration-300`,
+                selected === index
+                  ? cn("bg-muted", activeColor)
+                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
               )}
-            </AnimatePresence>
-          </motion.button>
-        );
-      })}
+            >
+              <Icon size={20} />
+              <span
+                className={`tab-span-${index} overflow-hidden whitespace-nowrap inline-block`}
+                style={{ width: 0, opacity: 0 }}
+              >
+                {tab.title}
+              </span>
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }

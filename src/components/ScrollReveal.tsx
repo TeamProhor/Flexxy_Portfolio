@@ -1,7 +1,13 @@
 "use client";
 
-import { m, useReducedMotion, LazyMotion, domAnimation } from "framer-motion";
-import { ReactNode } from "react";
+import { useRef, ReactNode } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -11,24 +17,43 @@ interface ScrollRevealProps {
 }
 
 export const ScrollReveal = ({ children, width = "100%", delay = 0, className }: ScrollRevealProps) => {
-  const shouldReduceMotion = useReducedMotion();
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!containerRef.current) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      gsap.set(containerRef.current, { opacity: 1, y: 0 });
+      return;
+    }
+
+    gsap.fromTo(
+      containerRef.current,
+      { opacity: 0, y: 28 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        delay: delay,
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 95%",
+          toggleActions: "play none none none",
+        }
+      }
+    );
+  }, { scope: containerRef });
 
   return (
-    <LazyMotion features={domAnimation}>
-      <m.div
-        className={className}
-        initial={{ opacity: 0, y: 28 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-5% 0px" }}
-        transition={
-          shouldReduceMotion
-            ? { duration: 0 }
-            : { type: "spring", damping: 28, stiffness: 90, delay }
-        }
-        style={{ width }}
-      >
-        {children}
-      </m.div>
-    </LazyMotion>
+    <div
+      ref={containerRef}
+      className={className}
+      style={{ width, opacity: 0 }}
+    >
+      {children}
+    </div>
   );
 };
