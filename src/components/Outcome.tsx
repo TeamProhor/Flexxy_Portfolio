@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
 import { LazyVideo } from "./ui/LazyVideo";
+import { outcomeStats } from "@/lib/data";
 
 export const Outcome = () => {
   return (
@@ -67,14 +68,12 @@ export const Outcome = () => {
 
           {/* Stats floating cards */}
           <div className="flex flex-col sm:flex-row gap-4 mt-10 w-full md:w-auto">
-            <Card className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex flex-row items-center justify-center md:justify-start gap-3 ring-0 transition-all duration-200 hover:shadow-md hover:border-gray-300">
-              <div className="w-2 h-2 bg-gray-400 rounded-full shrink-0"></div>
-              <span className="text-gray-500 font-medium whitespace-nowrap text-sm md:text-base">10M+ Views Delivered</span>
-            </Card>
-            <Card className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex flex-row items-center justify-center md:justify-start gap-3 ring-0 transition-all duration-200 hover:shadow-md hover:border-gray-300">
-              <div className="w-2 h-2 bg-rose-500 rounded-full shrink-0"></div>
-              <span className="text-gray-500 font-medium whitespace-nowrap text-sm md:text-base">Award-Winning Edits</span>
-            </Card>
+            {outcomeStats.map((stat) => (
+              <Card key={stat.id} className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex flex-row items-center justify-center md:justify-start gap-3 ring-0 transition-all duration-200 hover:shadow-md hover:border-gray-300">
+                <div className={`w-2 h-2 ${stat.color} rounded-full shrink-0`}></div>
+                <span className="text-gray-500 font-medium whitespace-nowrap text-sm md:text-base">{stat.label}</span>
+              </Card>
+            ))}
           </div>
         </ScrollReveal>
       </div>

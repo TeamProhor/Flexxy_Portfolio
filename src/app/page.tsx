@@ -7,12 +7,13 @@ import { EndResult } from "@/components/EndResult";
 import { HowItWorks } from "@/components/HowItWorks";
 import { FeaturedWork } from "@/components/FeaturedWork";
 import { FAQs } from "@/components/FAQs";
+import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
-  title: "Vedita Editz | Master Premium Motion Design",
-  description: "Learn the motion design system behind Apple's premium aesthetic. Join Vedita Editz to level up your UI animation skills.",
+  title: "Alex Reed | Premium Video Editor",
+  description: "Crafting cinematic stories and premium motion design for top brands.",
 };
 
 export default function Page() {
@@ -28,6 +29,7 @@ export default function Page() {
         <FeaturedWork />
         <HowItWorks />
         <FAQs />
+        <Contact />
       </main>
 
       <Footer />

@@ -1,6 +1,7 @@
 "use client";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
+import Link from "next/link";
 
 export const ProjectDetails = ({ role, year, description }: { role: string, year: string, description: string }) => {
   return (
@@ -27,12 +28,12 @@ export const ProjectDetails = ({ role, year, description }: { role: string, year
       </ScrollReveal>
       
       <ScrollReveal delay={0.2} className="mt-24 flex justify-center">
-        <a 
+        <Link 
           href="/works" 
           className="bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-zinc-800 transition-colors"
         >
           View All Works
-        </a>
+        </Link>
       </ScrollReveal>
     </section>
   );

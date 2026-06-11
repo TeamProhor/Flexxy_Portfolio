@@ -5,26 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { LazyVideo } from "./ui/LazyVideo";
 
-const projects = [
-  {
-    id: 1,
-    title: "Global Campaign",
-    client: "BMW",
-    src: "https://framerusercontent.com/assets/g1ZBzF5S0xNUSr65xEIQhuqtmVs.mp4"
-  },
-  {
-    id: 2,
-    title: "Product Launch",
-    client: "Apple",
-    src: "https://framerusercontent.com/assets/RHvEyqdnPvDAB5Vew1I6LccWE.mp4"
-  },
-  {
-    id: 3,
-    title: "Brand Anthem",
-    client: "Nike",
-    src: "https://framerusercontent.com/assets/g1ZBzF5S0xNUSr65xEIQhuqtmVs.mp4"
-  }
-];
+import { allProjects } from "@/lib/data";
 
 export const FeaturedWork = () => {
   return (
@@ -44,7 +25,7 @@ export const FeaturedWork = () => {
       </ScrollReveal>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 w-full max-w-7xl">
-        {projects.map((p, index) => (
+        {allProjects.slice(0, 3).map((p, index) => (
           <ScrollReveal key={p.id} delay={index * 0.1}>
             <div className="flex flex-col gap-4 group">
               <div className="relative w-full rounded-[24px] overflow-hidden bg-zinc-900 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lg">

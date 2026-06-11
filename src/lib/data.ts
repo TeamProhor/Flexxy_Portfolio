@@ -35,43 +35,6 @@ export const faqs = {
   ],
 };
 
-export const modules = {
-  left: [
-    {
-      id: "module-1",
-      title: "Module 1: Foundation",
-      content:
-        "Master the interface and the core principles of premium motion design.",
-    },
-    {
-      id: "module-3",
-      title: "Module 3: From Reference to Final Export",
-      content: "Learn the workflow of taking a concept to a finished product.",
-    },
-    {
-      id: "module-5",
-      title: "Module 5: Positioning & Getting Hired",
-      content: "How to frame your work to attract high-paying clients.",
-    },
-  ],
-  right: [
-    {
-      id: "module-2",
-      title: "Module 2: UI Animation That Actually Works",
-      content: "Deep dive into easing, timing, and interface interactions.",
-    },
-    {
-      id: "module-4",
-      title: "Module 4: Developing Your Signature Style",
-      content: "Find the look that makes clients seek you out specifically.",
-    },
-    {
-      id: "module-bonus",
-      title: "Bonus: Advanced Techniques Vault",
-      content: "Secret workflows and advanced After Effects tricks.",
-    },
-  ],
-};
 
 export const steps = [
   {
@@ -126,54 +89,7 @@ export const steps = [
   },
 ];
 
-export const testimonials = [
-  {
-    id: "testimonial-1",
-    text: "If you put into practice the courses teachings and actually apply and complete the modules. All you have to do is post your work and clients will come, the apple-style is super viral and there are hundreds of clients who will pay good money for it. Definetly recommend the course to anyone who wants to learn 👍",
-    author: "Mykel Oritz",
-    img: "/image/testimonial-mykel.webp",
-    imgPos: "",
-  },
-  {
-    id: "testimonial-2",
-    text: "I think it's a great community for Motion Design, especially UI style animations with great design sense included. Would definitely recommend to others as well as the people are are quite helpful.",
-    author: "Tanay Pandey",
-    img: "/image/testimonial-tanay.webp",
-    imgPos: "object-top",
-  },
-  {
-    id: "testimonial-3",
-    text: "I think it’s the best course if you want to improve your motion design skills, put them into real work and get better clients, plus the community really helps you grow and opens your eyes to a lot of things that make you better",
-    author: "joemotions.io",
-    img: "/image/testimonial-joe.webp",
-    imgPos: "",
-  },
-];
 
-export const pricingPlans = {
-  basic: {
-    price: "$49",
-    period: "/month",
-    features: [
-      { id: "f1", text: "Access to 40+ Video Lessons" },
-      { id: "f2", text: "Private Community Access" },
-      { id: "f3", text: "All projects + SFX Pack" },
-      { id: "f4", text: "Vedita Editz Daily Bonus" },
-      { id: "f5", text: "Widgets Trend Kit" },
-    ],
-  },
-  premium: {
-    price: "$249",
-    period: "Lifetime Access",
-    features: [
-      { id: "p1", text: "Everything from Basic" },
-      { id: "p2", text: "Deep-dive strategies on building a premium editing brand" },
-      { id: "p3", text: "Client acquisition (how to attract, close & retain clients)" },
-      { id: "p4", text: "Direct help 1v1 when you need help with clients, ideas, inspiration." },
-      { id: "p5", text: "Widgets Trend Kit" },
-    ],
-  },
-};
 
 export const endResultVideos = [
   {
@@ -281,4 +197,38 @@ export const allProjects = [
     src: "https://framerusercontent.com/assets/g1ZBzF5S0xNUSr65xEIQhuqtmVs.mp4",
     colSpan: "md:col-span-3",
   }
+];
+
+export const socialLinks = [
+  { id: "social-1", label: "Instagram", href: "#" },
+  { id: "social-2", label: "X / Twitter", href: "#" },
+  { id: "social-3", label: "LinkedIn", href: "#" },
+];
+
+export const capabilities = [
+  {
+    id: "cap-1",
+    title: "Editorial",
+    description: "Commercials, Documentaries, Social Campaigns, Brand Anthems.",
+  },
+  {
+    id: "cap-2",
+    title: "Motion Design",
+    description: "Kinetic Typography, UI Animation, Seamless Transitions, Title Sequences.",
+  },
+  {
+    id: "cap-3",
+    title: "Color & Sound",
+    description: "Cinematic Color Grading, Sound Design, Audio Mixing, Foley.",
+  },
+  {
+    id: "cap-4",
+    title: "Software",
+    description: "Premiere Pro, After Effects, DaVinci Resolve, Figma.",
+  },
+];
+
+export const outcomeStats = [
+  { id: "stat-1", label: "10M+ Views Delivered", color: "bg-gray-400" },
+  { id: "stat-2", label: "Award-Winning Edits", color: "bg-rose-500" },
 ];

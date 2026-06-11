@@ -22,7 +22,7 @@ export const EndResult = () => {
             <span className="font-serif-italic text-gradient-primary font-normal">Elevate The Brand</span>
           </h2>
           <p className="text-zinc-500 text-lg mt-6 max-w-2xl mx-auto">
-            It's not just about cuts; it's about pacing, motion, and visual flow.
+            It&apos;s not just about cuts; it&apos;s about pacing, motion, and visual flow.
           </p>
         </div>
       </ScrollReveal>
