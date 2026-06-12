@@ -2,7 +2,6 @@
 
 import { ScrollReveal } from "./ScrollReveal";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { LazyVideo } from "./ui/LazyVideo";
 
@@ -12,17 +11,14 @@ export const Purpose = () => {
       {/* Left: Text Content */}
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
         <ScrollReveal>
-          <Badge variant="secondary" className="bg-zinc-100/80 backdrop-blur-md border border-zinc-200/50 shadow-sm text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
-            Purpose
-          </Badge>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center md:text-left leading-[1.1]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center md:text-left leading-[1.1] [text-wrap:balance]">
             Video Edits That Make Your Audience
             <br />
-            <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+            <span className="font-serif-italic text-rose-500 font-normal">
               Choose You First
             </span>
           </h2>
-          <p className="text-zinc-500 text-base md:text-lg mt-6 leading-relaxed">
+          <p className="text-zinc-500 text-base md:text-lg mt-6 leading-relaxed [text-wrap:pretty]">
             I partner with ambitious brands and creators to produce videos that command premium attention. Clean cuts, intentional motion, and flawless pacing.
           </p>
         </ScrollReveal>
@@ -31,7 +27,7 @@ export const Purpose = () => {
       {/* Right: Video */}
       <div className="w-full md:w-1/2">
         <ScrollReveal delay={0.12}>
-          <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden bg-zinc-900 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.1)] pattern-bg">
+          <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden bg-zinc-900 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.1)]">
             <AspectRatio ratio={4 / 5}>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
               <LazyVideo

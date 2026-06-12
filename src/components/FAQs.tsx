@@ -7,8 +7,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
-
 import { faqs } from "@/lib/data";
 
 export const FAQs = () => {
@@ -16,17 +14,14 @@ export const FAQs = () => {
     <section id="faqs" className="flex flex-col items-center">
       <ScrollReveal>
         <div className="flex flex-col items-center">
-          <Badge variant="secondary" className="bg-zinc-100/80 backdrop-blur-md border border-zinc-200/50 shadow-sm text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
-            FAQs
-          </Badge>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1] [text-wrap:balance]">
             Things You&apos;re Probably
             <br />
-            <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+            <span className="font-serif-italic text-rose-500 font-normal">
               Wondering
             </span>
           </h2>
-          <p className="text-zinc-500 text-base md:text-lg mt-6 max-w-2xl text-center mb-12 md:mb-16">
+          <p className="text-zinc-500 text-base md:text-lg mt-6 max-w-2xl text-center mb-12 md:mb-16 [text-wrap:pretty]">
             Everything you need to know about the system.
           </p>
         </div>

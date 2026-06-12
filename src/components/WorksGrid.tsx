@@ -1,18 +1,58 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LazyVideo } from "@/components/ui/LazyVideo";
-import { ScrollReveal } from "@/components/ScrollReveal";
 import { allProjects } from "@/lib/data";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 export const WorksGrid = () => {
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!gridRef.current) return;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const items = gsap.utils.toArray<HTMLElement>(".works-grid-item");
+
+    if (prefersReducedMotion) {
+      gsap.set(items, { opacity: 1, y: 0, scale: 1 });
+      return;
+    }
+
+    items.forEach((el, i) => {
+      gsap.fromTo(el,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.9,
+          ease: "power4.out",
+          delay: i * 0.1,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 92%",
+            toggleActions: "play none none none",
+          }
+        }
+      );
+    });
+  }, { scope: gridRef });
+
   return (
     <section className="w-full max-w-7xl mx-auto px-6 pb-32">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 auto-rows-[300px] md:auto-rows-[400px]">
-        {allProjects.map((p, index) => (
-          <ScrollReveal key={p.id} delay={index * 0.1} className={`h-full w-full ${p.colSpan}`}>
+      <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 auto-rows-[300px] md:auto-rows-[400px]">
+        {allProjects.map((p) => (
+          <div key={p.id} className={`works-grid-item h-full w-full ${p.colSpan}`} style={{ opacity: 0 }}>
             <Link href={`/works/${p.slug}`} className="flex flex-col gap-4 group h-full w-full block">
-              <div className="relative w-full h-full rounded-[24px] overflow-hidden bg-zinc-900 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lg">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-zinc-900 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lg">
                 <LazyVideo
                   src={p.src}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -26,7 +66,7 @@ export const WorksGrid = () => {
                 </div>
               </div>
             </Link>
-          </ScrollReveal>
+          </div>
         ))}
       </div>
     </section>

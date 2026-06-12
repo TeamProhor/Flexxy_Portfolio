@@ -1,10 +1,11 @@
 "use client";
 
 import { ScrollReveal } from "./ScrollReveal";
-import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { LazyVideo } from "./ui/LazyVideo";
 
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { allProjects } from "@/lib/data";
 
 export const FeaturedWork = () => {
@@ -12,13 +13,10 @@ export const FeaturedWork = () => {
     <section id="work" className="flex flex-col items-center mt-20">
       <ScrollReveal>
         <div className="flex flex-col items-center">
-          <Badge variant="secondary" className="bg-zinc-100/80 backdrop-blur-md border border-zinc-200/50 shadow-sm text-black px-3 py-1.5 rounded text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
-            Selected Projects
-          </Badge>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1] [text-wrap:balance]">
             Featured
             <br />
-            <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+            <span className="font-serif-italic text-rose-500 font-normal">
               Work
             </span>
           </h2>
@@ -30,9 +28,9 @@ export const FeaturedWork = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 w-full max-w-7xl">
         {allProjects.slice(0, 3).map((p, index) => (
-          <ScrollReveal key={p.id} delay={index * 0.1}>
+          <ScrollReveal key={p.id} delay={index * 0.1} variant="scale">
             <div className="flex flex-col gap-4 group">
-              <div className="relative w-full rounded-[24px] overflow-hidden bg-zinc-900 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lg">
+              <div className="relative w-full rounded-2xl overflow-hidden bg-zinc-900 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lg">
                 <AspectRatio ratio={4 / 5}>
                   <LazyVideo
                     src={p.src}
@@ -50,6 +48,18 @@ export const FeaturedWork = () => {
           </ScrollReveal>
         ))}
       </div>
+
+      <ScrollReveal>
+        <div className="flex justify-center mt-12 md:mt-16">
+          <Button
+            asChild
+            variant="outline"
+            className="border-zinc-200 hover:bg-zinc-50 text-black font-semibold text-base px-8 py-6 rounded-full transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+          >
+            <Link href="/works">View All Works</Link>
+          </Button>
+        </div>
+      </ScrollReveal>
     </section>
   );
 };

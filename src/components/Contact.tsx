@@ -8,7 +8,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="w-full max-w-5xl mx-auto py-10 md:py-20">
       <ScrollReveal>
-        <div className="bg-[#171717] rounded-[32px] md:rounded-[48px] p-10 md:p-20 flex flex-col items-center text-center shadow-2xl relative overflow-hidden">
+        <div className="bg-[#171717] rounded-2xl md:rounded-3xl p-10 md:p-20 flex flex-col items-center text-center shadow-2xl relative overflow-hidden">
           
           <div className="absolute inset-0 bg-gradient-to-b from-rose-500/10 to-transparent pointer-events-none" />
 
@@ -19,12 +19,12 @@ export const Contact = () => {
           <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-white text-center leading-[1.1] max-w-2xl">
             Let&apos;s create something
             <br />
-            <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+            <span className="font-serif-italic text-rose-500 font-normal">
               extraordinary.
             </span>
           </h2>
           
-          <p className="text-zinc-400 text-lg mt-6 max-w-xl mx-auto leading-relaxed">
+          <p className="text-zinc-400 text-lg mt-6 max-w-xl mx-auto leading-relaxed [text-wrap:pretty]">
             I&apos;m currently taking on new projects for Q3. Whether you need a high-end commercial, a cinematic documentary, or a scroll-stopping social campaign, let&apos;s talk.
           </p>
 

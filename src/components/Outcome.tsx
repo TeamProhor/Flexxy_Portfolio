@@ -2,7 +2,6 @@
 
 import { ScrollReveal } from "./ScrollReveal";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
 import { LazyVideo } from "./ui/LazyVideo";
@@ -15,7 +14,7 @@ export const Outcome = () => {
       <div className="w-full md:w-1/2 flex flex-col gap-6">
         <ScrollReveal>
           {/* Figma Video Card */}
-          <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden bg-zinc-900 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.1)] pattern-bg group">
+          <div className="relative w-full rounded-2xl md:rounded-3xl overflow-hidden bg-zinc-900 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.1)] group">
             <AspectRatio ratio={4 / 5}>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
               <LazyVideo
@@ -55,17 +54,14 @@ export const Outcome = () => {
       {/* Right: Text Content */}
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
         <ScrollReveal delay={0.12}>
-          <Badge variant="secondary" className="bg-zinc-100/80 backdrop-blur-md border border-zinc-200/50 shadow-sm text-black px-3 py-1.5 rounded text-[10px] md:text-sm font-bold uppercase tracking-wider mb-6 inline-block h-auto">
-            Outcome
-          </Badge>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center md:text-left leading-[1.1]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center md:text-left leading-[1.1] [text-wrap:balance]">
             Motion Work That Actually
             <br />
-            <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+            <span className="font-serif-italic text-rose-500 font-normal">
               Stops the Scroll.
             </span>
           </h2>
-          <p className="text-zinc-500 text-base md:text-lg mt-6 leading-relaxed">
+          <p className="text-zinc-500 text-base md:text-lg mt-6 leading-relaxed [text-wrap:pretty]">
             Your brand deserves video content that looks like an Apple product launch. From dynamic commercials to cinematic documentaries, I deliver high-end post-production that captures attention and drives results. It&apos;s not just editing — it&apos;s crafting a visual experience.
           </p>
 

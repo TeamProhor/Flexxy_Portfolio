@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Spinner } from "@phosphor-icons/react";
+import { ScrollReveal } from "./ScrollReveal";
 
 import { steps } from "@/lib/data";
 
@@ -31,12 +32,13 @@ export const HowItWorks = () => {
       return;
     }
 
+    // Progress line scrub
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
         start: "top 80%",
         end: "bottom 20%",
-        scrub: true,
+        scrub: 1.2,
       }
     });
 
@@ -46,6 +48,7 @@ export const HowItWorks = () => {
       duration: 1
     }, 0);
 
+    // Step icon animations scrubbed to scroll
     steps.forEach((_, i) => {
       const start = i * 0.2;
       
@@ -84,10 +87,11 @@ export const HowItWorks = () => {
       }, start);
     });
 
+    // Step items: staggered entrance
     const stepElements = gsap.utils.toArray<HTMLElement>('.step-item');
     stepElements.forEach((el, i) => {
       gsap.fromTo(el, 
-        { opacity: 0, y: 20 },
+        { opacity: 0, y: 32 },
         {
           scrollTrigger: {
             trigger: el,
@@ -96,8 +100,9 @@ export const HowItWorks = () => {
           },
           opacity: 1,
           y: 0,
-          duration: 0.6,
-          delay: i * 0.1
+          duration: 0.8,
+          ease: "power4.out",
+          delay: i * 0.08
         }
       );
     });
@@ -106,15 +111,20 @@ export const HowItWorks = () => {
 
   return (
     <section id="how-it-works" className="flex flex-col max-w-4xl mx-auto w-full px-6 md:px-0">
-      <div className="text-center mb-16 md:mb-24">
-        <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
-          My Post-Production
-          <br />
-          <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
-            Process
-          </span>
-        </h2>
-      </div>
+      <ScrollReveal>
+        <div className="text-center mb-16 md:mb-24">
+          <h2
+            className="text-4xl md:text-6xl font-medium tracking-tight text-black text-center leading-[1.1]"
+            style={{ letterSpacing: "-0.03em", textWrap: "balance" }}
+          >
+            My Post-Production
+            <br />
+            <span className="font-serif-italic text-rose-500 font-normal">
+              Process
+            </span>
+          </h2>
+        </div>
+      </ScrollReveal>
 
       <div className="relative flex flex-col gap-12" ref={containerRef}>
         <div className="absolute left-[20px] md:left-[23px] top-0 bottom-0 w-[2px] bg-gray-100 -z-10" />
@@ -128,7 +138,7 @@ export const HowItWorks = () => {
             <div 
               key={item.id} 
               className="step-item relative flex gap-4 md:gap-8 group"
-              style={{ opacity: 0, transform: "translateY(20px)" }}
+              style={{ opacity: 0, transform: "translateY(32px)" }}
             >
               <div className="relative z-10 w-10 h-10 md:w-12 md:h-12 bg-white border border-gray-300 rounded-full flex-shrink-0 flex items-center justify-center shadow-sm overflow-hidden">
                 <div className={`step-icon-container-${i} flex items-center justify-center text-gray-400`}>
@@ -147,11 +157,13 @@ export const HowItWorks = () => {
                 <h2 className="text-3xl md:text-[39px] leading-[1.1] text-black">
                   <span className="font-serif-italic font-normal">{item.stage}</span>
                   {item.hasBr ? <br className="hidden md:block" /> : " "}
-                  <span className="tracking-tighter font-bold text-gradient-primary">
+                  <span className="tracking-tight font-bold text-rose-500">
                     {item.title}
                   </span>
                 </h2>
-                <p className="text-zinc-500 text-base md:text-lg leading-relaxed whitespace-pre-line">{item.description}</p>
+                <p className="text-zinc-500 text-base md:text-lg leading-relaxed whitespace-pre-line" style={{ textWrap: "pretty" }}>
+                  {item.description}
+                </p>
               </div>
             </div>
           );

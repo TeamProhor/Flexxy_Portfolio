@@ -81,13 +81,13 @@ const Logos3 = ({
   return (
     <section className="w-full">
       <div className="container flex flex-col items-center text-center">
-        <h1 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]">
+        <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]" style={{ textWrap: "balance" }}>
           Trusted by these
           <br />
-          <span className="font-serif-italic text-gradient-primary font-normal underline decoration-2 underline-offset-8">
+          <span className="font-serif-italic text-rose-500 font-normal">
             companies
           </span>
-        </h1>
+        </h2>
       </div>
       <div className="pt-10 md:pt-16 lg:pt-20">
         <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">

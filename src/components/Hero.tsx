@@ -3,35 +3,91 @@
 import { useState, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Badge } from "@/components/ui/badge";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import Image from "next/image";
 import { Demo as Loader } from "@/components/Loader";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 export const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const containerRef = useRef<HTMLElement>(null);
-  
+
   useGSAP(() => {
+    if (!containerRef.current) return;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
+
     if (prefersReducedMotion) {
-      gsap.set(".hero-anim", { opacity: 1, y: 0 });
+      gsap.set(".hero-pill, .hero-headline, .hero-accent, .hero-sub, .hero-loader, .hero-video", {
+        opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", filter: "blur(0px)",
+      });
       return;
     }
 
-    gsap.fromTo(
-      ".hero-anim",
-      { opacity: 0, y: 28 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.1,
-      }
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+    // 1. Pill badge — fade up from slight blur
+    tl.fromTo(".hero-pill",
+      { opacity: 0, y: 20, filter: "blur(8px)" },
+      { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8 },
+      0.2
     );
+
+    // 2. Headline line 1 — clip-path wipe from bottom
+    tl.fromTo(".hero-headline",
+      { opacity: 0, y: 30, clipPath: "inset(100% 0% 0% 0%)" },
+      { opacity: 1, y: 0, clipPath: "inset(0% 0% 0% 0%)", duration: 1 },
+      0.35
+    );
+
+    // 3. Accented text — slightly later, with a scale pop
+    tl.fromTo(".hero-accent",
+      { opacity: 0, y: 24, scale: 0.96 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.9 },
+      0.55
+    );
+
+    // 4. Subtitle — clean fade up
+    tl.fromTo(".hero-sub",
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 0.8 },
+      0.7
+    );
+
+    // 5. Loader widget
+    tl.fromTo(".hero-loader",
+      { opacity: 0, y: 16 },
+      { opacity: 1, y: 0, duration: 0.7 },
+      0.85
+    );
+
+    // 6. Video container — scale up with shadow bloom
+    tl.fromTo(".hero-video",
+      { opacity: 0, y: 60, scale: 0.94 },
+      { opacity: 1, y: 0, scale: 1, duration: 1.2, ease: "power3.out" },
+      0.95
+    );
+
+    // Parallax: video container moves subtly on scroll
+    const videoEl = containerRef.current.querySelector(".hero-video");
+    if (videoEl) {
+      gsap.to(videoEl, {
+        y: 80,
+        ease: "none",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }
+
   }, { scope: containerRef });
 
   return (
@@ -48,7 +104,8 @@ export const Hero = () => {
 
       {/* Top pill */}
       <div
-        className="hero-anim inline-flex items-center gap-2 px-1 py-1 pr-4 bg-zinc-900 rounded-full mb-8 shadow-sm opacity-0"
+        className="hero-pill inline-flex items-center gap-2 px-1 py-1 pr-4 bg-zinc-900 rounded-full mb-8 shadow-sm"
+        style={{ opacity: 0 }}
       >
         <Badge className="bg-black text-white text-[10px] md:text-xs font-medium px-3 py-1.5 rounded-full border border-zinc-700 h-auto">
           Available for booking
@@ -57,17 +114,17 @@ export const Hero = () => {
       </div>
 
       {/* Headline */}
-      <h1
-        className="hero-anim text-4xl md:text-[72px] leading-[1.05] tracking-tighter font-medium text-black max-w-4xl mx-auto opacity-0"
-      >
-        Crafting Cinematic Stories.
+      <h1 className="text-4xl md:text-[72px] leading-[1.05] tracking-tight font-medium text-black max-w-4xl mx-auto" style={{ letterSpacing: "-0.03em" }}>
+        <span className="hero-headline inline-block" style={{ opacity: 0 }}>
+          Crafting Cinematic Stories.
+        </span>
         <br />
         <PointerHighlight
           rectangleClassName="bg-zinc-100 border-zinc-200"
-          pointerClassName="text-gradient-primary"
+          pointerClassName="text-rose-500"
           containerClassName="inline-block"
         >
-          <span className="font-serif-italic text-gradient-primary font-normal tracking-normal px-6 relative z-10">
+          <span className="hero-accent font-serif-italic text-rose-500 font-normal tracking-normal px-6 relative z-10 inline-block" style={{ opacity: 0 }}>
             Premium Editor
           </span>
         </PointerHighlight>
@@ -75,19 +132,20 @@ export const Hero = () => {
 
       {/* Subtitle */}
       <p
-        className="hero-anim text-zinc-500 text-base md:text-xl mt-6 max-w-2xl mx-auto opacity-0"
+        className="hero-sub text-zinc-500 text-base md:text-xl mt-6 max-w-2xl mx-auto"
+        style={{ opacity: 0, textWrap: "pretty" }}
       >
         Premium video editing and post-production that elevates your brand and turns viewers into paying customers.
       </p>
 
       {/* Loader */}
-      <div className="hero-anim mt-10 flex justify-center w-full opacity-0">
+      <div className="hero-loader mt-10 flex justify-center w-full" style={{ opacity: 0 }}>
         <Loader />
       </div>
 
       {/* Hero video */}
-      <div className="hero-anim mt-16 md:mt-20 w-full max-w-5xl mx-auto opacity-0">
-        <div className="rounded-2xl md:rounded-[36px] overflow-hidden shadow-[0_24px_60px_-15px_rgba(0,0,0,0.1)] relative bg-zinc-100 border border-zinc-200/50 shadow-sm transition-shadow duration-500 hover:shadow-[0_32px_80px_rgba(0,0,0,0.14)]">
+      <div className="hero-video mt-16 md:mt-20 w-full max-w-5xl mx-auto" style={{ opacity: 0 }}>
+        <div className="rounded-2xl md:rounded-[28px] overflow-hidden shadow-[0_24px_60px_-15px_rgba(0,0,0,0.12)] relative bg-zinc-100 border border-zinc-200/50 transition-shadow duration-500 hover:shadow-[0_32px_80px_rgba(0,0,0,0.16)]">
           <AspectRatio ratio={16 / 9}>
             {!isPlaying ? (
               <button
@@ -107,7 +165,7 @@ export const Hero = () => {
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition-colors duration-400" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="size-16 md:size-20 bg-white/90 rounded-full flex items-center justify-center shadow-[0_24px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-110 group-hover:bg-white group-hover:shadow-[0_10px_40px_rgba(0,0,0,0.22)]">
+                  <div className="size-16 md:size-20 bg-white/90 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-110 group-hover:bg-white group-hover:shadow-[0_10px_40px_rgba(0,0,0,0.22)]">
                     <div className="w-0 h-0 border-y-[10px] md:border-y-[12px] border-y-transparent border-l-[18px] md:border-l-[22px] border-l-black ml-1.5" />
                   </div>
                 </div>
