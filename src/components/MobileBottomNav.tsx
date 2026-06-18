@@ -62,7 +62,7 @@ export function MobileBottomNav() {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 md:hidden flex justify-center w-max shadow-2xl rounded-2xl">
+    <div className="fixed bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-50 flex justify-center w-max shadow-2xl rounded-2xl md:scale-125 origin-bottom transition-all">
       <ExpandableTabs 
         tabs={tabs} 
         onChange={handleOnChange} 

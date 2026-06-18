@@ -84,30 +84,30 @@ const shadcn = [
 
 const items: DotFlowProps["items"] = [
     {
-        title: "Importing",
+        title: "Importing media",
         frames: importing,
         duration: 200,
     },
     {
-        title: "Syncing",
+        title: "Syncing audio",
         frames: syncing,
         repeatCount: 2,
         duration: 100,
     },
     {
-        title: "Searching",
+        title: "Applying effects",
         frames: searching,
         repeatCount: 2,
         duration: 150,
     },
     {
-        title: "Using shadcn",
+        title: "Rendering video",
         frames: shadcn,
         repeatCount: 2,
         duration: 200,
     },
     {
-        title: "Like it?",
+        title: "Export complete",
         frames: heartbit,
         repeatCount: 2,
     },

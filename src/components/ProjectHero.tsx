@@ -4,6 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { LazyVideo } from "@/components/ui/LazyVideo";
+import Image from "next/image";
 
 export const ProjectHero = ({ title, client, src }: { title: string; client: string; src: string }) => {
   const containerRef = useRef<HTMLElement>(null);
@@ -48,8 +49,15 @@ export const ProjectHero = ({ title, client, src }: { title: string; client: str
           >
             {title}
           </h1>
-          <p className="proj-client font-serif-italic text-2xl text-zinc-500 mt-4 text-center" style={{ opacity: 0 }}>
+          <p className="proj-client font-serif-italic text-2xl text-zinc-500 mt-4 text-center flex items-center justify-center gap-1.5" style={{ opacity: 0 }}>
             for {client}
+            <Image
+              src="/icons/verified.webp"
+              alt="Verified"
+              width={20}
+              height={20}
+              className="w-5 h-5 object-contain flex-shrink-0"
+            />
           </p>
         </div>
         <div className="proj-video relative w-full aspect-video rounded-2xl md:rounded-3xl overflow-hidden bg-zinc-900 shadow-xl" style={{ opacity: 0 }}>

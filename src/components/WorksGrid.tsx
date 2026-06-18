@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -62,7 +63,16 @@ export const WorksGrid = () => {
                 
                 <div className="absolute bottom-6 left-6 z-10 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
                   <h3 className="text-2xl font-medium text-white">{p.title}</h3>
-                  <p className="text-zinc-300">{p.client}</p>
+                  <p className="text-zinc-300 flex items-center gap-1">
+                    {p.client}
+                    <Image
+                      src="/icons/verified.webp"
+                      alt="Verified"
+                      width={14}
+                      height={14}
+                      className="w-3.5 h-3.5 object-contain flex-shrink-0 brightness-0 invert"
+                    />
+                  </p>
                 </div>
               </div>
             </Link>

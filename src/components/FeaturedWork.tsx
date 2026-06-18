@@ -7,6 +7,7 @@ import { LazyVideo } from "./ui/LazyVideo";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { allProjects } from "@/lib/data";
+import Image from "next/image";
 
 export const FeaturedWork = () => {
   return (
@@ -42,7 +43,16 @@ export const FeaturedWork = () => {
               </div>
               <div>
                 <h3 className="text-xl font-medium text-black">{p.title}</h3>
-                <p className="text-zinc-500">{p.client}</p>
+                <p className="text-zinc-500 flex items-center gap-1">
+                  {p.client}
+                  <Image
+                    src="/icons/verified.webp"
+                    alt="Verified"
+                    width={14}
+                    height={14}
+                    className="w-3.5 h-3.5 object-contain flex-shrink-0"
+                  />
+                </p>
               </div>
             </div>
           </ScrollReveal>
@@ -53,8 +63,7 @@ export const FeaturedWork = () => {
         <div className="flex justify-center mt-12 md:mt-16">
           <Button
             asChild
-            variant="outline"
-            className="border-zinc-200 hover:bg-zinc-50 text-black font-semibold text-base px-8 py-6 rounded-full transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            className="bg-gradient-to-br from-rose-500 to-red-600 hover:from-rose-600 hover:to-red-700 text-white font-semibold text-base px-8 py-6 rounded-full glow-button btn-shimmer hover:scale-[1.04] active:scale-[0.97] transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)]"
           >
             <Link href="/works">View All Works</Link>
           </Button>

@@ -188,12 +188,22 @@ export function Testimonials() {
                     <div className="overflow-hidden">
                       <span
                         className={cn(
-                          "text-sm font-medium whitespace-nowrap block",
+                          "text-sm font-medium whitespace-nowrap flex items-center gap-1",
                           "transition-colors duration-300",
                           isActive ? "text-background" : "text-foreground",
                         )}
                       >
                         {testimonial.author}
+                        <Image
+                          src="/icons/verified.webp"
+                          alt="Verified"
+                          width={14}
+                          height={14}
+                          className={cn(
+                            "w-3.5 h-3.5 object-contain flex-shrink-0",
+                            isActive && "brightness-0 invert"
+                          )}
+                        />
                       </span>
                     </div>
                   </div>

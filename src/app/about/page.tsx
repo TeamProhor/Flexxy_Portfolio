@@ -3,7 +3,6 @@ import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { AboutHero } from "@/components/AboutHero";
 import { AboutContent } from "@/components/AboutContent";
-import { Navbar } from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Alex Reed | About",
@@ -16,12 +15,6 @@ export default function AboutPage() {
       <ScrollProgress />
       <main className="flex min-h-screen flex-col items-center overflow-hidden bg-white selection:bg-rose-500/30">
         
-        <Navbar links={[
-          { href: "/works", label: "Works" },
-          { href: "/about", label: "About" },
-          { href: "/#contact", label: "Contact" },
-        ]} />
-
         <AboutHero />
         <AboutContent />
 

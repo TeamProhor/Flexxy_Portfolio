@@ -6,7 +6,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { Footer } from "@/components/Footer";
-import { Navbar } from "@/components/Navbar";
 
 export default function NotFound() {
   const containerRef = useRef<HTMLElement>(null);
@@ -52,12 +51,6 @@ export default function NotFound() {
       <ScrollProgress />
       <main ref={containerRef} className="flex min-h-screen flex-col items-center justify-between overflow-hidden bg-white selection:bg-rose-500/30">
         
-        <Navbar links={[
-          { href: "/works", label: "Works" },
-          { href: "/about", label: "About" },
-          { href: "/#contact", label: "Contact" },
-        ]} />
-
         <section className="flex flex-col items-center justify-center flex-1 px-6 text-center">
           <h1
             className="nf-code text-8xl md:text-[120px] font-medium tracking-tighter text-black leading-none mb-4"

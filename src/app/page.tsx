@@ -12,7 +12,6 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { Logos3Demo } from "@/components/ui/demo";
-import { Navbar } from "@/components/Navbar";
 
 
 export const metadata: Metadata = {
@@ -24,11 +23,6 @@ export default function Page() {
   return (
     <>
       <ScrollProgress />
-      <Navbar links={[
-        { href: "/works", label: "Works" },
-        { href: "/about", label: "About" },
-        { href: "#contact", label: "Contact" },
-      ]} />
       <main className="flex flex-col gap-20 md:gap-32 px-4 md:px-10 max-w-[1400px] mx-auto overflow-x-hidden">
         <Hero />
         <Logos3Demo />

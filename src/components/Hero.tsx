@@ -102,21 +102,12 @@ export const Hero = () => {
         }}
       />
 
-      {/* Top pill */}
-      <div
-        className="hero-pill inline-flex items-center gap-2 px-1 py-1 pr-4 bg-zinc-900 rounded-full mb-8 shadow-sm"
-        style={{ opacity: 0 }}
-      >
-        <Badge className="bg-black text-white text-[10px] md:text-xs font-medium px-3 py-1.5 rounded-full border border-zinc-700 h-auto">
-          Available for booking
-        </Badge>
-        <span className="text-zinc-300 text-xs md:text-sm font-medium">Hire</span>
-      </div>
+
 
       {/* Headline */}
       <h1 className="text-4xl md:text-[72px] leading-[1.05] tracking-tight font-medium text-black max-w-4xl mx-auto" style={{ letterSpacing: "-0.03em" }}>
         <span className="hero-headline inline-block" style={{ opacity: 0 }}>
-          Crafting Cinematic Stories.
+          Editor that actually
         </span>
         <br />
         <PointerHighlight
@@ -125,7 +116,7 @@ export const Hero = () => {
           containerClassName="inline-block"
         >
           <span className="hero-accent font-serif-italic text-rose-500 font-normal tracking-normal px-6 relative z-10 inline-block" style={{ opacity: 0 }}>
-            Premium Editor
+            stops the scroll
           </span>
         </PointerHighlight>
       </h1>
