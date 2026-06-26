@@ -199,7 +199,7 @@ export const allProjects = [
   }
 ];
 
-export const socialLinks = [
+const socialLinks = [
   { id: "social-1", label: "Instagram", href: "https://instagram.com" },
   { id: "social-2", label: "X / Twitter", href: "https://x.com" },
   { id: "social-3", label: "LinkedIn", href: "https://linkedin.com" },

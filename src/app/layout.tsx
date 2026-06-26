@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Instrument_Serif, Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { MobileBottomNav } from "@/components/MobileBottomNav";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -25,9 +24,12 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Reed | Premium Video Editor",
+  title: "Flexxy | Premium Video Editor",
   description: "Crafting cinematic stories and premium motion design for top brands.",
 };
+
+import { ThemeProvider } from "@/components/theme-provider";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 export default function RootLayout({
   children,
@@ -35,10 +37,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("scroll-smooth", "font-sans", geist.variable)}>
+    <html lang="en" suppressHydrationWarning className={cn("scroll-smooth", "font-sans", geist.variable)}>
       <body className={`${inter.variable} ${instrumentSerif.variable} antialiased`}>
-        {children}
-        <MobileBottomNav />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SmoothCursor />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

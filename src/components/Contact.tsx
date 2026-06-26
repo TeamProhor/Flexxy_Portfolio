@@ -1,7 +1,6 @@
 "use client";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Badge } from "@/components/ui/badge";
 
 export const Contact = () => {
   return (

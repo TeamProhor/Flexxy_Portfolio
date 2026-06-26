@@ -26,55 +26,55 @@ interface Logos3Props {
 }
 
 const Logos3 = ({
-  heading = "Trusted by these companies",
+  heading = "Trusted by these Creators",
   logos = [
     {
       id: "logo-1",
-      description: "Logo 1",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/astro-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Creator 1",
+      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Felix",
+      className: "h-12 w-12 rounded-full",
     },
     {
       id: "logo-2",
-      description: "Logo 2",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/figma-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Creator 2",
+      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Aneka",
+      className: "h-12 w-12 rounded-full",
     },
     {
       id: "logo-3",
-      description: "Logo 3",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/nextjs-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Creator 3",
+      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Mimi",
+      className: "h-12 w-12 rounded-full",
     },
     {
       id: "logo-4",
-      description: "Logo 4",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/react-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Creator 4",
+      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Oliver",
+      className: "h-12 w-12 rounded-full",
     },
     {
       id: "logo-5",
-      description: "Logo 5",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcn-ui-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Creator 5",
+      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Jack",
+      className: "h-12 w-12 rounded-full",
     },
     {
       id: "logo-6",
-      description: "Logo 6",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/supabase-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Creator 6",
+      image: "https://api.dicebear.com/7.x/notionists/svg?seed=George",
+      className: "h-12 w-12 rounded-full",
     },
     {
       id: "logo-7",
-      description: "Logo 7",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/tailwind-wordmark.svg",
-      className: "h-4 w-auto",
+      description: "Creator 7",
+      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Jasmine",
+      className: "h-12 w-12 rounded-full",
     },
     {
       id: "logo-8",
-      description: "Logo 8",
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/vercel-wordmark.svg",
-      className: "h-7 w-auto",
+      description: "Creator 8",
+      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Luna",
+      className: "h-12 w-12 rounded-full",
     },
   ],
 }: Logos3Props) => {
@@ -85,7 +85,7 @@ const Logos3 = ({
           Trusted by these
           <br />
           <span className="font-serif-italic text-rose-500 font-normal">
-            companies
+            Creators
           </span>
         </h2>
       </div>

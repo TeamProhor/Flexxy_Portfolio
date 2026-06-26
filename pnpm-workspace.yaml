@@ -1,6 +1,4 @@
 allowBuilds:
-  msgpackr-extract: true
-  sharp: true
-  unrs-resolver: true
-
-minimumReleaseAge: 10080
+  msgpackr-extract: set this to true or false
+  sharp: set this to true or false
+  unrs-resolver: set this to true or false

@@ -1,11 +1,10 @@
 "use client";
 
-import { useReducer, useRef, useCallback } from "react";
+import { useReducer, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { testimonials } from "@/lib/data";
 import Image from "next/image";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollReveal } from "./ScrollReveal";
 
@@ -60,7 +59,7 @@ export function Testimonials() {
   const quoteRef = useRef<HTMLParagraphElement>(null);
   const roleRef = useRef<HTMLParagraphElement>(null);
 
-  const handleSelect = useCallback((index: number) => {
+  const handleSelect = (index: number) => {
     if (index === state.activeIndex || state.isAnimating) return;
     
     dispatch({ type: "START_ANIMATION" });
@@ -111,7 +110,7 @@ export function Testimonials() {
         onComplete: () => dispatch({ type: "FINISH_ANIMATION" }),
       }
     );
-  }, [state.activeIndex, state.isAnimating]);
+  };
 
   return (
     <ScrollReveal>

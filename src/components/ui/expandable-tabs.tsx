@@ -26,6 +26,7 @@ interface ExpandableTabsProps {
   className?: string;
   activeColor?: string;
   onChange?: (index: number | null) => void;
+  children?: React.ReactNode;
 }
 
 export function ExpandableTabs({
@@ -33,6 +34,7 @@ export function ExpandableTabs({
   className,
   activeColor = "text-primary",
   onChange,
+  children,
 }: ExpandableTabsProps) {
   const [selected, setSelected] = React.useState<number | null>(null);
   const outsideClickRef = React.useRef<HTMLDivElement>(null);
@@ -125,6 +127,7 @@ export function ExpandableTabs({
             </button>
           );
         })}
+        {children}
       </div>
     </div>
   );

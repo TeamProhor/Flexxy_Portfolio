@@ -15,7 +15,7 @@ import { Logos3Demo } from "@/components/ui/demo";
 
 
 export const metadata: Metadata = {
-  title: "Alex Reed | Premium Video Editor",
+  title: "Flexxy | Premium Video Editor",
   description: "Crafting cinematic stories and premium motion design for top brands.",
 };
 

@@ -51,7 +51,7 @@ export const Footer = () => {
           className="footer-name text-[14vw] md:text-[12vw] font-medium tracking-tighter text-center leading-none text-zinc-200 select-none"
           style={{ opacity: 0 }}
         >
-          VeditaEditz.com
+          VeditaEditz
         </h2>
       </div>
     </footer>
