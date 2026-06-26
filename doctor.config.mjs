@@ -7,6 +7,9 @@ const config = {
       "doctor.config.mjs",
     ],
   },
+  rules: {
+    "react-doctor/require-pnpm-hardening": "off",
+  },
 };
 
 export default config;
