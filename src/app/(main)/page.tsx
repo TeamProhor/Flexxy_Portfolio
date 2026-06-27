@@ -12,7 +12,7 @@ import { FAQs } from "@/components/FAQs";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
-import { Logos3Demo } from "@/components/ui/demo";
+import { Logos } from "@/components/Logos";
 
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function Page() {
       <ScrollProgress />
       <main className="flex flex-col gap-20 md:gap-32 px-4 md:px-10 max-w-[1400px] mx-auto overflow-x-hidden">
         <Hero />
-        <Logos3Demo />
+        <Logos />
         <FeaturedWork />
         <WhyNow />
         <Purpose />

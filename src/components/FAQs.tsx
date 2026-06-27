@@ -15,14 +15,14 @@ export const FAQs = () => {
       <ScrollReveal>
         <div className="flex flex-col items-center">
           <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-foreground text-center leading-[1.1] [text-wrap:balance]">
-            Things You&apos;re Probably
+            Things You&apos;re
             <br />
             <span className="font-serif-italic text-rose-500 font-normal">
-              Wondering
+              Probably Wondering
             </span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg mt-6 max-w-2xl text-center mb-12 md:mb-16 [text-wrap:pretty]">
-            Everything you need to know about the system.
+            Everything you need to know about my video editing process.
           </p>
         </div>
       </ScrollReveal>

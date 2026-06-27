@@ -35,6 +35,14 @@ body {
   scrollbar-width: none !important;
 }
 
+/* Hide default cursor on interactive elements since we use a custom cursor */
+button, 
+a, 
+[role="button"],
+[data-slot="accordion-trigger"] {
+  cursor: none !important;
+}
+
 .glow-button {
   box-shadow: inset 0 0 20px 1.64px rgba(255, 255, 255, 0.2),
               0 15px 30px -2.5px rgba(255, 50, 50, 0.15),

@@ -117,10 +117,10 @@ export const HowItWorks = () => {
             className="text-4xl md:text-6xl font-medium tracking-tight text-foreground text-center leading-[1.1]"
             style={{ letterSpacing: "-0.03em", textWrap: "balance" }}
           >
-            My Post-Production
+            My process in
             <br />
             <span className="font-serif-italic text-rose-500 font-normal">
-              Process
+              post-production
             </span>
           </h2>
         </div>

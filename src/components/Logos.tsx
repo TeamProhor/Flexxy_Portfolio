@@ -5,12 +5,15 @@
 "use client";
 
 import AutoScroll from "embla-carousel-auto-scroll";
+import Image from "next/image";
 
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+
+import { trustedCreators } from "@/lib/data";
 
 interface Logo {
   id: string;
@@ -19,73 +22,22 @@ interface Logo {
   className?: string;
 }
 
-interface Logos3Props {
-  heading?: string;
+interface LogosProps {
   logos?: Logo[];
   className?: string;
 }
 
-const Logos3 = ({
-  heading = "Trusted by these Creators",
-  logos = [
-    {
-      id: "logo-1",
-      description: "Creator 1",
-      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Felix",
-      className: "h-12 w-12 rounded-full",
-    },
-    {
-      id: "logo-2",
-      description: "Creator 2",
-      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Aneka",
-      className: "h-12 w-12 rounded-full",
-    },
-    {
-      id: "logo-3",
-      description: "Creator 3",
-      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Mimi",
-      className: "h-12 w-12 rounded-full",
-    },
-    {
-      id: "logo-4",
-      description: "Creator 4",
-      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Oliver",
-      className: "h-12 w-12 rounded-full",
-    },
-    {
-      id: "logo-5",
-      description: "Creator 5",
-      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Jack",
-      className: "h-12 w-12 rounded-full",
-    },
-    {
-      id: "logo-6",
-      description: "Creator 6",
-      image: "https://api.dicebear.com/7.x/notionists/svg?seed=George",
-      className: "h-12 w-12 rounded-full",
-    },
-    {
-      id: "logo-7",
-      description: "Creator 7",
-      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Jasmine",
-      className: "h-12 w-12 rounded-full",
-    },
-    {
-      id: "logo-8",
-      description: "Creator 8",
-      image: "https://api.dicebear.com/7.x/notionists/svg?seed=Luna",
-      className: "h-12 w-12 rounded-full",
-    },
-  ],
-}: Logos3Props) => {
+const Logos = ({
+  logos = trustedCreators,
+}: LogosProps) => {
   return (
     <section className="w-full">
       <div className="container flex flex-col items-center text-center">
         <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-foreground text-center leading-[1.1]" style={{ textWrap: "balance" }}>
-          Trusted by these
+          Trusted by
           <br />
           <span className="font-serif-italic text-rose-500 font-normal">
-            Creators
+            these Creators
           </span>
         </h2>
       </div>
@@ -103,9 +55,11 @@ const Logos3 = ({
                 >
                   <div className="mx-10 flex shrink-0 items-center justify-center">
                     <div>
-                      <img
+                      <Image
                         src={logo.image}
                         alt={logo.description}
+                        width={48}
+                        height={48}
                         className={logo.className}
                       />
                     </div>
@@ -122,4 +76,4 @@ const Logos3 = ({
   );
 };
 
-export { Logos3 };
+export { Logos };

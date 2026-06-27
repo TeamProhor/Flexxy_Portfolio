@@ -15,10 +15,10 @@ export const FeaturedWork = () => {
       <ScrollReveal>
         <div className="flex flex-col items-center">
           <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-foreground text-center leading-[1.1] [text-wrap:balance]">
-            Featured
+            Some of my
             <br />
             <span className="font-serif-italic text-rose-500 font-normal">
-              Work
+              featured work
             </span>
           </h2>
           <p className="text-muted-foreground text-lg mt-6 max-w-2xl text-center">
