@@ -32,7 +32,7 @@ export function LoginForm() {
             <div className="w-full space-y-4">
               <div className="relative">
                 <EnvelopeSimple className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
-                <Input type="email" placeholder="Your email" className="w-full rounded-xl pl-10" />
+                <Input type="email" placeholder="Your email" className="w-full rounded-xl pl-10 bg-muted/40 border-transparent focus-visible:bg-background focus-visible:border-ring transition-colors" />
               </div>
               <div className="flex flex-col gap-2">
                 <Button className="w-full rounded-xl btn-shimmer glow-button" size="lg">
