@@ -14,14 +14,14 @@ export const FeaturedWork = () => {
     <section id="work" className="flex flex-col items-center mt-20">
       <ScrollReveal>
         <div className="flex flex-col items-center">
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1] [text-wrap:balance]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-foreground text-center leading-[1.1] [text-wrap:balance]">
             Featured
             <br />
             <span className="font-serif-italic text-rose-500 font-normal">
               Work
             </span>
           </h2>
-          <p className="text-zinc-500 text-lg mt-6 max-w-2xl text-center">
+          <p className="text-muted-foreground text-lg mt-6 max-w-2xl text-center">
             A curated selection of my best commercial and documentary edits.
           </p>
         </div>
@@ -42,8 +42,8 @@ export const FeaturedWork = () => {
                 </AspectRatio>
               </div>
               <div>
-                <h3 className="text-xl font-medium text-black">{p.title}</h3>
-                <p className="text-zinc-500 flex items-center gap-1">
+                <h3 className="text-xl font-medium text-foreground">{p.title}</h3>
+                <p className="text-muted-foreground flex items-center gap-1">
                   {p.client}
                   <Image
                     src="/icons/verified.webp"

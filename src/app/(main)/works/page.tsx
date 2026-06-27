@@ -13,7 +13,7 @@ export default function WorksPage() {
   return (
     <>
       <ScrollProgress />
-      <main className="flex min-h-screen flex-col items-center overflow-hidden bg-white selection:bg-rose-500/30">
+      <main className="flex min-h-screen flex-col items-center overflow-hidden bg-background selection:bg-rose-500/30">
         
         <WorksHero />
         <WorksGrid />

@@ -114,7 +114,7 @@ export const HowItWorks = () => {
       <ScrollReveal>
         <div className="text-center mb-16 md:mb-24">
           <h2
-            className="text-4xl md:text-6xl font-medium tracking-tight text-black text-center leading-[1.1]"
+            className="text-4xl md:text-6xl font-medium tracking-tight text-foreground text-center leading-[1.1]"
             style={{ letterSpacing: "-0.03em", textWrap: "balance" }}
           >
             My Post-Production
@@ -140,7 +140,7 @@ export const HowItWorks = () => {
               className="step-item relative flex gap-4 md:gap-8 group"
               style={{ opacity: 0, transform: "translateY(32px)" }}
             >
-              <div className="relative z-10 w-10 h-10 md:w-12 md:h-12 bg-white border border-gray-300 rounded-full flex-shrink-0 flex items-center justify-center shadow-sm overflow-hidden">
+              <div className="relative z-10 w-10 h-10 md:w-12 md:h-12 bg-background border border-gray-300 rounded-full flex-shrink-0 flex items-center justify-center shadow-sm overflow-hidden">
                 <div className={`step-icon-container-${i} flex items-center justify-center text-gray-400`}>
                   <div className="relative flex items-center justify-center w-full h-full">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 md:w-6 md:h-6 absolute">
@@ -154,14 +154,14 @@ export const HowItWorks = () => {
               </div>
 
               <div className={`flex flex-col gap-4 ${!item.isLast ? "pb-12" : ""} ${i > 0 ? "mt-2 md:mt-4" : ""}`}>
-                <h2 className="text-3xl md:text-[39px] leading-[1.1] text-black">
+                <h2 className="text-3xl md:text-[39px] leading-[1.1] text-foreground">
                   <span className="font-serif-italic font-normal">{item.stage}</span>
                   {item.hasBr ? <br className="hidden md:block" /> : " "}
                   <span className="tracking-tight font-bold text-rose-500">
                     {item.title}
                   </span>
                 </h2>
-                <p className="text-zinc-500 text-base md:text-lg leading-relaxed whitespace-pre-line" style={{ textWrap: "pretty" }}>
+                <p className="text-muted-foreground text-base md:text-lg leading-relaxed whitespace-pre-line" style={{ textWrap: "pretty" }}>
                   {item.description}
                 </p>
               </div>

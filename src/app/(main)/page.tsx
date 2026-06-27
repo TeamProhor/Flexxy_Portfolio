@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Hero } from "@/components/Hero";
+import { Preloader } from "@/components/Preloader";
 import { Outcome } from "@/components/Outcome";
 import { Purpose } from "@/components/Purpose";
 import { WhyNow } from "@/components/WhyNow";
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <Preloader />
       <ScrollProgress />
       <main className="flex flex-col gap-20 md:gap-32 px-4 md:px-10 max-w-[1400px] mx-auto overflow-x-hidden">
         <Hero />

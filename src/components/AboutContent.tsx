@@ -14,22 +14,22 @@ export const AboutContent = () => {
           <div className="w-full md:w-1/2">
             <ScrollReveal variant="slide-left">
               <h2
-                className="text-3xl md:text-4xl font-medium tracking-tight text-black mb-6"
+                className="text-3xl md:text-4xl font-medium tracking-tight text-foreground mb-6"
                 style={{ textWrap: "balance", letterSpacing: "-0.02em" }}
               >
                 Post-production is the final rewrite of the story.
               </h2>
-              <p className="text-lg text-zinc-500 leading-relaxed font-light mb-6" style={{ textWrap: "pretty" }}>
+              <p className="text-lg text-muted-foreground leading-relaxed font-light mb-6" style={{ textWrap: "pretty" }}>
                 Most editors just cut clips. I focus on rhythm, pacing, and emotional resonance. Whether it&apos;s a 15-second social commercial or a 20-minute documentary, every single frame has to justify its existence.
               </p>
-              <p className="text-lg text-zinc-500 leading-relaxed font-light" style={{ textWrap: "pretty" }}>
+              <p className="text-lg text-muted-foreground leading-relaxed font-light" style={{ textWrap: "pretty" }}>
                 My approach blends high-end motion design with documentary-style storytelling to create work that feels premium, effortless, and entirely unique to your brand.
               </p>
             </ScrollReveal>
           </div>
           <div className="w-full md:w-1/2">
             <ScrollReveal variant="slide-right" delay={0.15}>
-              <div className="relative w-full aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden bg-zinc-100 shadow-sm">
+              <div className="relative w-full aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden bg-secondary shadow-sm">
                 <Image 
                   src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=2000&auto=format&fit=crop"
                   alt="Minimalist desk setup with a laptop and notebook"
@@ -53,7 +53,7 @@ export const AboutContent = () => {
               {capabilities.map((cap) => (
                 <div key={cap.id}>
                   <h4 className="text-white font-medium mb-2">{cap.title}</h4>
-                  <p className="text-zinc-400 text-sm leading-relaxed">{cap.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{cap.description}</p>
                 </div>
               ))}
             </div>

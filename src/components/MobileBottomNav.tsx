@@ -1,7 +1,6 @@
 "use client";
 
 import { ExpandableTabs } from "@/components/ui/expandable-tabs";
-import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { House, PlayCircle, EnvelopeSimple, Question, User, UserCircle } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
@@ -71,12 +70,7 @@ export function MobileBottomNav() {
         tabs={tabs} 
         onChange={handleOnChange} 
         activeColor="text-rose-500" 
-      >
-        <div className="mx-1 h-[24px] w-[1.2px] bg-border" aria-hidden="true" />
-        <AnimatedThemeToggler 
-          className="relative flex items-center justify-center rounded-xl p-2 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors duration-300"
-        />
-      </ExpandableTabs>
+      />
     </div>
   );
 }

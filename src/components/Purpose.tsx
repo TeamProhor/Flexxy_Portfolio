@@ -11,14 +11,14 @@ export const Purpose = () => {
       {/* Left: Text Content */}
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
         <ScrollReveal>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center md:text-left leading-[1.1] [text-wrap:balance]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-foreground text-center md:text-left leading-[1.1] [text-wrap:balance]">
             Video Edits That Make Your Audience
             <br />
             <span className="font-serif-italic text-rose-500 font-normal">
               Choose You First
             </span>
           </h2>
-          <p className="text-zinc-500 text-base md:text-lg mt-6 leading-relaxed [text-wrap:pretty]">
+          <p className="text-muted-foreground text-base md:text-lg mt-6 leading-relaxed [text-wrap:pretty]">
             I partner with ambitious brands and creators to produce videos that command premium attention. Clean cuts, intentional motion, and flawless pacing.
           </p>
         </ScrollReveal>
@@ -37,7 +37,7 @@ export const Purpose = () => {
               />
 
               <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-20 flex items-center gap-3">
-                <div className="relative size-10 md:size-[50px] rounded-xl md:rounded-2xl border border-white/10 shadow-lg bg-white overflow-hidden">
+                <div className="relative size-10 md:size-[50px] rounded-xl md:rounded-2xl border border-white/10 shadow-lg bg-background overflow-hidden">
                   <Image
                     src="/image/portal-avatar.webp"
                     alt="Portal"

@@ -81,7 +81,7 @@ const Logos3 = ({
   return (
     <section className="w-full">
       <div className="container flex flex-col items-center text-center">
-        <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1]" style={{ textWrap: "balance" }}>
+        <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-foreground text-center leading-[1.1]" style={{ textWrap: "balance" }}>
           Trusted by these
           <br />
           <span className="font-serif-italic text-rose-500 font-normal">

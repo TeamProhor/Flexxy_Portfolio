@@ -79,7 +79,7 @@ export const DotFlow = ({ items, isPlaying = true }: DotFlowProps) => {
                 isPlaying={isPlaying}
                 repeatCount={items[index]?.repeatCount ?? 1}
                 duration={items[index]?.duration ?? 150}
-                dotClassName="bg-white/15 [&.active]:bg-white size-1"
+                dotClassName="bg-background/15 [&.active]:bg-background size-1"
             />
             <div ref={containerRef} className="relative">
                 <div ref={textRef} className="inline-block text-lg font-medium whitespace-nowrap text-white">

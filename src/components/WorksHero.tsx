@@ -42,13 +42,13 @@ export const WorksHero = () => {
     <section ref={containerRef} className="flex flex-col items-center mt-12 md:mt-24 mb-16 px-6">
       <div className="flex flex-col items-center">
         <h1
-          className="text-5xl md:text-7xl font-medium tracking-tight text-black text-center leading-[1.05]"
+          className="text-5xl md:text-7xl font-medium tracking-tight text-foreground text-center leading-[1.05]"
           style={{ letterSpacing: "-0.03em", textWrap: "balance" }}
         >
           <span className="works-h1 inline-block" style={{ opacity: 0 }}>Selected</span>{" "}
           <span className="works-accent font-serif-italic text-rose-500 font-normal inline-block" style={{ opacity: 0 }}>Works</span>
         </h1>
-        <p className="works-sub text-zinc-500 text-lg mt-6 max-w-2xl text-center" style={{ opacity: 0, textWrap: "pretty" }}>
+        <p className="works-sub text-muted-foreground text-lg mt-6 max-w-2xl text-center" style={{ opacity: 0, textWrap: "pretty" }}>
           An archive of premium commercials, documentaries, and digital campaigns.
         </p>
       </div>

@@ -54,21 +54,21 @@ export const Outcome = () => {
       {/* Right: Text Content */}
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
         <ScrollReveal delay={0.12}>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center md:text-left leading-[1.1] [text-wrap:balance]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-foreground text-center md:text-left leading-[1.1] [text-wrap:balance]">
             Motion Work That Actually
             <br />
             <span className="font-serif-italic text-rose-500 font-normal">
               Stops the Scroll.
             </span>
           </h2>
-          <p className="text-zinc-500 text-base md:text-lg mt-6 leading-relaxed [text-wrap:pretty]">
+          <p className="text-muted-foreground text-base md:text-lg mt-6 leading-relaxed [text-wrap:pretty]">
             Your brand deserves video content that looks like an Apple product launch. From dynamic commercials to cinematic documentaries, I deliver high-end post-production that captures attention and drives results. It&apos;s not just editing — it&apos;s crafting a visual experience.
           </p>
 
           {/* Stats floating cards */}
           <div className="flex flex-col sm:flex-row gap-4 mt-10 w-full md:w-auto">
             {outcomeStats.map((stat) => (
-              <Card key={stat.id} className="bg-white border border-gray-200 rounded-2xl p-4 shadow-sm flex flex-row items-center justify-center md:justify-start gap-3 ring-0 transition-all duration-200 hover:shadow-md hover:border-gray-300">
+              <Card key={stat.id} className="bg-background border border-gray-200 rounded-2xl p-4 shadow-sm flex flex-row items-center justify-center md:justify-start gap-3 ring-0 transition-all duration-200 hover:shadow-md hover:border-gray-300">
                 <div className={`w-2 h-2 ${stat.color} rounded-full shrink-0`}></div>
                 <span className="text-gray-500 font-medium whitespace-nowrap text-sm md:text-base">{stat.label}</span>
               </Card>

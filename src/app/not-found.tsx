@@ -49,19 +49,19 @@ export default function NotFound() {
   return (
     <>
       <ScrollProgress />
-      <main ref={containerRef} className="flex min-h-screen flex-col items-center justify-between overflow-hidden bg-white selection:bg-rose-500/30">
+      <main ref={containerRef} className="flex min-h-screen flex-col items-center justify-between overflow-hidden bg-background selection:bg-rose-500/30">
         
         <section className="flex flex-col items-center justify-center flex-1 px-6 text-center">
           <h1
-            className="nf-code text-8xl md:text-[120px] font-medium tracking-tighter text-black leading-none mb-4"
+            className="nf-code text-8xl md:text-[120px] font-medium tracking-tighter text-foreground leading-none mb-4"
             style={{ opacity: 0, letterSpacing: "-0.04em" }}
           >
             404
           </h1>
-          <p className="nf-tagline font-serif-italic text-3xl md:text-4xl text-zinc-500 mb-8" style={{ opacity: 0 }}>
+          <p className="nf-tagline font-serif-italic text-3xl md:text-4xl text-muted-foreground mb-8" style={{ opacity: 0 }}>
             Frame not found.
           </p>
-          <p className="nf-body text-zinc-400 max-w-md mx-auto mb-12 text-lg" style={{ opacity: 0, textWrap: "pretty" }}>
+          <p className="nf-body text-muted-foreground max-w-md mx-auto mb-12 text-lg" style={{ opacity: 0, textWrap: "pretty" }}>
             The page you&apos;re looking for has been cut from the final edit. 
           </p>
           <Link 

@@ -22,7 +22,7 @@ export const Contact = () => {
             </span>
           </h2>
           
-          <p className="text-zinc-400 text-lg mt-6 max-w-xl mx-auto leading-relaxed [text-wrap:pretty] z-10">
+          <p className="text-muted-foreground text-lg mt-6 max-w-xl mx-auto leading-relaxed [text-wrap:pretty] z-10">
             I&apos;m currently taking on new projects for Q3. Whether you need a high-end commercial, a cinematic documentary, or a scroll-stopping social campaign, let&apos;s talk.
           </p>
 

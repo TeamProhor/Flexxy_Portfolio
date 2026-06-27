@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   description: "Crafting cinematic stories and premium motion design for top brands.",
 };
 
-import { ThemeProvider } from "@/components/theme-provider";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 export default function RootLayout({
@@ -39,15 +38,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={cn("scroll-smooth", "font-sans", geist.variable)}>
       <body className={`${inter.variable} ${instrumentSerif.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <SmoothCursor />
-          {children}
-        </ThemeProvider>
+        <SmoothCursor />
+        {children}
       </body>
     </html>
   );

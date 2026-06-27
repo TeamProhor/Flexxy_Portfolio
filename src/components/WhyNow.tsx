@@ -12,14 +12,14 @@ export const WhyNow = () => {
     <section id="why-now" className="flex flex-col items-center">
       <ScrollReveal>
         <div className="flex flex-col items-center">
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1] [text-wrap:balance]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-foreground text-center leading-[1.1] [text-wrap:balance]">
             Your Unfair Advantage
             <br />
             <span className="font-serif-italic text-rose-500 font-normal">
               Right Now
             </span>
           </h2>
-          <p className="text-zinc-500 text-base md:text-lg mt-6 max-w-2xl text-center [text-wrap:pretty]">
+          <p className="text-muted-foreground text-base md:text-lg mt-6 max-w-2xl text-center [text-wrap:pretty]">
             Every tech startup, SaaS company, and brand wants that clean, premium aesthetic but 90% of video editors can&apos;t deliver it.
           </p>
         </div>
@@ -30,15 +30,15 @@ export const WhyNow = () => {
         {/* Left: Disadvantage */}
         <ScrollReveal>
           <div className="flex flex-col h-full">
-            <h3 className="text-zinc-500 text-lg md:text-xl font-medium mb-4 pl-4 text-center md:text-left">Where Most Video Editors Fall Short</h3>
+            <h3 className="text-muted-foreground text-lg md:text-xl font-medium mb-4 pl-4 text-center md:text-left">Where Most Video Editors Fall Short</h3>
             <Card className="bg-[#fcfcfc] border border-dashed border-[#d9d9d9] rounded-2xl p-6 md:p-8 flex flex-col gap-6 h-full shadow-sm ring-0 transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] hover:shadow-md hover:border-[#c4c4c4]">
               {/* List Items */}
               {advantagesData.disadvantages.map((item) => (
                 <div key={item.id} className="flex items-start gap-4">
-                  <div className="bg-white border border-[#e6e6e6] rounded-full p-2 flex-shrink-0 mt-0.5 flex items-center justify-center">
+                  <div className="bg-background border border-[#e6e6e6] rounded-full p-2 flex-shrink-0 mt-0.5 flex items-center justify-center">
                     <XIcon size={18} color="#f43f5e" weight="bold" className="md:size-5" />
                   </div>
-                  <p className="text-black font-medium leading-tight text-sm md:text-base">{item.text}</p>
+                  <p className="text-foreground font-medium leading-tight text-sm md:text-base">{item.text}</p>
                 </div>
               ))}
             </Card>

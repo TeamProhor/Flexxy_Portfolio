@@ -43,8 +43,8 @@ export const Footer = () => {
   }, { scope: footerRef });
 
   return (
-    <footer ref={footerRef} className="w-full border-t-2 border-dashed border-zinc-200 pt-12 mt-12 overflow-hidden flex flex-col items-center px-4">
-      <div className="text-zinc-500 text-xs md:text-sm mb-12 text-center">Copyright © Vedita Editz 2026</div>
+    <footer ref={footerRef} className="w-full border-t-2 border-dashed border-border pt-12 mt-12 overflow-hidden flex flex-col items-center px-4">
+      <div className="text-muted-foreground text-xs md:text-sm mb-12 text-center">Copyright © Vedita Editz 2026</div>
 
       <div className="w-full relative md:px-10 max-w-[1400px] mx-auto pb-8 md:pb-4">
         <h2

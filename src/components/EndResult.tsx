@@ -13,14 +13,14 @@ export const EndResult = () => {
     <section id="end-result" className="flex flex-col items-center">
       <ScrollReveal>
         <div className="flex flex-col items-center">
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-black text-center leading-[1.1] [text-wrap:balance]">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tighter text-foreground text-center leading-[1.1] [text-wrap:balance]">
             Cinematic Details That
             <br />
             <span className="font-serif-italic text-rose-500 font-normal">
               Elevate The Brand
             </span>
           </h2>
-          <p className="text-zinc-500 text-lg mt-6 max-w-2xl mx-auto [text-wrap:pretty]">
+          <p className="text-muted-foreground text-lg mt-6 max-w-2xl mx-auto [text-wrap:pretty]">
             It&apos;s not just about cuts; it&apos;s about pacing, motion, and visual flow.
           </p>
         </div>

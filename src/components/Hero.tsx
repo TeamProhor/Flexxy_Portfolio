@@ -104,13 +104,13 @@ export const Hero = () => {
 
 
       {/* Headline */}
-      <h1 className="text-4xl md:text-[72px] leading-[1.05] tracking-tight font-medium text-black max-w-4xl mx-auto" style={{ letterSpacing: "-0.03em" }}>
+      <h1 className="text-4xl md:text-[72px] leading-[1.05] tracking-tight font-medium text-foreground max-w-4xl mx-auto" style={{ letterSpacing: "-0.03em" }}>
         <span className="hero-headline inline-block" style={{ opacity: 0 }}>
           Editor that actually
         </span>
         <br />
         <PointerHighlight
-          rectangleClassName="bg-zinc-100 border-zinc-200"
+          rectangleClassName="bg-secondary border-border"
           pointerClassName="text-rose-500"
           containerClassName="inline-block"
         >
@@ -122,7 +122,7 @@ export const Hero = () => {
 
       {/* Subtitle */}
       <p
-        className="hero-sub text-zinc-500 text-base md:text-xl mt-6 max-w-2xl mx-auto"
+        className="hero-sub text-muted-foreground text-base md:text-xl mt-6 max-w-2xl mx-auto"
         style={{ opacity: 0, textWrap: "pretty" }}
       >
         Premium video editing and post-production that elevates your brand and turns viewers into paying customers.
@@ -135,7 +135,7 @@ export const Hero = () => {
 
       {/* Hero video */}
       <div className="hero-video mt-16 md:mt-20 w-full max-w-5xl mx-auto" style={{ opacity: 0 }}>
-        <div className="rounded-2xl md:rounded-[28px] overflow-hidden shadow-[0_24px_60px_-15px_rgba(0,0,0,0.12)] relative bg-zinc-100 border border-zinc-200/50 transition-shadow duration-500 hover:shadow-[0_32px_80px_rgba(0,0,0,0.16)]">
+        <div className="rounded-2xl md:rounded-[28px] overflow-hidden shadow-[0_24px_60px_-15px_rgba(0,0,0,0.12)] relative bg-secondary border border-border/50 transition-shadow duration-500 hover:shadow-[0_32px_80px_rgba(0,0,0,0.16)]">
           <AspectRatio ratio={16 / 9}>
             {!isPlaying ? (
               <button
@@ -155,7 +155,7 @@ export const Hero = () => {
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition-colors duration-400" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="size-16 md:size-20 bg-white/90 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-110 group-hover:bg-white group-hover:shadow-[0_10px_40px_rgba(0,0,0,0.22)]">
+                  <div className="size-16 md:size-20 bg-background/90 rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.12)] transition-all duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-110 group-hover:bg-background group-hover:shadow-[0_10px_40px_rgba(0,0,0,0.22)]">
                     <div className="w-0 h-0 border-y-[10px] md:border-y-[12px] border-y-transparent border-l-[18px] md:border-l-[22px] border-l-black ml-1.5" />
                   </div>
                 </div>

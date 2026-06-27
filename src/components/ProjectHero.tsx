@@ -44,12 +44,12 @@ export const ProjectHero = ({ title, client, src }: { title: string; client: str
       <div className="w-full max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-12">
           <h1
-            className="proj-title text-5xl md:text-7xl font-medium tracking-tight text-black text-center leading-[1.05]"
+            className="proj-title text-5xl md:text-7xl font-medium tracking-tight text-foreground text-center leading-[1.05]"
             style={{ opacity: 0, letterSpacing: "-0.03em", textWrap: "balance" }}
           >
             {title}
           </h1>
-          <p className="proj-client font-serif-italic text-2xl text-zinc-500 mt-4 text-center flex items-center justify-center gap-1.5" style={{ opacity: 0 }}>
+          <p className="proj-client font-serif-italic text-2xl text-muted-foreground mt-4 text-center flex items-center justify-center gap-1.5" style={{ opacity: 0 }}>
             for {client}
             <Image
               src="/icons/verified.webp"

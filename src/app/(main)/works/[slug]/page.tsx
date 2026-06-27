@@ -33,7 +33,7 @@ export default async function ProjectPage(props: Props) {
   return (
     <>
       <ScrollProgress />
-      <main className="flex min-h-screen flex-col items-center overflow-hidden bg-white selection:bg-rose-500/30">
+      <main className="flex min-h-screen flex-col items-center overflow-hidden bg-background selection:bg-rose-500/30">
         
         <ProjectHero title={project.title} client={project.client} src={project.src} />
         <ProjectDetails role={project.role} year={project.year} description={project.description} />
