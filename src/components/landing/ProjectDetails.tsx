@@ -1,6 +1,6 @@
 "use client";
 
-import { ScrollReveal } from "@/components/ScrollReveal";
+import { ScrollReveal } from "@/components/landing/ScrollReveal";
 import Link from "next/link";
 
 export const ProjectDetails = ({ role, year, description }: { role: string; year: string; description: string }) => {

@@ -7,7 +7,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollReveal } from "./ScrollReveal";
+import { ScrollReveal } from "@/components/landing/ScrollReveal";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -63,7 +63,8 @@ export function Testimonials() {
 
   const { contextSafe } = useGSAP({ scope: containerRef });
 
-  const handleSelect = contextSafe((index: number) => {
+  const handleSelect = (index: number) => {
+    contextSafe(() => {
     if (index === state.activeIndex || state.isAnimating) return;
     
     dispatch({ type: "START_ANIMATION" });
@@ -114,7 +115,8 @@ export function Testimonials() {
         onComplete: () => dispatch({ type: "FINISH_ANIMATION" }),
       }
     );
-  });
+    })();
+  };
 
   return (
     <ScrollReveal>

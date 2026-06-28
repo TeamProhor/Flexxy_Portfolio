@@ -4,8 +4,8 @@ import { useRef } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollProgress } from "@/components/ScrollProgress";
-import { Footer } from "@/components/Footer";
+import { ScrollProgress } from "@/components/landing/ScrollProgress";
+import { Footer } from "@/components/landing/Footer";
 
 export default function NotFound() {
   const containerRef = useRef<HTMLElement>(null);

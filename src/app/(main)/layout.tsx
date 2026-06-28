@@ -1,4 +1,4 @@
-import { MobileBottomNav } from "@/components/MobileBottomNav";
+import { MobileBottomNav } from "@/components/landing/MobileBottomNav";
 
 export default function MainLayout({
   children,

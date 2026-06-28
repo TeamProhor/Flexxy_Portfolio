@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import Image from "next/image";
-import { Demo as Loader } from "@/components/Loader";
+import { Demo as Loader } from "@/components/landing/Loader";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);

@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-import { Footer } from "@/components/Footer";
-import { ScrollProgress } from "@/components/ScrollProgress";
-import { WorksHero } from "@/components/WorksHero";
-import { WorksGrid } from "@/components/WorksGrid";
+import { Footer } from "@/components/landing/Footer";
+import { ScrollProgress } from "@/components/landing/ScrollProgress";
+import { WorksHero } from "@/components/landing/WorksHero";
+import { WorksGrid } from "@/components/landing/WorksGrid";
 
 export const metadata: Metadata = {
   title: "Flexxy | Selected Works",

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { LoginForm } from "@/components/auth/LoginForm";
-import { ScrollProgress } from "@/components/ScrollProgress";
+import { ScrollProgress } from "@/components/landing/ScrollProgress";
 
 export const metadata: Metadata = {
   title: "Flexxy | Login",

@@ -1,6 +1,6 @@
 "use client";
 
-import { ScrollReveal } from "./ScrollReveal";
+import { ScrollReveal } from "@/components/landing/ScrollReveal";
 import { XIcon, CheckIcon } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";

@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Footer } from "@/components/Footer";
-import { ScrollProgress } from "@/components/ScrollProgress";
-import { ProjectHero } from "@/components/ProjectHero";
-import { ProjectDetails } from "@/components/ProjectDetails";
+import { Footer } from "@/components/landing/Footer";
+import { ScrollProgress } from "@/components/landing/ScrollProgress";
+import { ProjectHero } from "@/components/landing/ProjectHero";
+import { ProjectDetails } from "@/components/landing/ProjectDetails";
 import { allProjects } from "@/lib/data";
 
 type Props = {

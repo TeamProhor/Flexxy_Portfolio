@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Spinner } from "@phosphor-icons/react";
-import { ScrollReveal } from "./ScrollReveal";
+import { ScrollReveal } from "@/components/landing/ScrollReveal";
 
 import { steps } from "@/lib/data";
 

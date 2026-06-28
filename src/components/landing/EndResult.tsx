@@ -1,10 +1,10 @@
 "use client";
 
-import { ScrollReveal } from "./ScrollReveal";
+import { ScrollReveal } from "@/components/landing/ScrollReveal";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { LazyVideo } from "./ui/LazyVideo";
+import { LazyVideo } from "@/components/ui/LazyVideo";
 
 import { endResultVideos } from "@/lib/data";
 

@@ -1,18 +1,18 @@
 import { Metadata } from "next";
-import { Hero } from "@/components/Hero";
-import { Preloader } from "@/components/Preloader";
-import { Outcome } from "@/components/Outcome";
-import { Purpose } from "@/components/Purpose";
-import { WhyNow } from "@/components/WhyNow";
-import { EndResult } from "@/components/EndResult";
-import { HowItWorks } from "@/components/HowItWorks";
-import { FeaturedWork } from "@/components/FeaturedWork";
-import { Testimonials } from "@/components/Testimonials";
-import { FAQs } from "@/components/FAQs";
-import { Contact } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
-import { ScrollProgress } from "@/components/ScrollProgress";
-import { Logos } from "@/components/Logos";
+import { Hero } from "@/components/landing/Hero";
+import { Preloader } from "@/components/landing/Preloader";
+import { Outcome } from "@/components/landing/Outcome";
+import { Purpose } from "@/components/landing/Purpose";
+import { WhyNow } from "@/components/landing/WhyNow";
+import { EndResult } from "@/components/landing/EndResult";
+import { HowItWorks } from "@/components/landing/HowItWorks";
+import { FeaturedWork } from "@/components/landing/FeaturedWork";
+import { Testimonials } from "@/components/landing/Testimonials";
+import { FAQs } from "@/components/landing/FAQs";
+import { Contact } from "@/components/landing/Contact";
+import { Footer } from "@/components/landing/Footer";
+import { ScrollProgress } from "@/components/landing/ScrollProgress";
+import { Logos } from "@/components/landing/Logos";
 
 
 export const metadata: Metadata = {

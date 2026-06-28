@@ -1,10 +1,10 @@
 "use client";
 
-import { ScrollReveal } from "./ScrollReveal";
+import { ScrollReveal } from "@/components/landing/ScrollReveal";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
-import { LazyVideo } from "./ui/LazyVideo";
+import { LazyVideo } from "@/components/ui/LazyVideo";
 import { outcomeStats } from "@/lib/data";
 
 export const Outcome = () => {

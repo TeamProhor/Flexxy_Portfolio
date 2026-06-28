@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-import { Footer } from "@/components/Footer";
-import { ScrollProgress } from "@/components/ScrollProgress";
-import { AboutHero } from "@/components/AboutHero";
-import { AboutContent } from "@/components/AboutContent";
+import { Footer } from "@/components/landing/Footer";
+import { ScrollProgress } from "@/components/landing/ScrollProgress";
+import { AboutHero } from "@/components/landing/AboutHero";
+import { AboutContent } from "@/components/landing/AboutContent";
 
 export const metadata: Metadata = {
   title: "Flexxy | About",

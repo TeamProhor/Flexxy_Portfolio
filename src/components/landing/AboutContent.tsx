@@ -1,6 +1,6 @@
 "use client";
 
-import { ScrollReveal } from "@/components/ScrollReveal";
+import { ScrollReveal } from "@/components/landing/ScrollReveal";
 import { capabilities } from "@/lib/data";
 import Image from "next/image";
 
