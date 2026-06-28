@@ -89,22 +89,23 @@ export const HowItWorks = () => {
 
     // Step items: staggered entrance
     const stepElements = gsap.utils.toArray<HTMLElement>('.step-item');
-    stepElements.forEach((el, i) => {
-      gsap.fromTo(el, 
-        { opacity: 0, y: 32 },
-        {
-          scrollTrigger: {
-            trigger: el,
-            start: "top 90%",
-            toggleActions: "play none none none"
-          },
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power4.out",
-          delay: i * 0.08
-        }
-      );
+    ScrollTrigger.batch(stepElements, {
+      interval: 0.1,
+      onEnter: (batch) => {
+        gsap.fromTo(batch, 
+          { opacity: 0, y: 32 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power4.out",
+            stagger: 0.1,
+            overwrite: true
+          }
+        );
+      },
+      start: "top 90%",
+      once: true
     });
 
   }, { scope: containerRef });

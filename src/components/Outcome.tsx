@@ -18,7 +18,7 @@ export const Outcome = () => {
             <AspectRatio ratio={4 / 5}>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
               <LazyVideo
-                src="https://framerusercontent.com/assets/g1ZBzF5S0xNUSr65xEIQhuqtmVs.mp4"
+                src="/videos/04.mp4"
                 className="w-full h-full object-cover relative z-0"
                 ariaLabel="UI animation demonstration in Figma"
               />

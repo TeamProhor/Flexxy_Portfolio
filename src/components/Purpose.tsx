@@ -31,7 +31,7 @@ export const Purpose = () => {
             <AspectRatio ratio={4 / 5}>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
               <LazyVideo
-                src="https://framerusercontent.com/assets/RHvEyqdnPvDAB5Vew1I6LccWE.mp4"
+                src="/videos/05.mp4"
                 className="w-full h-full object-cover relative z-0"
                 ariaLabel="Motion portfolio demonstration"
               />

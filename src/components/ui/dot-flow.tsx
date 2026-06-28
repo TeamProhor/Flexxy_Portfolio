@@ -25,7 +25,7 @@ export const DotFlow = ({ items, isPlaying = true }: DotFlowProps) => {
 
     const { contextSafe } = useGSAP();
 
-    useEffect(() => {
+    useGSAP(() => {
         if (!containerRef.current || !textRef.current) return;
 
         const newWidth = textRef.current.offsetWidth + 1;
@@ -35,7 +35,7 @@ export const DotFlow = ({ items, isPlaying = true }: DotFlowProps) => {
             duration: 0.5,
             ease: "power2.out",
         });
-    }, [textIndex, items]);
+    }, { dependencies: [textIndex, items], scope: containerRef });
 
     useEffect(() => {
         setIndex(0);

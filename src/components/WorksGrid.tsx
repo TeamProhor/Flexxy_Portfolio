@@ -27,23 +27,25 @@ export const WorksGrid = () => {
       return;
     }
 
-    items.forEach((el, i) => {
-      gsap.fromTo(el,
-        { opacity: 0, y: 50, scale: 0.95 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.9,
-          ease: "power4.out",
-          delay: i * 0.1,
-          scrollTrigger: {
-            trigger: el,
-            start: "top 92%",
-            toggleActions: "play none none none",
+    ScrollTrigger.batch(items, {
+      interval: 0.1,
+      batchMax: 3,
+      onEnter: (batch) => {
+        gsap.fromTo(batch,
+          { opacity: 0, y: 50, scale: 0.95 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.9,
+            ease: "power4.out",
+            stagger: 0.1,
+            overwrite: true
           }
-        }
-      );
+        );
+      },
+      start: "top 92%",
+      once: true
     });
   }, { scope: gridRef });
 

@@ -25,8 +25,6 @@ export function MobileBottomNav() {
     { title: "About", icon: User },
     { title: "FAQs", icon: Question },
     { title: "Contact", icon: EnvelopeSimple },
-    { type: "separator" as const },
-    { title: "Profile", icon: UserCircle },
   ];
 
   const handleOnChange = (index: number | null) => {
@@ -59,8 +57,6 @@ export function MobileBottomNav() {
       } else {
         router.push("/#contact");
       }
-    } else if (index === 6) {
-      router.push("/dashboard");
     }
   };
 

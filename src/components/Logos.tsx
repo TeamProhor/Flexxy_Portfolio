@@ -37,7 +37,7 @@ const Logos = ({
           Trusted by
           <br />
           <span className="font-serif-italic text-rose-500 font-normal">
-            these Creators
+            top Companies
           </span>
         </h2>
       </div>
