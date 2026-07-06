@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.2/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -20,9 +20,7 @@
       "!src/lib/utils.ts",
       "!src/proxy.ts",
       "!.next",
-      "!.agents",
-      "!.codex",
-      "!.gemini"
+      "!.agents"
     ]
   },
   "formatter": {
@@ -33,7 +31,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
+      "preset": "recommended",
       "suspicious": {
         "noUnknownAtRules": "off"
       }
@@ -48,6 +46,11 @@
       "source": {
         "organizeImports": "on"
       }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
     }
   }
 }

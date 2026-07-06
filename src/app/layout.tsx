@@ -1,15 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Cormorant,
+  Hind_Siliguri,
+  Inter,
+  JetBrains_Mono,
+} from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const hindSiliguri = Hind_Siliguri({
+  variable: "--font-hind-siliguri",
+  subsets: ["bengali"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const cormorant = Cormorant({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
@@ -26,11 +44,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${hindSiliguri.variable} ${cormorant.variable} ${jetbrainsMono.variable}  ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <TooltipProvider>
-        <body className="min-h-full flex flex-col">{children}</body>
-      </TooltipProvider>
+      <ThemeProvider>
+        <TooltipProvider>
+          <body className="min-h-full flex flex-col">{children}</body>
+        </TooltipProvider>
+      </ThemeProvider>
     </html>
   );
 }
