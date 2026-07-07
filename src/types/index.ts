@@ -32,22 +32,3 @@ export interface ThemeTogglerProps extends ComponentPropsWithoutRef<"button"> {
   /** Called on toggle. Pair with `theme` for controlled usage. */
   readonly onThemeChange?: (theme: "light" | "dark") => void;
 }
-
-export interface LoginFormProps {
-  readonly dict: {
-    login: {
-      title: string;
-      newHere: string;
-      signUpFree: string;
-      sendMagicLink: string;
-      usePassword: string;
-      or: string;
-      sso: string;
-      termsText1: string;
-      termsLink: string;
-      and: string;
-      privacyLink: string;
-      termsText2: string;
-    };
-  };
-}

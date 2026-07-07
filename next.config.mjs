@@ -30,6 +30,14 @@ const nextConfig = {
   cacheComponents: true,
   images: {
     formats: ["image/avif", "image/webp"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.dicebear.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
   },
   productionBrowserSourceMaps: false,
   typescript: {

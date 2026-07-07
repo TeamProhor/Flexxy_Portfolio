@@ -1,24 +1,24 @@
 {
   "meta": {
-    "title": "Prohor Next.js & Supabase Starter Kit",
-    "ogTitle": "Prohor Next.js Starter Kit",
-    "description": "Build modern web apps faster with Prohor Next.js Starter Kit. Features Supabase, Tailwind CSS, and Biome linting for an optimal developer experience.",
-    "ogDescription": "Build modern web apps faster with Prohor Next.js Starter Kit.",
-    "twitterTitle": "Prohor Next.js Starter Kit - Build Faster Apps Today",
-    "twitterDescription": "Launch your next web project faster with Prohor Next.js Starter Kit. Featuring Supabase integration, modern Tailwind CSS styling, strict Biome linting, and seamless developer experience built-in."
+    "title": "Flexxy - Premium Video Editor & Motion Designer Portfolio",
+    "ogTitle": "Flexxy Portfolio",
+    "description": "Cinematic storytelling and premium video editing for SaaS, tech startups, and brands. Expert post-production including color grading and sound design.",
+    "ogDescription": "Cinematic storytelling and premium video editing for SaaS, tech startups, and brands.",
+    "twitterTitle": "Flexxy - Premium Video Editor & Motion Designer Portfolio",
+    "twitterDescription": "Cinematic storytelling and premium video editing for SaaS, tech startups, and brands. Expert post-production including color grading and sound design."
   },
   "jsonLd": {
-    "name": "Prohor Next.js Starter Kit",
+    "name": "Flexxy Portfolio",
     "language": "en-US",
-    "description": "A fast, modern, and reliable Next.js starter kit fully equipped with Supabase, Tailwind CSS, and Biome.",
+    "description": "Premium video editing and post-production portfolio for brands.",
     "faq": [
       {
-        "question": "What is the Prohor Next.js Starter Kit?",
-        "answer": "Prohor is a modern and fast Next.js starter kit fully equipped with Supabase database, Tailwind CSS styling, Biome linting, and GSAP animation framework."
+        "question": "What specific types of videos do you edit?",
+        "answer": "I specialize in premium commercials, engaging documentaries, and high-end cinematic social media content."
       },
       {
-        "question": "How do I get started with Prohor Starter Kit?",
-        "answer": "You can start development immediately by cloning the project and running 'bun install' followed by 'bun run dev'."
+        "question": "How long does a typical project take to finish?",
+        "answer": "Depending on the scope, most projects are completed within two weeks. Rush delivery is always available."
       }
     ]
   },
@@ -73,5 +73,358 @@
       "privacyLink": "Privacy Policy",
       "termsText2": "."
     }
+  },
+  "landing": {
+    "preloader": {
+      "title1": "Stop",
+      "title2": "here",
+      "subtitle": "You can definitely leave the website:",
+      "list": [
+        "If you think editing doesn't matter anything",
+        "Isn't looking for premium editors.",
+        "Doesn't want to grow your business and wants to get stucked at the place you are",
+        "just looking for a cheap editor who copy paste your reels from a template"
+      ]
+    },
+    "hero": {
+      "title1": "Editor that actually",
+      "title2": "stops the scroll",
+      "subtitle": "Premium video editing and post-production that elevates your brand and turns viewers into paying customers.",
+      "ariaPlay": "Play Video",
+      "loader": {
+        "importing": "Importing media",
+        "syncing": "Syncing audio",
+        "applying": "Applying effects",
+        "rendering": "Rendering video",
+        "complete": "Export complete"
+      }
+    },
+    "logos": {
+      "title1": "Trusted by",
+      "title2": "top Companies"
+    },
+    "featuredWork": {
+      "title1": "Some of my",
+      "title2": "featured work",
+      "subtitle": "A curated selection of my best commercial and documentary edits.",
+      "btn": "View All Works"
+    },
+    "whyNow": {
+      "title1": "Your Unfair Advantage",
+      "title2": "Right Now",
+      "subtitle": "Every tech startup, SaaS company, and brand wants that clean, premium aesthetic but 90% of video editors can't deliver it.",
+      "disadvantagesTitle": "Where Most Video Editors Fall Short",
+      "advantagesTitle": "When You Work With Me",
+      "btn": "View My Work"
+    },
+    "purpose": {
+      "title1": "Video Edits That Make Your Audience",
+      "title2": "Choose You First",
+      "subtitle": "I partner with ambitious brands and creators to produce videos that command premium attention. Clean cuts, intentional motion, and flawless pacing."
+    },
+    "outcome": {
+      "title1": "Motion Work That Actually",
+      "title2": "Stops the Scroll.",
+      "subtitle": "Your brand deserves video content that looks like an Apple product launch. From dynamic commercials to cinematic documentaries, I deliver high-end post-production that captures attention and drives results. It's not just editing — it's crafting a visual experience."
+    },
+    "howItWorks": {
+      "title1": "My process in",
+      "title2": "post-production"
+    },
+    "endResult": {
+      "title1": "Cinematic Details That",
+      "title2": "Elevate The Brand",
+      "subtitle": "It's not just about cuts; it's about pacing, motion, and visual flow.",
+      "btn": "I want To Create Work Like This"
+    },
+    "testimonials": {
+      "title": "Testimonials"
+    },
+    "faqs": {
+      "title1": "Things You're",
+      "title2": "Probably Wondering",
+      "subtitle": "Everything you need to know about my video editing process."
+    },
+    "contact": {
+      "title1": "Let's create something",
+      "title2": "extraordinary.",
+      "subtitle": "I'm currently taking on new projects for Q3. Whether you need a high-end commercial, a cinematic documentary, or a scroll-stopping social campaign, let's talk.",
+      "btn": "Start a Project"
+    },
+    "footer": {
+      "copyright": "Copyright © Vedita Editz 2026",
+      "largeText": "VeditaEditz"
+    }
+  },
+  "about": {
+    "hero": {
+      "title1": "The Edit is",
+      "title2": "Everything",
+      "subtitle": "Hi, I'm Flexxy. I partner with ambitious brands to turn raw footage into cinematic experiences that demand attention."
+    },
+    "content": {
+      "philosophyTitle": "Post-production is the final rewrite of the story.",
+      "philosophyP1": "Most editors just cut clips. I focus on rhythm, pacing, and emotional resonance. Whether it's a 15-second social commercial or a 20-minute documentary, every single frame has to justify its existence.",
+      "philosophyP2": "My approach blends high-end motion design with documentary-style storytelling to create work that feels premium, effortless, and entirely unique to your brand.",
+      "capabilitiesTitle": "Capabilities"
+    }
+  },
+  "works": {
+    "hero": {
+      "title1": "Selected",
+      "title2": "Works",
+      "subtitle": "An archive of premium commercials, documentaries, and digital campaigns."
+    }
+  },
+  "project": {
+    "forText": "for",
+    "roleLabel": "Role",
+    "yearLabel": "Year",
+    "overviewLabel": "Project Overview",
+    "btn": "View All Works"
+  },
+  "data": {
+    "faqs": {
+      "left": [
+        {
+          "id": "faq-left-1",
+          "q": "What specific types of videos do you edit?",
+          "a": "I specialize in premium commercials, engaging documentaries, and high-end cinematic social media content."
+        },
+        {
+          "id": "faq-left-2",
+          "q": "How long does a typical project take to finish?",
+          "a": "Depending on the scope, most projects are completed within two weeks. Rush delivery is always available."
+        },
+        {
+          "id": "faq-left-3",
+          "q": "How many rounds of revisions are included?",
+          "a": "Every project includes two complete rounds of revisions to ensure the final product perfectly hits the mark."
+        }
+      ],
+      "right": [
+        {
+          "id": "faq-right-1",
+          "q": "Do you help with script and creative direction?",
+          "a": "Absolutely. I actively collaborate with clients early on to shape the narrative and visual style flawlessly."
+        },
+        {
+          "id": "faq-right-2",
+          "q": "What software stack do you use for editing?",
+          "a": "I work primarily within Adobe Premiere Pro, After Effects, and DaVinci Resolve for expert color grading."
+        },
+        {
+          "id": "faq-right-3",
+          "q": "What is the best way to get a project started?",
+          "a": "Simply reach out via the contact form with your project details, and we will schedule a quick discovery call."
+        }
+      ]
+    },
+    "steps": [
+      {
+        "id": "step-1",
+        "step": "Step 1",
+        "stage": "Stage 1:",
+        "title": "Discovery & Strategy",
+        "description": "We start by analyzing your brand, audience, and goals. We discuss the creative direction to ensure the final video aligns perfectly with your vision.",
+        "isLast": false,
+        "hasBr": false,
+        "icon": "FileText"
+      },
+      {
+        "id": "step-2",
+        "step": "Step 2",
+        "stage": "Stage 2:",
+        "title": "Asset Curation & Storymapping",
+        "description": "I review all provided footage, curate the best takes, and build a rough structural outline of the narrative before diving into the detailed edit.",
+        "isLast": false,
+        "hasBr": false,
+        "icon": "MapTrifold"
+      },
+      {
+        "id": "step-3",
+        "step": "Step 3",
+        "stage": "Stage 3:",
+        "title": "The Edit & Motion",
+        "description": "This is where the magic happens. I cut the footage to the beat, add seamless transitions, and integrate premium motion graphics that elevate the production value.",
+        "isLast": false,
+        "hasBr": false,
+        "icon": "MagicWand"
+      },
+      {
+        "id": "step-4",
+        "step": "Step 4",
+        "stage": "Stage 4:",
+        "title": "Color & Sound Design",
+        "description": "A great edit needs great sound and color. I perform professional color grading to achieve a cinematic look and layer immersive sound effects to bring the video to life.",
+        "isLast": false,
+        "hasBr": false,
+        "icon": "RocketLaunch"
+      },
+      {
+        "id": "step-5",
+        "step": "Step 5",
+        "stage": "Stage 5:",
+        "title": "Final Delivery",
+        "description": "You receive a polished, high-resolution master file optimized for your target platforms, ready to captivate your audience and drive results.",
+        "isLast": true,
+        "hasBr": false,
+        "icon": "Crown"
+      }
+    ],
+    "advantages": {
+      "disadvantages": [
+        {
+          "id": "dis-1",
+          "text": "Always missing deadlines and delaying your content schedule"
+        },
+        {
+          "id": "dis-2",
+          "text": "Has no clue about scroll-stopping hooks or viewer retention"
+        },
+        {
+          "id": "dis-3",
+          "text": "Can't assist with scripts, leaving you to do all the creative heavy lifting"
+        },
+        {
+          "id": "dis-4",
+          "text": "Demands money every single day without actually understanding your business needs"
+        },
+        {
+          "id": "dis-5",
+          "text": "Inexperienced editors who need constant supervision and direction"
+        },
+        {
+          "id": "dis-6",
+          "text": "Fails to turn simple footage into anything more than a basic, boring video"
+        }
+      ],
+      "advantages": [
+        {
+          "id": "adv-1",
+          "text": "Always delivers high-quality work on time and keeps your content schedule running smoothly"
+        },
+        {
+          "id": "adv-2",
+          "text": "Master of scroll-stopping hooks that grab attention and maximize viewer retention"
+        },
+        {
+          "id": "adv-3",
+          "text": "Proactively helps you with your scripts and creative direction to elevate every video"
+        },
+        {
+          "id": "adv-4",
+          "text": "Deeply understands your business and your goals instead of just demanding money every day"
+        },
+        {
+          "id": "adv-5",
+          "text": "Highly experienced editor who takes ownership of projects with minimal supervision"
+        },
+        {
+          "id": "adv-6",
+          "text": "Expertly turns simple, raw footage into a polished and unforgettable cinematic experience"
+        }
+      ]
+    },
+    "projects": [
+      {
+        "id": 1,
+        "slug": "global-campaign",
+        "title": "Global Campaign",
+        "client": "Tata Motors",
+        "role": "Lead Editor",
+        "year": "2024",
+        "description": "A high-octane global launch campaign requiring split-second precision and seamless speed-ramps to capture the sheer power and elegance of the new M-Series."
+      },
+      {
+        "id": 2,
+        "slug": "product-launch",
+        "title": "Product Launch",
+        "client": "Flipkart",
+        "role": "Motion Designer",
+        "year": "2023",
+        "description": "Minimalist, rhythm-driven editing that highlights the pristine design and capability of the device, matching every cut to the bespoke sound design."
+      },
+      {
+        "id": 3,
+        "slug": "brand-anthem",
+        "title": "Brand Anthem",
+        "client": "Myntra",
+        "role": "Editor & Colorist",
+        "year": "2024",
+        "description": "An emotional, raw documentary-style anthem piece focusing on grit and perseverance, featuring dynamic transitions and a highly cinematic grade."
+      },
+      {
+        "id": 4,
+        "slug": "documentary",
+        "title": "Documentary",
+        "client": "Discovery India",
+        "role": "Lead Editor",
+        "year": "2023",
+        "description": "A breathtaking visual journey that required thousands of hours of raw footage to be distilled into a captivating 20-minute narrative."
+      },
+      {
+        "id": 5,
+        "slug": "social-commercial",
+        "title": "Social Commercial",
+        "client": "JioSaavn",
+        "role": "Video Editor",
+        "year": "2024",
+        "description": "A fast-paced, highly engaging commercial optimized for vertical social feeds, featuring bold typography and kinetic motion design."
+      }
+    ],
+    "capabilities": [
+      {
+        "id": "cap-1",
+        "title": "Editorial",
+        "description": "Commercials, Documentaries, Social Campaigns, Brand Anthems."
+      },
+      {
+        "id": "cap-2",
+        "title": "Motion Design",
+        "description": "Kinetic Typography, UI Animation, Seamless Transitions, Title Sequences."
+      },
+      {
+        "id": "cap-3",
+        "title": "Color & Sound",
+        "description": "Cinematic Color Grading, Sound Design, Audio Mixing, Foley."
+      },
+      {
+        "id": "cap-4",
+        "title": "Software",
+        "description": "Premiere Pro, After Effects, DaVinci Resolve, Figma."
+      }
+    ],
+    "outcomeStats": [
+      {
+        "id": "stat-1",
+        "label": "10M+ Views Delivered"
+      },
+      {
+        "id": "stat-2",
+        "label": "Award-Winning Edits"
+      }
+    ],
+    "testimonials": [
+      {
+        "id": 1,
+        "quote": "The visual storytelling is just next level. It completely transformed our campaign.",
+        "author": "Rahul Sharma",
+        "role": "Marketing Head at Zomato"
+      },
+      {
+        "id": 2,
+        "quote": "Simply brilliant execution. The retention rate on our videos skyrocketed.",
+        "author": "Priya Patel",
+        "role": "Content Creator"
+      },
+      {
+        "id": 3,
+        "quote": "His attention to detail and cinematic touch is unmatched in the industry.",
+        "author": "Amit Desai",
+        "role": "Founder at CRED"
+      }
+    ],
+    "mobileNav": ["Home", "Work", "About", "FAQs", "Contact"]
   }
 }

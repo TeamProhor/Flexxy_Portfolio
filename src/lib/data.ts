@@ -1,0 +1,350 @@
+const faqs = {
+  left: [
+    {
+      id: "faq-left-1",
+      q: "What specific types of videos do you edit?",
+      a: "I specialize in premium commercials, engaging documentaries, and high-end cinematic social media content.",
+    },
+    {
+      id: "faq-left-2",
+      q: "How long does a typical project take to finish?",
+      a: "Depending on the scope, most projects are completed within two weeks. Rush delivery is always available.",
+    },
+    {
+      id: "faq-left-3",
+      q: "How many rounds of revisions are included?",
+      a: "Every project includes two complete rounds of revisions to ensure the final product perfectly hits the mark.",
+    },
+  ],
+  right: [
+    {
+      id: "faq-right-1",
+      q: "Do you help with script and creative direction?",
+      a: "Absolutely. I actively collaborate with clients early on to shape the narrative and visual style flawlessly.",
+    },
+    {
+      id: "faq-right-2",
+      q: "What software stack do you use for editing?",
+      a: "I work primarily within Adobe Premiere Pro, After Effects, and DaVinci Resolve for expert color grading.",
+    },
+    {
+      id: "faq-right-3",
+      q: "What is the best way to get a project started?",
+      a: "Simply reach out via the contact form with your project details, and we will schedule a quick discovery call.",
+    },
+  ],
+};
+
+const steps = [
+  {
+    id: "step-1",
+    step: "Step 1",
+    stage: "Stage 1:",
+    title: "Discovery & Strategy",
+    description:
+      "We start by analyzing your brand, audience, and goals. We discuss the creative direction to ensure the final video aligns perfectly with your vision.",
+    isLast: false,
+    hasBr: false,
+    icon: "FileText",
+  },
+  {
+    id: "step-2",
+    step: "Step 2",
+    stage: "Stage 2:",
+    title: "Asset Curation & Storymapping",
+    description:
+      "I review all provided footage, curate the best takes, and build a rough structural outline of the narrative before diving into the detailed edit.",
+    isLast: false,
+    hasBr: false,
+    icon: "MapTrifold",
+  },
+  {
+    id: "step-3",
+    step: "Step 3",
+    stage: "Stage 3:",
+    title: "The Edit & Motion",
+    description:
+      "This is where the magic happens. I cut the footage to the beat, add seamless transitions, and integrate premium motion graphics that elevate the production value.",
+    isLast: false,
+    hasBr: false,
+    icon: "MagicWand",
+  },
+  {
+    id: "step-4",
+    step: "Step 4",
+    stage: "Stage 4:",
+    title: "Color & Sound Design",
+    description:
+      "A great edit needs great sound and color. I perform professional color grading to achieve a cinematic look and layer immersive sound effects to bring the video to life.",
+    isLast: false,
+    hasBr: false,
+    icon: "RocketLaunch",
+  },
+  {
+    id: "step-5",
+    step: "Step 5",
+    stage: "Stage 5:",
+    title: "Final Delivery",
+    description:
+      "You receive a polished, high-resolution master file optimized for your target platforms, ready to captivate your audience and drive results.",
+    isLast: true,
+    hasBr: false,
+    icon: "Crown",
+  },
+];
+
+export const endResultVideos = [
+  {
+    id: "video-swiggy",
+    src: "/videos/01.mp4",
+    img: "/image/video-swiggy.webp",
+    title: "Swiggy",
+    mt: "",
+  },
+  {
+    id: "video-paytm",
+    src: "/videos/02.mp4",
+    img: "/image/video-paytm.webp",
+    title: "Paytm",
+    mt: "lg:mt-8",
+  },
+  {
+    id: "video-ola",
+    src: "/videos/03.mp4",
+    img: "/image/video-ola.webp",
+    title: "Ola",
+    mt: "",
+  },
+  {
+    id: "video-cred",
+    src: "/videos/04.mp4",
+    img: "/image/video-cred.webp",
+    title: "CRED",
+    mt: "lg:mt-8",
+  },
+];
+
+const advantagesData = {
+  disadvantages: [
+    {
+      id: "dis-1",
+      text: "Always missing deadlines and delaying your content schedule",
+    },
+    {
+      id: "dis-2",
+      text: "Has no clue about scroll-stopping hooks or viewer retention",
+    },
+    {
+      id: "dis-3",
+      text: "Can't assist with scripts, leaving you to do all the creative heavy lifting",
+    },
+    {
+      id: "dis-4",
+      text: "Demands money every single day without actually understanding your business needs",
+    },
+    {
+      id: "dis-5",
+      text: "Inexperienced editors who need constant supervision and direction",
+    },
+    {
+      id: "dis-6",
+      text: "Fails to turn simple footage into anything more than a basic, boring video",
+    },
+  ],
+  advantages: [
+    {
+      id: "adv-1",
+      text: "Always delivers high-quality work on time and keeps your content schedule running smoothly",
+    },
+    {
+      id: "adv-2",
+      text: "Master of scroll-stopping hooks that grab attention and maximize viewer retention",
+    },
+    {
+      id: "adv-3",
+      text: "Proactively helps you with your scripts and creative direction to elevate every video",
+    },
+    {
+      id: "adv-4",
+      text: "Deeply understands your business and your goals instead of just demanding money every day",
+    },
+    {
+      id: "adv-5",
+      text: "Highly experienced editor who takes ownership of projects with minimal supervision",
+    },
+    {
+      id: "adv-6",
+      text: "Expertly turns simple, raw footage into a polished and unforgettable cinematic experience",
+    },
+  ],
+};
+
+export const allProjects = [
+  {
+    id: 1,
+    slug: "global-campaign",
+    title: "Global Campaign",
+    client: "Tata Motors",
+    role: "Lead Editor",
+    year: "2024",
+    description:
+      "A high-octane global launch campaign requiring split-second precision and seamless speed-ramps to capture the sheer power and elegance of the new M-Series.",
+    src: "/videos/05.mp4",
+    colSpan: "md:col-span-2",
+  },
+  {
+    id: 2,
+    slug: "product-launch",
+    title: "Product Launch",
+    client: "Flipkart",
+    role: "Motion Designer",
+    year: "2023",
+    description:
+      "Minimalist, rhythm-driven editing that highlights the pristine design and capability of the device, matching every cut to the bespoke sound design.",
+    src: "/videos/01.mp4",
+    colSpan: "md:col-span-1",
+  },
+  {
+    id: 3,
+    slug: "brand-anthem",
+    title: "Brand Anthem",
+    client: "Myntra",
+    role: "Editor & Colorist",
+    year: "2024",
+    description:
+      "An emotional, raw documentary-style anthem piece focusing on grit and perseverance, featuring dynamic transitions and a highly cinematic grade.",
+    src: "/videos/02.mp4",
+    colSpan: "md:col-span-1",
+  },
+  {
+    id: 4,
+    slug: "documentary",
+    title: "Documentary",
+    client: "Discovery India",
+    role: "Lead Editor",
+    year: "2023",
+    description:
+      "A breathtaking visual journey that required thousands of hours of raw footage to be distilled into a compelling 20-minute narrative.",
+    src: "/videos/03.mp4",
+    colSpan: "md:col-span-2",
+  },
+  {
+    id: 5,
+    slug: "social-commercial",
+    title: "Social Commercial",
+    client: "JioSaavn",
+    role: "Video Editor",
+    year: "2024",
+    description:
+      "A fast-paced, highly engaging commercial optimized for vertical social feeds, featuring bold typography and kinetic motion design.",
+    src: "/videos/04.mp4",
+    colSpan: "md:col-span-3",
+  },
+];
+
+const capabilities = [
+  {
+    id: "cap-1",
+    title: "Editorial",
+    description: "Commercials, Documentaries, Social Campaigns, Brand Anthems.",
+  },
+  {
+    id: "cap-2",
+    title: "Motion Design",
+    description:
+      "Kinetic Typography, UI Animation, Seamless Transitions, Title Sequences.",
+  },
+  {
+    id: "cap-3",
+    title: "Color & Sound",
+    description: "Cinematic Color Grading, Sound Design, Audio Mixing, Foley.",
+  },
+  {
+    id: "cap-4",
+    title: "Software",
+    description: "Premiere Pro, After Effects, DaVinci Resolve, Figma.",
+  },
+];
+
+const outcomeStats = [
+  { id: "stat-1", label: "10M+ Views Delivered", color: "bg-gray-400" },
+  { id: "stat-2", label: "Award-Winning Edits", color: "bg-rose-500" },
+];
+
+const testimonials = [
+  {
+    id: 1,
+    quote:
+      "The visual storytelling is just next level. It completely transformed our campaign.",
+    author: "Rahul Sharma",
+    role: "Marketing Head at Zomato",
+    avatar: "https://api.dicebear.com/7.x/notionists/webp?seed=Rahul",
+  },
+  {
+    id: 2,
+    quote:
+      "Simply brilliant execution. The retention rate on our videos skyrocketed.",
+    author: "Priya Patel",
+    role: "Content Creator",
+    avatar: "https://api.dicebear.com/7.x/notionists/webp?seed=Priya",
+  },
+  {
+    id: 3,
+    quote:
+      "His attention to detail and cinematic touch is unmatched in the industry.",
+    author: "Amit Desai",
+    role: "Founder at CRED",
+    avatar: "https://api.dicebear.com/7.x/notionists/webp?seed=Amit",
+  },
+];
+
+export const trustedCreators = [
+  {
+    id: "logo-1",
+    description: "Rohan",
+    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Rohan",
+    className: "h-12 w-12 rounded-full",
+  },
+  {
+    id: "logo-2",
+    description: "Anjali",
+    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Anjali",
+    className: "h-12 w-12 rounded-full",
+  },
+  {
+    id: "logo-3",
+    description: "Vikram",
+    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Vikram",
+    className: "h-12 w-12 rounded-full",
+  },
+  {
+    id: "logo-4",
+    description: "Sneha",
+    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Sneha",
+    className: "h-12 w-12 rounded-full",
+  },
+  {
+    id: "logo-5",
+    description: "Karan",
+    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Karan",
+    className: "h-12 w-12 rounded-full",
+  },
+  {
+    id: "logo-6",
+    description: "Neha",
+    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Neha",
+    className: "h-12 w-12 rounded-full",
+  },
+  {
+    id: "logo-7",
+    description: "Aditya",
+    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Aditya",
+    className: "h-12 w-12 rounded-full",
+  },
+  {
+    id: "logo-8",
+    description: "Pooja",
+    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Pooja",
+    className: "h-12 w-12 rounded-full",
+  },
+];

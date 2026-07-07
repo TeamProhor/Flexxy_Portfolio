@@ -5,10 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: var(--font-hind-siliguri), var(--font-inter), sans-serif;
-  --font-serif: var(--font-cormorant), var(--font-hind-siliguri), serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-serif: var(--font-instrument-serif), serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
-  --font-heading: var(--font-cormorant), var(--font-hind-siliguri), serif;
+  --font-heading: var(--font-sans);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -49,34 +49,34 @@
 }
 
 :root {
-  --background: oklch(0.985 0.003 70);
-  --foreground: oklch(0.145 0.001 70);
-  --card: oklch(0.935 0.01 75);
-  --card-foreground: oklch(0.145 0.001 70);
-  --popover: oklch(0.985 0.003 70);
-  --popover-foreground: oklch(0.145 0.001 70);
-  --primary: oklch(0.61 0.13 40);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.935 0.01 75);
-  --secondary-foreground: oklch(0.145 0.001 70);
-  --muted: oklch(0.96 0.01 75);
-  --muted-foreground: oklch(0.48 0.01 75);
-  --accent: oklch(0.935 0.01 75);
-  --accent-foreground: oklch(0.145 0.001 70);
-  --destructive: oklch(0.48 0.18 20);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.9 0.01 75);
-  --input: oklch(0.9 0.01 75);
-  --ring: oklch(0.61 0.13 40);
-  --radius: 12px;
-  --sidebar: oklch(0.985 0.003 70);
-  --sidebar-foreground: oklch(0.145 0.001 70);
-  --sidebar-primary: oklch(0.61 0.13 40);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.935 0.01 75);
-  --sidebar-accent-foreground: oklch(0.145 0.001 70);
-  --sidebar-border: oklch(0.9 0.01 75);
-  --sidebar-ring: oklch(0.61 0.13 40);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
@@ -109,23 +109,111 @@
   --sidebar-ring: oklch(0.61 0.13 40);
 }
 
+body {
+  font-family: var(--font-sans), sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: rgba(255, 0, 0, 0.12);
+  color: inherit;
+}
+
+.font-serif-italic {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+
+/* Hide scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+/* Hide default cursor on interactive elements since we use a custom cursor */
+button,
+a,
+[role="button"],
+[data-slot="accordion-trigger"] {
+  cursor: none;
+}
+
+.glow-button {
+  box-shadow:
+    inset 0 0 20px 1.64px rgba(255, 255, 255, 0.2),
+    0 15px 30px -2.5px rgba(255, 50, 50, 0.15),
+    0 4px 6px -1px rgba(255, 50, 50, 0.1);
+}
+
+/* Shimmer sweep on hover — works on any rounded button */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 80%
+  );
+  transform: translateX(-150%);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+.btn-shimmer:hover::after {
+  transform: translateX(150%);
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Footer large text — solid color, not gradient */
+.text-footer-fade {
+  color: oklch(0.85 0 0);
+}
+
+/* Reduced motion: disable all custom animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow {
+    animation: none;
+  }
+  .btn-shimmer::after {
+    transition: none;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
   }
   html {
     @apply font-sans;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-heading;
   }
 }
 
@@ -133,4 +221,22 @@
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
+}
+
+html[lang="hi"] {
+  --font-sans: var(--font-mukta), sans-serif;
+  --font-serif: var(--font-rozha-one), serif;
+}
+
+html[lang="hi"],
+html[lang="hi"] body {
+  font-family: var(--font-mukta), sans-serif;
+}
+
+html[lang="hi"] h1,
+html[lang="hi"] h2,
+html[lang="hi"] h3,
+html[lang="hi"] .font-serif,
+html[lang="hi"] .font-serif-italic {
+  font-family: var(--font-rozha-one), serif;
 }

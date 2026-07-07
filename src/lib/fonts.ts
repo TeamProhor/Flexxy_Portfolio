@@ -1,28 +1,41 @@
 import {
-  Cormorant,
-  Hind_Siliguri,
+  Geist,
+  Instrument_Serif,
   Inter,
-  JetBrains_Mono,
+  Mukta,
+  Rozha_One,
 } from "next/font/google";
-
-export const hindSiliguri = Hind_Siliguri({
-  variable: "--font-hind-siliguri",
-  subsets: ["bengali"],
-  weight: ["300", "400", "500", "600", "700"],
-});
 
 export const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
-export const cormorant = Cormorant({
-  variable: "--font-cormorant",
+export const geist = Geist({
   subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+export const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  weight: "400",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+export const rozhaOne = Rozha_One({
+  variable: "--font-rozha-one",
+  weight: "400",
+  subsets: ["devanagari", "latin"],
+  display: "swap",
+});
+
+export const mukta = Mukta({
+  variable: "--font-mukta",
   weight: ["300", "400", "500", "600", "700"],
-});
-
-export const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
+  subsets: ["devanagari", "latin"],
+  display: "swap",
 });

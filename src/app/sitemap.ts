@@ -4,11 +4,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://prohor-nextjs-starter-kit.vercel.app";
   const lastModified = new Date().toISOString();
 
-  const routes = ["", "/login"];
+  const routes = ["", "/works", "/about"];
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
   for (const route of routes) {
-    for (const locale of ["en", "bn"]) {
+    for (const locale of ["en", "hi"]) {
       sitemapEntries.push({
         url: `${baseUrl}/${locale}${route}`,
         lastModified,
@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: {
             en: `${baseUrl}/en${route}`,
-            bn: `${baseUrl}/bn${route}`,
+            hi: `${baseUrl}/hi${route}`,
           },
         },
       });

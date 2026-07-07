@@ -1,45 +1,102 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { cormorant, hindSiliguri, inter, jetbrainsMono } from "@/lib/fonts";
-import { ProhorIcon } from "@/lib/icons";
-import "@/app/globals.css";
+import { useRef } from "react";
+import { Footer } from "@/components/landing/Footer";
+import { ScrollProgress } from "@/components/landing/ScrollProgress";
 
 export default function NotFound() {
-  const pathname = usePathname();
-  const isBn = pathname?.startsWith("/bn");
+  const containerRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      if (!containerRef.current) return;
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+
+      if (prefersReducedMotion) {
+        gsap.set(".nf-code, .nf-tagline, .nf-body, .nf-cta", {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          scale: 1,
+        });
+        return;
+      }
+
+      const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+      tl.fromTo(
+        ".nf-code",
+        { opacity: 0, scale: 0.9, filter: "blur(10px)" },
+        { opacity: 1, scale: 1, filter: "blur(0px)", duration: 1 },
+        0.15,
+      );
+
+      tl.fromTo(
+        ".nf-tagline",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.7 },
+        0.4,
+      );
+
+      tl.fromTo(
+        ".nf-body",
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.6 },
+        0.55,
+      );
+
+      tl.fromTo(
+        ".nf-cta",
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, duration: 0.6 },
+        0.7,
+      );
+    },
+    { scope: containerRef },
+  );
 
   return (
-    <html
-      lang={isBn ? "bn" : "en"}
-      className={`${hindSiliguri.variable} ${cormorant.variable} ${jetbrainsMono.variable} ${inter.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <main className="flex flex-grow min-h-screen flex-col items-center justify-center bg-background px-6">
-          <div className="flex flex-col items-center gap-6 text-center">
-            <ProhorIcon animate={true} className="size-24" />
+    <>
+      <ScrollProgress />
+      <main
+        ref={containerRef}
+        className="flex min-h-screen flex-col items-center justify-between overflow-hidden bg-background selection:bg-rose-500/30"
+      >
+        <section className="flex flex-col items-center justify-center flex-1 px-6 text-center">
+          <h1
+            className="nf-code text-8xl md:text-[120px] font-medium tracking-tighter text-foreground leading-none mb-4"
+            style={{ opacity: 0, letterSpacing: "-0.04em" }}
+          >
+            404
+          </h1>
+          <p
+            className="nf-tagline font-serif-italic text-3xl md:text-4xl text-muted-foreground mb-8"
+            style={{ opacity: 0 }}
+          >
+            Frame not found.
+          </p>
+          <p
+            className="nf-body text-muted-foreground max-w-md mx-auto mb-12 text-lg"
+            style={{ opacity: 0, textWrap: "pretty" }}
+          >
+            The page you&apos;re looking for has been cut from the final edit.
+          </p>
+          <Link
+            href="/"
+            className="nf-cta bg-black text-white px-8 py-4 rounded-full font-semibold hover:bg-zinc-800 transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
+            style={{ opacity: 0 }}
+          >
+            Back to Home
+          </Link>
+        </section>
 
-            <div className="flex flex-col gap-2">
-              <h1 className="text-balance text-4xl font-normal tracking-tight font-serif text-foreground">
-                {isBn ? "৪০৪ - পাতাটি খুঁজে পাওয়া যায়নি" : "404 - Page Not Found"}
-              </h1>
-              <p className="text-pretty text-muted-foreground text-sm font-sans max-w-md">
-                {isBn
-                  ? "দুঃখিত, আপনি যে পাতাটি খুঁজছেন তা স্থানান্তরিত করা হয়েছে অথবা মুছে ফেলা হয়েছে।"
-                  : "Sorry, the page you are looking for has been moved or deleted."}
-              </p>
-            </div>
-
-            <Button asChild size="lg" className="mt-2">
-              <Link href={isBn ? "/bn" : "/en"}>
-                {isBn ? "হোমপেজে ফিরে যান" : "Return Home"}
-              </Link>
-            </Button>
-          </div>
-        </main>
-      </body>
-    </html>
+        <Footer />
+      </main>
+    </>
   );
 }

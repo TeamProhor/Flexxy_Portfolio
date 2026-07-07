@@ -2,19 +2,25 @@ import type { Metadata } from "next";
 
 export const siteMetadata: Metadata = {
   metadataBase: new URL("https://prohor-nextjs-starter-kit.vercel.app"),
-  title: "Prohor Next.js & Supabase Starter Kit",
-  description: "Modern Next.js & Supabase starter kit with Tailwind by Prohor.",
+  title: "Flexxy - Premium Video Editor & Motion Designer Portfolio",
+  description:
+    "Cinematic storytelling and premium video editing for SaaS, tech startups, and brands. Expert post-production including color grading and sound design.",
   keywords: [
-    "Next.js starter",
-    "Supabase template",
-    "Tailwind CSS boilerplate",
-    "Prohor Starter Kit",
-    "React framework",
-    "AI friendly Next.js",
+    "Video Editor Portfolio",
+    "Premium Video Editing",
+    "Motion Designer",
+    "SaaS Commercials Editor",
+    "Cinematic Color Grading",
+    "DaVinci Resolve Editor",
+    "Sound Design Specialist",
+    "Vedita Edits",
+    "Flexxy Video Editing",
   ],
-  authors: [{ name: "Prohor Team", url: "https://github.com/TeamProhor" }],
-  creator: "Prohor Team",
-  publisher: "Prohor Team",
+  authors: [
+    { name: "Flexxy", url: "https://prohor-nextjs-starter-kit.vercel.app" },
+  ],
+  creator: "Flexxy",
+  publisher: "Flexxy",
   formatDetection: {
     email: false,
     address: false,
@@ -24,7 +30,7 @@ export const siteMetadata: Metadata = {
     canonical: "/",
     languages: {
       "en-US": "/en",
-      "bn-BD": "/bn",
+      "hi-IN": "/hi",
     },
   },
   robots: {
@@ -41,30 +47,30 @@ export const siteMetadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Prohor Next.js Starter Kit",
+    title: "Flexxy - Premium Video Editor & Motion Designer Portfolio",
     description:
-      "Modern Next.js & Supabase starter kit with Tailwind by Prohor.",
+      "Cinematic storytelling and premium video editing for SaaS, tech startups, and brands. Expert post-production including color grading and sound design.",
     type: "website",
-    siteName: "Prohor",
-    locale: "bn_BD",
-    alternateLocale: ["en_US"],
+    siteName: "Vedita Edits",
+    locale: "en_US",
+    alternateLocale: ["hi_IN"],
     url: "https://prohor-nextjs-starter-kit.vercel.app/",
     images: [
       {
         url: "https://prohor-nextjs-starter-kit.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Prohor Next.js Starter Kit with Supabase & Tailwind CSS",
+        alt: "Flexxy - Premium Video Editor & Motion Designer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prohor Next.js Starter Kit - Build Faster Apps Today",
+    title: "Flexxy - Premium Video Editor & Motion Designer Portfolio",
     description:
-      "Launch your next web project faster with Prohor Next.js Starter Kit. Featuring Supabase integration, modern Tailwind CSS styling, strict Biome linting, and seamless developer experience built-in.",
-    site: "@TeamProhor",
-    creator: "@TeamProhor",
+      "Cinematic storytelling and premium video editing for SaaS, tech startups, and brands. Expert post-production including color grading and sound design.",
+    site: "@VeditaEdits",
+    creator: "@VeditaEdits",
     images: ["https://prohor-nextjs-starter-kit.vercel.app/og-image.png"],
   },
 };
@@ -76,35 +82,30 @@ export const siteJsonLd = {
       "@type": "WebSite",
       "@id": "https://prohor-nextjs-starter-kit.vercel.app/#website",
       url: "https://prohor-nextjs-starter-kit.vercel.app/",
-      name: "Prohor Next.js Starter Kit",
+      name: "Flexxy Portfolio",
       description:
-        "Modern Next.js & Supabase starter kit with Tailwind by Prohor.",
-      inLanguage: ["en-US", "bn-BD"],
+        "Premium video editing and post-production portfolio for brands.",
+      inLanguage: ["en-US", "hi-IN"],
     },
     {
-      "@type": "Organization",
-      "@id": "https://prohor-nextjs-starter-kit.vercel.app/#organization",
-      name: "Prohor Team",
+      "@type": "Person",
+      "@id": "https://prohor-nextjs-starter-kit.vercel.app/#person",
+      name: "Flexxy",
+      jobTitle: "Premium Video Editor & Motion Designer",
       url: "https://prohor-nextjs-starter-kit.vercel.app/",
-      sameAs: ["https://github.com/TeamProhor"],
-      logo: "https://prohor-nextjs-starter-kit.vercel.app/icon.svg",
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer support",
-      },
+      sameAs: [
+        "https://github.com/TeamProhor",
+        "https://twitter.com/VeditaEdits",
+      ],
+      description:
+        "Specializing in rhythm-driven editing, cinematic color grading, sound design, and custom motion graphics for startups and creators.",
     },
     {
-      "@type": "SoftwareApplication",
-      name: "Prohor Next.js Starter Kit",
-      operatingSystem: "All",
-      applicationCategory: "DeveloperApplication",
+      "@type": "ProfessionalService",
+      name: "Vedita Edits",
       description:
-        "A fast, modern, and reliable Next.js starter kit fully equipped with Supabase, Tailwind CSS, and Biome.",
-      offers: {
-        "@type": "Offer",
-        price: "0",
-        priceCurrency: "USD",
-      },
+        "High-end post-production services including commercial video editing, color grading, sound mixing, and custom title designs.",
+      url: "https://prohor-nextjs-starter-kit.vercel.app/",
     },
   ],
 };
@@ -115,18 +116,18 @@ export const siteFaqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is the Prohor Next.js Starter Kit?",
+      name: "What specific types of videos do you edit?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Prohor is a modern and fast Next.js starter kit fully equipped with Supabase database, Tailwind CSS styling, Biome linting, and GSAP animation framework.",
+        text: "I specialize in premium commercials, engaging documentaries, and high-end cinematic social media content.",
       },
     },
     {
       "@type": "Question",
-      name: "How do I get started with Prohor Starter Kit?",
+      name: "How long does a typical project take to finish?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can start development immediately by cloning the project and running 'bun install' followed by 'bun run dev'.",
+        text: "Depending on the scope, most projects are completed within two weeks. Rush delivery is always available.",
       },
     },
   ],

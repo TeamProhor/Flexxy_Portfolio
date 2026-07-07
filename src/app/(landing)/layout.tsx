@@ -1,17 +1,13 @@
 import type { ReactElement, ReactNode } from "react";
-import { getDictionary } from "@/lib/i18n";
+import { MobileBottomNav } from "@/components/landing/MobileBottomNav";
+import dict from "@/dictionaries/en.json";
 import { siteFaqJsonLd } from "@/lib/seo";
 
-export default async function LandingLayout({
+export default function LandingLayout({
   children,
-  params,
 }: Readonly<{
   children: ReactNode;
-  params: Promise<{ lang: string }>;
-}>): Promise<ReactElement> {
-  const resolvedParams = await params;
-  const dict = await getDictionary(resolvedParams.lang);
-
+}>): ReactElement {
   const dynamicFaqJsonLd = {
     ...siteFaqJsonLd,
     mainEntity: dict.jsonLd.faq.map((item) => ({
@@ -36,7 +32,8 @@ export default async function LandingLayout({
         // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD payload is safe
         dangerouslySetInnerHTML={{ __html: jsonLdString }}
       />
-      {children}
+      <div className="flex-1">{children}</div>
+      <MobileBottomNav />
     </div>
   );
 }
