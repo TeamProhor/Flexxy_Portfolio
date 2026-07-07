@@ -186,6 +186,8 @@ export const Hero = ({ dict }: Readonly<HeroProps>) => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
                   className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   priority
+                  loading="eager"
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition-colors duration-400" />
                 <div className="absolute inset-0 flex items-center justify-center">

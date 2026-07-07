@@ -133,11 +133,7 @@ export function Testimonials({
     })();
   };
 
-  const avatars = [
-    "https://api.dicebear.com/7.x/notionists/webp?seed=Rahul",
-    "https://api.dicebear.com/7.x/notionists/webp?seed=Priya",
-    "https://api.dicebear.com/7.x/notionists/webp?seed=Amit",
-  ];
+  const avatars = ["/avatar.webp", "/avatar.webp", "/avatar.webp"];
 
   return (
     <ScrollReveal>

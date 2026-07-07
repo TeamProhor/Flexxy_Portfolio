@@ -74,6 +74,16 @@ export default function RootLayout({
       <head>
         <link rel="alternate" type="text/plain" href="/llms.txt" />
         <link rel="apple-touch-icon" href="/icon.svg" />
+        <link
+          rel="preconnect"
+          href="https://img.youtube.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://www.youtube.com"
+          crossOrigin="anonymous"
+        />
         <script
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD payload is safe

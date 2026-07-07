@@ -42,7 +42,7 @@ export const Outcome = ({ dict, statsData }: Readonly<OutcomeProps>) => {
               <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-20 flex items-center gap-3">
                 <div className="relative size-10 md:size-[50px] rounded-xl md:rounded-2xl border border-white/10 shadow-lg overflow-hidden">
                   <Image
-                    src="/image/figma-avatar.webp"
+                    src="/avatar.webp"
                     alt="Figma"
                     width={100}
                     height={100}

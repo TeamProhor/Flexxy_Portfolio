@@ -1,4 +1,4 @@
-const faqs = {
+const _faqs = {
   left: [
     {
       id: "faq-left-1",
@@ -35,7 +35,7 @@ const faqs = {
   ],
 };
 
-const steps = [
+const _steps = [
   {
     id: "step-1",
     step: "Step 1",
@@ -97,34 +97,34 @@ export const endResultVideos = [
   {
     id: "video-swiggy",
     src: "/videos/01.mp4",
-    img: "/image/video-swiggy.webp",
+    img: "/avatar.webp",
     title: "Swiggy",
     mt: "",
   },
   {
     id: "video-paytm",
     src: "/videos/02.mp4",
-    img: "/image/video-paytm.webp",
+    img: "/avatar.webp",
     title: "Paytm",
     mt: "lg:mt-8",
   },
   {
     id: "video-ola",
     src: "/videos/03.mp4",
-    img: "/image/video-ola.webp",
+    img: "/avatar.webp",
     title: "Ola",
     mt: "",
   },
   {
     id: "video-cred",
     src: "/videos/04.mp4",
-    img: "/image/video-cred.webp",
+    img: "/avatar.webp",
     title: "CRED",
     mt: "lg:mt-8",
   },
 ];
 
-const advantagesData = {
+const _advantagesData = {
   disadvantages: [
     {
       id: "dis-1",
@@ -242,7 +242,7 @@ export const allProjects = [
   },
 ];
 
-const capabilities = [
+const _capabilities = [
   {
     id: "cap-1",
     title: "Editorial",
@@ -266,19 +266,19 @@ const capabilities = [
   },
 ];
 
-const outcomeStats = [
+const _outcomeStats = [
   { id: "stat-1", label: "10M+ Views Delivered", color: "bg-gray-400" },
   { id: "stat-2", label: "Award-Winning Edits", color: "bg-rose-500" },
 ];
 
-const testimonials = [
+const _testimonials = [
   {
     id: 1,
     quote:
       "The visual storytelling is just next level. It completely transformed our campaign.",
     author: "Rahul Sharma",
     role: "Marketing Head at Zomato",
-    avatar: "https://api.dicebear.com/7.x/notionists/webp?seed=Rahul",
+    avatar: "/avatar.webp",
   },
   {
     id: 2,
@@ -286,7 +286,7 @@ const testimonials = [
       "Simply brilliant execution. The retention rate on our videos skyrocketed.",
     author: "Priya Patel",
     role: "Content Creator",
-    avatar: "https://api.dicebear.com/7.x/notionists/webp?seed=Priya",
+    avatar: "/avatar.webp",
   },
   {
     id: 3,
@@ -294,7 +294,7 @@ const testimonials = [
       "His attention to detail and cinematic touch is unmatched in the industry.",
     author: "Amit Desai",
     role: "Founder at CRED",
-    avatar: "https://api.dicebear.com/7.x/notionists/webp?seed=Amit",
+    avatar: "/avatar.webp",
   },
 ];
 
@@ -302,49 +302,49 @@ export const trustedCreators = [
   {
     id: "logo-1",
     description: "Rohan",
-    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Rohan",
+    image: "/avatar.webp",
     className: "h-12 w-12 rounded-full",
   },
   {
     id: "logo-2",
     description: "Anjali",
-    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Anjali",
+    image: "/avatar.webp",
     className: "h-12 w-12 rounded-full",
   },
   {
     id: "logo-3",
     description: "Vikram",
-    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Vikram",
+    image: "/avatar.webp",
     className: "h-12 w-12 rounded-full",
   },
   {
     id: "logo-4",
     description: "Sneha",
-    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Sneha",
+    image: "/avatar.webp",
     className: "h-12 w-12 rounded-full",
   },
   {
     id: "logo-5",
     description: "Karan",
-    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Karan",
+    image: "/avatar.webp",
     className: "h-12 w-12 rounded-full",
   },
   {
     id: "logo-6",
     description: "Neha",
-    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Neha",
+    image: "/avatar.webp",
     className: "h-12 w-12 rounded-full",
   },
   {
     id: "logo-7",
     description: "Aditya",
-    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Aditya",
+    image: "/avatar.webp",
     className: "h-12 w-12 rounded-full",
   },
   {
     id: "logo-8",
     description: "Pooja",
-    image: "https://api.dicebear.com/7.x/notionists/webp?seed=Pooja",
+    image: "/avatar.webp",
     className: "h-12 w-12 rounded-full",
   },
 ];
