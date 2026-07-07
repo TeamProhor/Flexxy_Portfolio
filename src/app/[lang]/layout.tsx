@@ -44,16 +44,21 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const resolvedParams = await params;
-  const dict = getDictionary(resolvedParams.lang);
+  const dict = await getDictionary(resolvedParams.lang);
 
   return {
     ...siteMetadata,
     title: dict.meta.title,
     description: dict.meta.description,
-    authors: siteMetadata.authors,
-    creator: siteMetadata.creator,
-    publisher: siteMetadata.publisher,
-    formatDetection: siteMetadata.formatDetection,
+    authors: [{ name: "Prohor Team", url: "https://github.com/TeamProhor" }],
+    creator: "Prohor Team",
+    publisher: "Prohor Team",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+      date: false,
+    },
     alternates: {
       canonical: `/${resolvedParams.lang}`,
       languages: {
@@ -64,14 +69,16 @@ export async function generateMetadata({
     openGraph: {
       ...siteMetadata.openGraph,
       title: dict.meta.ogTitle,
-      description: dict.meta.description,
+      description: dict.meta.ogDescription,
       locale: resolvedParams.lang === "bn" ? "bn_BD" : "en_US",
       url: `https://prohor-nextjs-starter-kit.vercel.app/${resolvedParams.lang}`,
     },
     twitter: {
       ...siteMetadata.twitter,
-      title: dict.meta.ogTitle,
-      description: dict.meta.description,
+      title: dict.meta.twitterTitle,
+      description: dict.meta.twitterDescription,
+      site: "@TeamProhor",
+      creator: "@TeamProhor",
     },
   };
 }
@@ -84,7 +91,7 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }>) {
   const resolvedParams = await params;
-  const dict = getDictionary(resolvedParams.lang);
+  const dict = await getDictionary(resolvedParams.lang);
 
   const dynamicJsonLd = {
     ...siteJsonLd,
@@ -101,6 +108,11 @@ export default async function RootLayout({
       return item;
     }),
   };
+
+  const jsonLdString = JSON.stringify(dynamicJsonLd)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026");
 
   return (
     <html
@@ -119,7 +131,7 @@ export default async function RootLayout({
               type="application/ld+json"
               // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD payload is safe
               dangerouslySetInnerHTML={{
-                __html: JSON.stringify(dynamicJsonLd),
+                __html: jsonLdString,
               }}
             />
             {children}

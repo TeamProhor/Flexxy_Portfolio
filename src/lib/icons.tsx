@@ -13,7 +13,8 @@ export function ProhorIcon({
       viewBox="0 0 24 24"
       className={className}
       style={{
-        transition: "all 0.3s ease",
+        transition:
+          "color 0.3s ease, fill 0.3s ease, stroke 0.3s ease, transform 0.3s ease, opacity 0.3s ease",
         ...style,
       }}
       {...props}

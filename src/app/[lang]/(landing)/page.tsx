@@ -11,7 +11,7 @@ export default async function Home({
   params: Promise<{ lang: string }>;
 }): Promise<ReactElement> {
   const resolvedParams = await params;
-  const dict = getDictionary(resolvedParams.lang);
+  const dict = await getDictionary(resolvedParams.lang);
 
   return (
     <main className="relative flex flex-col min-h-screen bg-background">

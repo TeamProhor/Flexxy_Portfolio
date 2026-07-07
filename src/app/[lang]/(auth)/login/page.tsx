@@ -8,7 +8,7 @@ export default async function LoginPage({
   params: Promise<{ lang: string }>;
 }): Promise<ReactElement> {
   const resolvedParams = await params;
-  const dict = getDictionary(resolvedParams.lang);
+  const dict = await getDictionary(resolvedParams.lang);
 
   return <LoginForm dict={dict.auth} />;
 }

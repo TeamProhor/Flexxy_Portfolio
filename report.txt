@@ -1,0 +1,345 @@
+## Website SEO Meta Tag Optimization Task
+### Project Overview
+- **Optimization Target**: Modern Search Engines & AI Search Engine Optimization (Google, 
+Bing, Perplexity, ChatGPT, Gemini) - **Website URL**: 
+https://prohor-nextjs-starter-kit.vercel.app/
+### Detected SEO Issues
+#### Open Graph Tags [Social Sharing]
+- **og:description**: ⚠️ Length error (Current: 149 characters, Recommended: 55-65 characters) 
+  - Importance: 4/5 stars - Description: Defines page description for Open Graph protocol and 
+  AI understanding.
+#### Twitter Card Tags [Social Sharing]
+- **twitter:title**: ⚠️ Length error (Current: 26 characters, Recommended: 50-70 characters) - 
+  Importance: 3/5 stars - Description: Defines Twitter card title for social and AI indexing.
+- **twitter:description**: ⚠️ Length error (Current: 149 characters, Recommended: 150-200 
+characters)
+  - Importance: 3/5 stars - Description: Defines Twitter card description for social and AI 
+  comprehension.
+- **twitter:site**: ❌ Missing content - Importance: 2/5 stars - Description: Twitter site 
+  account tag associates brand Twitter account.
+- **twitter:creator**: ❌ Missing content - Importance: 2/5 stars - Description: Twitter 
+  creator tag identifies the content creator's Twitter account.
+#### Technical SEO Tags [Search Engines]
+- **author**: ❌ Missing content - Importance: 2/5 stars - Description: Page author 
+  information tag helps establish content authority and credibility.
+- **format-detection**: ❌ Missing content - Importance: 2/5 stars - Description: Format 
+  detection tag controls automatic recognition of phone numbers on mobile devices.
+### Optimization Implementation Plan
+Please provide the following specific code and content optimization solutions:
+#### 1. HTML Meta Tag Implementation
+```html <!-- Add optimized meta tags in the <head> section --> <meta name="..." 
+content="..."> <meta property="og:..." content="..."> <meta name="twitter:..." content="..."> 
+```
+#### 2. Structured Data (JSON-LD)
+```json { "@context": "https://schema.org", "@type": "...",
+  // Provide appropriate structured data configuration
+}
+```
+#### 3. Content Optimization Recommendations
+- **Title Tag**: Specific title suggestions with target keywords - **Description**: 
+Compelling description copy to attract user clicks - **Keywords**: Relevant keyword strategy
+#### 4. AI Search Engine Optimization Points
+- **Semantic Content**: Use natural language descriptions that AI can easily understand - 
+**Key Information Highlighting**: Ensure core information is within the first 160 characters 
+- **Q&A Format**: Consider common question answering patterns - **Entity Recognition**: 
+Clearly mention brand, product, and service names
+### Output Requirements
+- 🤖 AI search engine friendly content structure - 📊 Compliant with modern SEO best 
+practices - 🌐 Consider user experience and accessibility
+Please ensure all recommendations are specific and actionable, providing alternative solutions to accommodate different technical environments.  
+
+
+AI Search Score:
+94/ 100
+Excellent AI Search Performance
+AI Prompt Optimizer for Cursor
+7 optimization points found: 4 missing items, 3 length errors
+
+Copy AI Optimization Prompt
+Analysis Results Details
+Validate AI Crawler Files
+Check whether a website has llms.txt, llms-full.txt, or llms-small.txt and preview AI crawler guidance for large language models.
+llms.txt
+Exists
+View Content
+robots.txt
+Exists
+View Content
+sitemap.xml
+Exists
+View Content
+.well-known/ai.txt
+Not Found
+LLMS.txt Checker
+Copy
+* [Home](https://prohor-nextjs-starter-kit.vercel.app/en)
+  * [Features](https://prohor-nextjs-starter-kit.vercel.app/en/features)
+  * [Pricing](https://prohor-nextjs-starter-kit.vercel.app/en/pricing)
+
+Toggle theme
+prohorIcon
+# Prohor Next.js Starter Kit
+A fast, modern, and reliable developer starter kit
+[Login](https://prohor-nextjs-starter-kit.vercel.app/en/login)
+< 2sLoad Time
+100SEO Score
+[Next.js 16](https://nextjs.org)Framework
+[Supabase](https://supabase.com)Database
+## Frequently Asked Questions
+### What is the Prohor Next.js Starter Kit?
+Prohor is a modern and fast Next.js starter kit fully equipped with Supabase database, Tailwind CSS styling, Biome linting, and GSAP animation framework.
+### How do I get started with Prohor Starter Kit?
+You can start development immediately by cloning the project and running 'bun install' followed by 'bun run dev'.
+Site Map
+All discovered crawlable links
+4 links found
+Copy All
+https://prohor-nextjs-starter-kit.vercel.app/en
+Copy
+https://prohor-nextjs-starter-kit.vercel.app/en/features
+Copy
+https://prohor-nextjs-starter-kit.vercel.app/en/pricing
+Copy
+https://prohor-nextjs-starter-kit.vercel.app/en/login
+Copy
+SEO Details Analysis
+SEO Details Analysis
+#	Name	Content	Length	Importance	Description
+1	title	
+Prohor Next.js & Supabase Starter Kit
+37
+/
+30-60
+★
+★
+★
+★
+★
+Page title displayed in browser tabs and AI search results.
+2	description	
+Build modern web apps faster with Prohor Next.js Starter Kit. Features Supabase, Tailwind CSS, and Biome linting for an optimal developer experience.
+149
+/
+120-160
+★
+★
+★
+★
+★
+Page description helps AI search engines generate summaries.
+3	keywords	
+Next.js starter,Supabase template,Tailwind CSS boilerplate,Prohor Starter Kit,React framework,AI friendly Next.js
+-	
+★
+★
+★
+★
+★
+Page keywords help AI search engines understand content.
+4	og:title	
+Prohor Next.js Starter Kit
+26
+/
+25-35
+★
+★
+★
+★
+★
+Defines page title for Open Graph protocol and AI comprehension.
+5	og:description	
+Build modern web apps faster with Prohor Next.js Starter Kit. Features Supabase, Tailwind CSS, and Biome linting for an optimal developer experience.
+149
+/
+55-65
+★
+★
+★
+★
+★
+Defines page description for Open Graph protocol and AI understanding.
+6	og:image	
+https://prohor-nextjs-starter-kit.vercel.app/og-image.png
+-	
+★
+★
+★
+★
+★
+Defines image displayed when sharing and for AI context.
+7	og:url	
+https://prohor-nextjs-starter-kit.vercel.app/en
+-	
+★
+★
+★
+★
+★
+Open Graph URL tag specifies the canonical URL of the page for better sharing accuracy.
+8	og:type	
+website
+-	
+★
+★
+★
+★
+★
+Open Graph type tag defines the content type (website, article, product, etc.).
+9	og:site_name	
+Prohor
+-	
+★
+★
+★
+★
+★
+Open Graph site name tag displays the website brand name.
+10	twitter:title	
+Prohor Next.js Starter Kit
+26
+/
+50-70
+★
+★
+★
+★
+★
+Defines Twitter card title for social and AI indexing.
+11	twitter:description	
+Build modern web apps faster with Prohor Next.js Starter Kit. Features Supabase, Tailwind CSS, and Biome linting for an optimal developer experience.
+149
+/
+150-200
+★
+★
+★
+★
+★
+Defines Twitter card description for social and AI comprehension.
+12	twitter:card	
+summary_large_image
+-	
+★
+★
+★
+★
+★
+Defines Twitter card type as large summary for better AI understanding.
+13	twitter:image	
+https://prohor-nextjs-starter-kit.vercel.app/og-image.png
+-	
+★
+★
+★
+★
+★
+Twitter Card image tag optimizes Twitter sharing preview image.
+14	twitter:site	
+-
+-	
+★
+★
+★
+★
+★
+Twitter site account tag associates brand Twitter account.
+15	twitter:creator	
+-
+-	
+★
+★
+★
+★
+★
+Twitter creator tag identifies the content creator's Twitter account.
+16	charset	
+utf-8
+-	
+★
+★
+★
+★
+★
+Defines document character encoding for proper AI parsing.
+17	viewport	
+width=device-width, initial-scale=1
+-	
+★
+★
+★
+★
+★
+Viewport settings for responsive design and AI analysis.
+18	robots	
+index, follow
+-	
+★
+★
+★
+★
+★
+AI search engine crawler instructions.
+19	canonical	
+https://prohor-nextjs-starter-kit.vercel.app/en
+-	
+★
+★
+★
+★
+★
+Canonical URL tag prevents duplicate content issues and consolidates page authority.
+20	lang	
+en
+-	
+★
+★
+★
+★
+★
+Page language declaration helps search engines understand content language for better localized search results.
+21	hreflang	
+https://prohor-nextjs-starter-kit.vercel.app/en, https://prohor-nextjs-starter-kit.vercel.app/bn
+-	
+★
+★
+★
+★
+★
+Multi-language page association tag points to other language versions for better international SEO.
+22	alternate	
+/llms.txt, https://prohor-nextjs-starter-kit.vercel.app/en, https://prohor-nextjs-starter-kit.vercel.app/bn
+-	
+★
+★
+★
+★
+★
+Alternate link tag includes RSS, mobile versions and other alternate resources.
+23	author	
+-
+-	
+★
+★
+★
+★
+★
+Page author information tag helps establish content authority and credibility.
+24	format-detection	
+-
+-	
+★
+★
+★
+★
+★
+Format detection tag controls automatic recognition of phone numbers on mobile devices.
+25	statusCode	
+307
+-	
+★
+★
+★
+★
+★
+HTTP status code, 200 indicates normal page access affecting search engine crawling and indexing.
+

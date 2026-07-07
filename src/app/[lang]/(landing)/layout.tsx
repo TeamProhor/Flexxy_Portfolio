@@ -10,7 +10,7 @@ export default async function LandingLayout({
   params: Promise<{ lang: string }>;
 }>): Promise<ReactElement> {
   const resolvedParams = await params;
-  const dict = getDictionary(resolvedParams.lang);
+  const dict = await getDictionary(resolvedParams.lang);
 
   const dynamicFaqJsonLd = {
     ...siteFaqJsonLd,
@@ -24,12 +24,17 @@ export default async function LandingLayout({
     })),
   };
 
+  const jsonLdString = JSON.stringify(dynamicFaqJsonLd)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026");
+
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <script
         type="application/ld+json"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: static JSON-LD payload is safe
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(dynamicFaqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdString }}
       />
       {children}
     </div>

@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "title": "Prohor Next.js & Supabase Starter Kit",
+    "ogTitle": "Prohor Next.js Starter Kit",
+    "description": "Build modern web apps faster with Prohor Next.js Starter Kit. Features Supabase, Tailwind CSS, and Biome linting for an optimal developer experience.",
+    "ogDescription": "Build modern web apps faster with Prohor Next.js Starter Kit.",
+    "twitterTitle": "Prohor Next.js Starter Kit - Build Faster Apps Today",
+    "twitterDescription": "Launch your next web project faster with Prohor Next.js Starter Kit. Featuring Supabase integration, modern Tailwind CSS styling, strict Biome linting, and seamless developer experience built-in."
+  },
+  "jsonLd": {
+    "name": "Prohor Next.js Starter Kit",
+    "language": "en-US",
+    "description": "A fast, modern, and reliable Next.js starter kit fully equipped with Supabase, Tailwind CSS, and Biome.",
+    "faq": [
+      {
+        "question": "What is the Prohor Next.js Starter Kit?",
+        "answer": "Prohor is a modern and fast Next.js starter kit fully equipped with Supabase database, Tailwind CSS styling, Biome linting, and GSAP animation framework."
+      },
+      {
+        "question": "How do I get started with Prohor Starter Kit?",
+        "answer": "You can start development immediately by cloning the project and running 'bun install' followed by 'bun run dev'."
+      }
+    ]
+  },
+  "page": {
+    "nav": {
+      "home": "Home",
+      "features": "Features",
+      "pricing": "Pricing"
+    },
+    "hero": {
+      "title": "Prohor Next.js Starter Kit",
+      "subtitle": "A fast, modern, and reliable developer starter kit",
+      "login": "Login"
+    },
+    "stats": {
+      "title": "Performance & Technology",
+      "speed": {
+        "value": "< 2s",
+        "label": "Load Time"
+      },
+      "lighthouse": {
+        "value": "100",
+        "label": "SEO Score"
+      },
+      "stack": {
+        "value": "Next.js 16",
+        "label": "Framework",
+        "citationUrl": "https://nextjs.org"
+      },
+      "db": {
+        "value": "Supabase",
+        "label": "Database",
+        "citationUrl": "https://supabase.com"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "newHere": "New here?",
+      "signUpFree": "Sign up for free",
+      "sendMagicLink": "Send Magic Link",
+      "usePassword": "Use password instead",
+      "or": "or",
+      "sso": "Log in with SSO",
+      "termsText1": "By continuing, you agree to our",
+      "termsLink": "Terms of Service",
+      "and": "and",
+      "privacyLink": "Privacy Policy",
+      "termsText2": "."
+    }
+  }
+}
